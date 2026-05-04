@@ -70,7 +70,7 @@ TypeScript strict ESM, `@modelcontextprotocol/sdk` v1.27+, `zod` v4, `express`. 
 
 ## Deployment
 
-Railway (public, no auth), service `gs-book-mcp` under the **Book Power** Railway project. GitHub auto-deploy from `main` is wired via Railway's GitHub app on `zhiganov/governable-spaces-mcp`.
+Railway (public, no auth), service `governable-spaces-mcp` under the **Book Power** Railway project. Live at https://governable-spaces-mcp-production.up.railway.app. GitHub auto-deploy from `main` is wired via Railway's GitHub app on `zhiganov/governable-spaces-mcp`.
 
 ## Source
 

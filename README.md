@@ -28,7 +28,7 @@ If the file doesn't exist, create it.
 {
   "mcpServers": {
     "governable-spaces": {
-      "url": "https://gs-book-mcp-production.up.railway.app/mcp",
+      "url": "https://governable-spaces-mcp-production.up.railway.app/mcp",
       "transport": "http"
     }
   }
@@ -48,7 +48,7 @@ Claude should mention 13 tools whose names start with `start_analysis`, `diagnos
 Run this once from your terminal:
 
 ```bash
-claude mcp add --transport http -s user governable-spaces https://gs-book-mcp-production.up.railway.app/mcp
+claude mcp add --transport http -s user governable-spaces https://governable-spaces-mcp-production.up.railway.app/mcp
 ```
 
 Then restart your Claude Code session and check `claude mcp list` — you should see `governable-spaces ... ✓ Connected`. The 13 tools become available with names like `mcp__governable-spaces__start_analysis`.
@@ -120,7 +120,7 @@ You're building or stewarding an online community — a Mastodon instance, a co-
 Most often a JSON typo or wrong file path. On macOS: `cat ~/Library/Application\ Support/Claude/claude_desktop_config.json` should print your config — if not, the file is in the wrong place or has malformed JSON. Run the file's contents through a JSON validator (paste into https://jsonlint.com).
 
 **Claude Code says "Connection failed".**
-Confirm the URL works directly: `curl https://gs-book-mcp-production.up.railway.app/health` should return `{"status":"ok",...}`. If yes, the server is up — check `claude mcp list` to see what scope and URL Claude Code recorded.
+Confirm the URL works directly: `curl https://governable-spaces-mcp-production.up.railway.app/health` should return `{"status":"ok",...}`. If yes, the server is up — check `claude mcp list` to see what scope and URL Claude Code recorded.
 
 **Tools work but responses feel generic.**
 The MCP scaffolds Schneider's framing; the depth comes from how specifically you describe your situation. Vague prompts get vague tool calls. Lead with the concrete case ("the 2023 Reddit API revolt", "our small federated researcher platform") and let Claude route from there.
