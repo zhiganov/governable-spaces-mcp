@@ -22,7 +22,8 @@ git -C ~/claude-project/claude-config pull
 git -C ~/claude-project/book-power pull
 
 # If this is the first time the Linux machine is touching a book-power MCP,
-# the parent folder doesn't exist yet (book-power gitignores book-power-output/).
+# the parent folder doesn't exist yet — book-power-output/ is a workspace-root
+# convention folder, not tracked by any repo, so nothing auto-creates it.
 # Create it and clone this repo into the canonical slug-subfolder path:
 mkdir -p ~/claude-project/book-power-output/mcp
 cd ~/claude-project/book-power-output/mcp
