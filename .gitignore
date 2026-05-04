@@ -1,0 +1,7 @@
+node_modules/
+dist/
+books/
+.env
+.extraction-cache/
+*.log
+.DS_Store
