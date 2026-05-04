@@ -20,6 +20,13 @@ This repo's build is queued for the Linux machine. Before starting:
 # 1. Sync workspace — load latest conventions and templates
 git -C ~/claude-project/claude-config pull
 git -C ~/claude-project/book-power pull
+
+# If this is the first time the Linux machine is touching a book-power MCP,
+# the parent folder doesn't exist yet (book-power gitignores book-power-output/).
+# Create it and clone this repo into the canonical slug-subfolder path:
+mkdir -p ~/claude-project/book-power-output/mcp
+cd ~/claude-project/book-power-output/mcp
+[ -d governable-spaces ] || git clone https://github.com/zhiganov/governable-spaces-mcp.git governable-spaces
 git -C ~/claude-project/book-power-output/mcp/governable-spaces pull
 
 # 2. Download the source book (Luminos provides PDF/EPUB freely)
