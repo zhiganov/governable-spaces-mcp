@@ -78,4 +78,4 @@ Nathan Schneider, *Governable Spaces: Democratic Design for Online Life* (UC Pre
 
 ## Related
 
-Sibling MCPs from the same [book-power](https://github.com/zhiganov/book-power) umbrella: think-like-a-commoner (Bollier, public), jtbd-knowledge (Moesta + Kalbach, private), facilitating-deliberation (White, Hunter, Greaves, private), Plurality (Weyl + Tang, queued).
+Sibling MCPs from the same book-power umbrella (private): think-like-a-commoner (Bollier, public), jtbd-knowledge (Moesta + Kalbach, private), facilitating-deliberation (White, Hunter, Greaves, private), Plurality (Weyl + Tang, queued).

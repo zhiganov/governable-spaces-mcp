@@ -172,13 +172,13 @@ Source book: [Governable Spaces on Luminos](https://luminosoa.org/books/m/10.152
 
 Source: TypeScript ESM, `@modelcontextprotocol/sdk`, `zod`. Stack documented in [CLAUDE.md](CLAUDE.md).
 
-Catalogs are extracted from the source markdown via `npm run extract` (requires `ANTHROPIC_API_KEY` in `.env`). The extraction pipeline uses `claude-sonnet-4-6` with structured tool-use, prompt caching, and a post-extraction semantic dedup pass — see `scripts/extract-core.ts` and `scripts/extract-data.democracy-tech.ts` (templates from [book-power](https://github.com/zhiganov/book-power)).
+Catalogs are extracted from the source markdown via `npm run extract` (requires `ANTHROPIC_API_KEY` in `.env`). The extraction pipeline uses `claude-sonnet-4-6` with structured tool-use, prompt caching, and a post-extraction semantic dedup pass — see `scripts/extract-core.ts` and `scripts/extract-data.democracy-tech.ts` (templates from the book-power umbrella, private).
 
 EPUB → markdown conversion: Kreuzberg flattens EPUB heading structure, so `scripts/convert-source.ts` post-processes the extracted text to add `# Chapter` markers based on Schneider's table of contents. Re-runs from the EPUB are idempotent.
 
 ## Related
 
-Sibling MCPs under the [book-power](https://github.com/zhiganov/book-power) umbrella:
+Sibling MCPs under the book-power umbrella (umbrella repo private):
 
 - [think-like-a-commoner-mcp](https://github.com/zhiganov/think-like-a-commoner-mcp) — Bollier's commons framing (shipped, public, CC BY-NC-SA)
 - jtbd-knowledge-mcp — JTBD framing combining Moesta + Kalbach (shipped, private — copyrighted source)
