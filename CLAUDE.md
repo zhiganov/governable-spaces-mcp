@@ -18,32 +18,32 @@ This repo's build is queued for the Linux machine. Before starting:
 
 ```bash
 # 1. Sync workspace — load latest conventions and templates
-git -C ~/claude-project/claude-config pull
-git -C ~/claude-project/book-power pull
+git -C ~/claude/.claude-config pull
+git -C ~/claude/book-power pull
 
 # If this is the first time the Linux machine is touching a book-power MCP,
 # the parent folder doesn't exist yet — book-power-output/ is a workspace-root
 # convention folder, not tracked by any repo, so nothing auto-creates it.
 # Create it and clone this repo into the canonical slug-subfolder path:
-mkdir -p ~/claude-project/book-power-output/mcp
-cd ~/claude-project/book-power-output/mcp
+mkdir -p ~/claude/book-power-output/mcp
+cd ~/claude/book-power-output/mcp
 [ -d governable-spaces ] || git clone https://github.com/zhiganov/governable-spaces-mcp.git governable-spaces
-git -C ~/claude-project/book-power-output/mcp/governable-spaces pull
+git -C ~/claude/book-power-output/mcp/governable-spaces pull
 
 # 2. Download the source book (Luminos provides PDF/EPUB freely)
-#    Save to ~/claude-project/book-power/books/governable-spaces.<ext>
+#    Save to ~/claude/book-power/books/governable-spaces.<ext>
 #    Then run book-power's extract pipeline to convert to markdown:
-cd ~/claude-project/book-power
+cd ~/claude/book-power
 npx tsx src/cli.ts process ./books/governable-spaces.pdf --output mcp --skip-copyright
 
 # 3. Copy the democracy-tech extraction templates into this repo:
-cp ~/claude-project/book-power/templates/mcp-server-handcrafted/extract-core.ts \
-   ~/claude-project/book-power-output/mcp/governable-spaces/scripts/extract-core.ts
-cp ~/claude-project/book-power/templates/mcp-server-handcrafted/extract-data.democracy-tech.ts \
-   ~/claude-project/book-power-output/mcp/governable-spaces/scripts/extract-data.democracy-tech.ts
+cp ~/claude/book-power/templates/mcp-server-handcrafted/extract-core.ts \
+   ~/claude/book-power-output/mcp/governable-spaces/scripts/extract-core.ts
+cp ~/claude/book-power/templates/mcp-server-handcrafted/extract-data.democracy-tech.ts \
+   ~/claude/book-power-output/mcp/governable-spaces/scripts/extract-data.democracy-tech.ts
 ```
 
-Then follow the **full build checklist** at `~/claude-project/book-power/CLAUDE.md` — the "Building a new hand-crafted MCP — pre-flight checklist" section walks every remaining step (license check, repo paths, Railway service under Book Power project, README structure, commit hygiene, distribution follow-ups).
+Then follow the **full build checklist** at `~/claude/book-power/CLAUDE.md` — the "Building a new hand-crafted MCP — pre-flight checklist" section walks every remaining step (license check, repo paths, Railway service under Book Power project, README structure, commit hygiene, distribution follow-ups).
 
 ## Why democracy-tech, not commons
 
@@ -68,7 +68,7 @@ When the build starts, expect to refine these parts of `extract-data.democracy-t
 
 ## Forward links
 
-- book-power umbrella: https://github.com/zhiganov/book-power (private — not linkable from a public README, but local docs are at `~/claude-project/book-power/`)
+- book-power umbrella: https://github.com/zhiganov/book-power (private — not linkable from a public README, but local docs are at `~/claude/book-power/`)
 - Sibling MCPs:
   - **think-like-a-commoner-mcp** (Bollier, public) — first reference for the domain-template pattern
   - **jtbd-knowledge-mcp** (Moesta + Kalbach, private) — first reference for hand-crafted MCP architecture
