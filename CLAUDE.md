@@ -2,74 +2,80 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Status: empty repo, build pending.** This is a fresh book-power-style hand-crafted MCP that hasn't been built yet. Don't start from scratch — follow the book-power umbrella's pre-flight checklist (link below) which has the canonical sequence and the templates to copy.
+## Overview
 
-## What this will be
+**governable-spaces-mcp** — Public MCP server embedding Nathan Schneider's *Governable Spaces: Democratic Design for Online Life* (UC Press / Luminos, 2024). 13 tools across 4 groups (routing, diagnostic, design, reference). Dual-licensed: MIT code + CC BY-NC-SA 4.0 embedded content.
 
-An MCP server embedding Nathan Schneider's *Governable Spaces: Democratic Design for Online Life* (University of California Press / Luminos, 2024).
-
-- **Source:** https://luminosoa.org/books/m/10.1525/luminos.181 (PDF / EPUB / MOBI freely available)
-- **License:** Source is **CC BY-NC-SA 4.0**; this MCP will dual-license: MIT for code + CC BY-NC-SA 4.0 for embedded book content (attribution to Schneider built into every quoted response).
-- **Chosen domain template:** `extract-data.democracy-tech.ts` (NOT `extract-data.commons.ts` — Schneider's framing is governance-of-online-communities, distinct enough from Bollier's commons framing to warrant its own catalog set).
-
-## Build kickoff (Linux agent — first 3 steps)
-
-This repo's build is queued for the Linux machine. Before starting:
+## Commands
 
 ```bash
-# 1. Sync workspace — load latest conventions and templates
-git -C ~/claude/.claude-config pull
-git -C ~/claude/book-power pull
-
-# If this is the first time the Linux machine is touching a book-power MCP,
-# the parent folder doesn't exist yet — book-power-output/ is a workspace-root
-# convention folder, not tracked by any repo, so nothing auto-creates it.
-# Create it and clone this repo into the canonical slug-subfolder path:
-mkdir -p ~/claude/book-power-output/mcp
-cd ~/claude/book-power-output/mcp
-[ -d governable-spaces ] || git clone https://github.com/zhiganov/governable-spaces-mcp.git governable-spaces
-git -C ~/claude/book-power-output/mcp/governable-spaces pull
-
-# 2. Download the source book (Luminos provides PDF/EPUB freely)
-#    Save to ~/claude/book-power/books/governable-spaces.<ext>
-#    Then run book-power's extract pipeline to convert to markdown:
-cd ~/claude/book-power
-npx tsx src/cli.ts process ./books/governable-spaces.pdf --output mcp --skip-copyright
-
-# 3. Copy the democracy-tech extraction templates into this repo:
-cp ~/claude/book-power/templates/mcp-server-handcrafted/extract-core.ts \
-   ~/claude/book-power-output/mcp/governable-spaces/scripts/extract-core.ts
-cp ~/claude/book-power/templates/mcp-server-handcrafted/extract-data.democracy-tech.ts \
-   ~/claude/book-power-output/mcp/governable-spaces/scripts/extract-data.democracy-tech.ts
+npm run build          # Compile TypeScript (tsc)
+npm run dev            # Run directly with tsx (no build step)
+npm start              # Run compiled server (dist/index.js)
+npm run convert        # Re-run EPUB → markdown post-processor (adds # chapter markers)
+npm run extract        # Re-run Sonnet extraction over books/governable-spaces.md (requires ANTHROPIC_API_KEY)
+npm run typecheck      # tsc --noEmit
 ```
 
-Then follow the **full build checklist** at `~/claude/book-power/CLAUDE.md` — the "Building a new hand-crafted MCP — pre-flight checklist" section walks every remaining step (license check, repo paths, Railway service under Book Power project, README structure, commit hygiene, distribution follow-ups).
+## Architecture
 
-## Why democracy-tech, not commons
+```
+src/
+├── index.ts                 # MCP server — 13 tool registrations + handlers + dual transport
+├── search.ts                # Substring search across all 6 catalogs
+├── types.ts                 # Case, FailureMode, GovernanceForm, PolicyStrategy, GlossaryTerm, Quote
+└── data/
+    ├── index.ts             # Re-exports
+    ├── cases.ts             # ~64 democratic-medium cases
+    ├── failure_modes.ts     # ~40 failure-mode patterns + named instances (kind discriminator)
+    ├── governance_forms.ts  # ~26 democratic primitives (sortition, federated, plural-voting, etc.)
+    ├── policy_strategies.ts # ~21 scaled policy moves
+    ├── glossary.ts          # ~89 Schneider vocabulary terms
+    └── quotes.ts            # ~43 themed grounding passages
 
-Schneider's *Governable Spaces* shares vocabulary with the commons tradition (Schneider IS a commons-adjacent scholar) but its central frame is **democratic design of online governance**, not commons stewardship. The framework's distinct concepts:
+scripts/
+├── convert-source.ts            # EPUB → markdown post-processor (adds # chapter markers; Kreuzberg flattens EPUB headings)
+├── extract-core.ts              # Book-agnostic extraction infra (chapter chunking, ids_so_far, dedup pass, cache). Synced from book-power templates.
+├── extract-data.democracy-tech.ts  # Domain config (catalog set, schemas, system prompt). Reusable across democracy-tech books.
+└── dry-run.ts                   # Sanity check: confirms chapterChunks splits the source as expected (no API calls)
 
-- **Implicit feudalism** — the default counter-democratic pattern of online platforms (admins as fiefdom rulers)
-- **Governable spaces** — platforms designed to permit democratic self-governance
-- **Governable stacks** — modular composition of governance primitives across the web stack
-- **Democratic mediation** — collective ownership/governance of platforms as movement strategy
-- **Modular politics, metagovernance** — Schneider's vocabulary for governance-of-governance
+books/
+└── governable-spaces.md     # Schneider source as flat markdown with # chapter markers. Gitignored — regenerate via `npm run convert` from the EPUB at ../book-power/books/.
 
-These map awkwardly onto commons / enclosures / strategies. The democracy-tech catalog set (cases / failure_modes / governance_forms / policy_strategies / glossary / quotes) fits cleanly. See the template's header comment and book-power#22 / TLAC#7 for the design rationale.
+.extraction-cache/           # Per-chapter result cache for restart-safe extraction. Gitignored.
+```
 
-## Customizations expected vs the template
+## Tool groups (13 total)
 
-When the build starts, expect to refine these parts of `extract-data.democracy-tech.ts`:
+**Routing (2):** `start_analysis`, `suggest_next_step`
+**Diagnostic (4):** `diagnose_implicit_feudalism`, `find_failure_mode`, `find_precedent_case`, `list_policy_strategies`
+**Design (3):** `assess_governable_space`, `find_similar_case`, `suggest_governance_forms`
+**Reference (4):** `apply_democratic_mediation`, `get_glossary_term`, `find_quote`, `search_book`
 
-- `SOURCE` path — point at the converted markdown
-- `SYSTEM_PROMPT`'s book metadata line is correct as-shipped (Schneider, UC Press / Luminos, 2024, CC BY-NC-SA 4.0)
-- `INCLUSION CRITERIA` / `TARGET SIZES` may need refinement after the first run if catalogs land wildly off
-- `extractTargetedFixedCardinality` is intentionally absent — Schneider's book has no Ostrom-equivalent fixed-cardinality catalog. If you find one during reading, add it.
+## Key design decisions
 
-## Forward links
+- Hybrid: server provides framing scaffolding; Claude in conversation does analytical work (no LLM calls in server)
+- All data embedded as TypeScript constants — no DB, no vector search
+- Substring search for cross-catalog discovery (`search_book`)
+- Branching entry-point (`start_analysis`) routes to one of 4 workflows: diagnose_feudalism, design_governable_space, name_failure_mode, exploring
+- Dual transport: stdio (local dev) / StreamableHTTP (Railway). **No auth** — public, by design (book is CC BY-NC-SA, framing is for movement-building)
+- `diagnose_implicit_feudalism` is intentionally heuristic and surfaces caveat: a governable space MUST give participants meaningful exit, voice, AND ownership stake (Schneider Ch. 1). Negation handling is coarse — for nuanced cases the LLM consumer should override.
+- `find_failure_mode` returns both pattern entries and instance entries (kind discriminator) so the agent can show "this is X pattern, exemplified by Y, Z, W historical instances."
+- `find_quote` capped at 3 results × ~200 words each, per CC BY-NC-SA fair-use discipline; each response includes attribution.
+- `glossary` ran 89 entries (target ~25). Dedup pass returned warnings about `keep` ids not matching catalog (case mismatch on "communityRule", missing entries like "modpol"/"governable-stack"/"metagovernance"). Worth a manual cull pass eventually.
 
-- book-power umbrella: https://github.com/zhiganov/book-power (private — not linkable from a public README, but local docs are at `~/claude/book-power/`)
-- Sibling MCPs:
-  - **think-like-a-commoner-mcp** (Bollier, public) — first reference for the domain-template pattern
-  - **jtbd-knowledge-mcp** (Moesta + Kalbach, private) — first reference for hand-crafted MCP architecture
-  - **facilitating-deliberation-mcp** (MosaicLab, private) — facilitator's reference
+## Stack
+
+TypeScript strict ESM, `@modelcontextprotocol/sdk` v1.27+, `zod` v4, `express`. Extraction script uses `@anthropic-ai/sdk` with `claude-sonnet-4-6` and prompt caching.
+
+## Deployment
+
+Railway (public, no auth), service `gs-book-mcp` under the **Book Power** Railway project. GitHub auto-deploy from `main` is wired via Railway's GitHub app on `zhiganov/governable-spaces-mcp`.
+
+## Source
+
+Nathan Schneider, *Governable Spaces: Democratic Design for Online Life* (UC Press / Luminos, 2024). Free open-access PDF/EPUB/MOBI: https://luminosoa.org/books/m/10.1525/luminos.181 — DOI 10.1525/luminos.181 — CC BY-NC-SA 4.0.
+
+## Related
+
+Sibling MCPs from the same [book-power](https://github.com/zhiganov/book-power) umbrella: think-like-a-commoner (Bollier, public), jtbd-knowledge (Moesta + Kalbach, private), facilitating-deliberation (White, Hunter, Greaves, private), Plurality (Weyl + Tang, queued).
