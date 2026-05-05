@@ -1,6 +1,6 @@
 # Governable Spaces — MCP Server
 
-An MCP server embedding Nathan Schneider's framing of democratic design for online life from *Governable Spaces: Democratic Design for Online Life* (UC Press / Luminos, 2024).
+An unofficial MCP server embedding Nathan Schneider's framing of democratic design for online life from *Governable Spaces: Democratic Design for Online Life* (UC Press / Luminos, 2024).
 
 > Built for: democracy-tech builders, governance designers, platform-cooperative organizers, fediverse implementers, DAO designers, civic-tech researchers. Use it inside Claude Desktop, Claude Code, or any MCP-compatible client to apply Schneider's framing to a real situation — diagnose implicit feudalism, find precedent democratic-medium cases, surface countering governance forms, or reframe a market/feudal-mind problem.
 
