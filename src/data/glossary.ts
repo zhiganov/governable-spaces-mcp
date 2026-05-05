@@ -3,10 +3,20 @@ import type { GlossaryTerm } from '../types.js';
 export const GLOSSARY: GlossaryTerm[] = [
   {
     "term": "Governable Space",
-    "definition": "An online community or platform designed so that participants have meaningful capacity for self-governance — including voice, exit, and ownership stake. A governable space MUST give participants structured mechanisms to shape the rules, culture, and direction of the space. It is distinct from a mere forum or comment section. Schneider coins this term to name what democratic online life requires, contra the feudal defaults of commercial platforms.",
+    "definition": "An online environment designed so that the people who inhabit it can meaningfully shape the rules, norms, and structures that govern their shared life. Schneider uses this term to name the aspirational target of democratic design for online life — spaces where governance is legible, participatory, and accountable to members rather than invisible or unilaterally imposed by owners or algorithms.",
     "see_also": [
-      "implicit-feudalism",
       "governable-stack",
+      "democratic-mediation",
+      "implicit-feudalism",
+      "modular-politics"
+    ],
+    "source_chapter": "Introduction"
+  },
+  {
+    "term": "Democratic Design",
+    "definition": "The intentional craft of online spaces, platforms, and protocols so that governance structures embody democratic values — participation, accountability, contestation, and self-determination. Schneider frames democratic design as a discipline analogous to architecture or urban planning: choices about interfaces, rules, and affordances are political choices, and they can be made with or against democratic intent.",
+    "see_also": [
+      "governable-space",
       "democratic-mediation",
       "modular-politics"
     ],
@@ -14,232 +24,250 @@ export const GLOSSARY: GlossaryTerm[] = [
   },
   {
     "term": "Implicit Feudalism",
-    "definition": "Schneider's term for the default governance structure of online communities and platforms, in which owners or administrators hold unaccountable, lord-like power over participants. Participants are subjects, not citizens. The feudalism is 'implicit' because platforms rarely announce this arrangement — it is baked into software defaults, terms of service, and design. Online communities MUST NOT be mistaken for democracies merely because they have discussion features; without structural accountability, they reproduce feudal hierarchy.",
+    "definition": "A condition in which online communities are governed by relations of lord-and-vassal power disguised as neutral platform administration. Platform owners hold unilateral, largely unaccountable authority over members — setting rules, reversing decisions, and expelling users without democratic recourse — in a structural pattern that mirrors pre-modern feudal hierarchy even as it presents itself as merely technical or managerial.",
     "see_also": [
-      "governable-space",
       "politics-of-no-politics",
       "digital-colonialism",
-      "metagovernance"
+      "governable-space"
     ],
-    "source_chapter": "Introduction",
-    "source_quote": "The default governance structure of online communities is what I call implicit feudalism — an arrangement in which owners and administrators hold power over participants the way lords held power over serfs, without accountability or recourse."
+    "source_chapter": "Introduction"
   },
   {
     "term": "Democratic Mediation",
-    "definition": "The process by which democratic norms, rules, and practices are embedded into the design of online spaces and platforms — making democratic self-governance the medium through which communities operate. Schneider uses this term to describe both the goal (mediated democracy) and the design challenge: how to encode democratic accountability into software, policy, and culture so that it operates by default rather than by exception.",
+    "definition": "The range of practices, tools, and institutions that mediate collective life online in ways that are accountable, participatory, and contestable by members. Schneider uses this term to name the positive counterpart to implicit feudalism — the varied historical and contemporary experiments in self-governance that online communities have developed or could develop.",
     "see_also": [
       "governable-space",
       "modular-politics",
-      "metagovernance",
-      "implicit-feudalism"
+      "metagovernance"
+    ],
+    "source_chapter": "Introduction"
+  },
+  {
+    "term": "Metagovernance",
+    "definition": "Governance of governance: the higher-order rules, norms, and structures that shape how a community or platform makes and changes its own rules. In Schneider's usage, metagovernance encompasses the constitutional layer of online spaces — who gets to set the terms of participation, how rule-making processes themselves are designed, and how those processes can be reformed.",
+    "see_also": [
+      "governable-stack",
+      "modular-politics",
+      "democratic-mediation"
     ],
     "source_chapter": "Introduction"
   },
   {
     "term": "Governable Stack",
-    "definition": "The full sociotechnical layering — from infrastructure and protocols up through platforms, applications, and community rules — that must each be amenable to democratic governance if online life is to be truly self-governing. A governable stack requires democratic design at every layer, not just at the surface community level. Schneider argues that tinkering with community rules while leaving lower layers feudally controlled reproduces implicit feudalism.",
+    "definition": "The layered technical and social architecture of an online space — from protocols and infrastructure through platform software to community norms — understood as a site of democratic design. Schneider argues that democratic governance requires attending to each layer of this stack, since power exercised at a lower layer (e.g., protocol design) can override democratic choices made at a higher layer (e.g., community rules).",
     "see_also": [
       "governable-space",
-      "modular-politics",
       "metagovernance",
+      "modular-politics",
       "federated-subsidiarity"
     ],
     "source_chapter": "Introduction"
   },
   {
     "term": "Modular Politics",
-    "definition": "Schneider's design principle and policy vision in which governance tools and rules are portable, interoperable modules that communities can adopt, adapt, and combine — rather than bespoke, siloed configurations locked to a single platform. Modular politics enables a kind of democratic ecosystem: communities SHOULD be able to compose governance from shared, tested primitives rather than reinventing feudal defaults.",
+    "definition": "An approach to online governance in which democratic tools and rules are treated as composable, interchangeable modules that communities can adopt, adapt, and combine rather than accepting the fixed governance arrangements bundled with any given platform. Schneider envisions modular politics as enabling governance portability and experimentation across the governable stack.",
     "see_also": [
       "governable-stack",
       "democratic-mediation",
-      "metagovernance",
+      "metagovernance"
+    ],
+    "source_chapter": "Introduction"
+  },
+  {
+    "term": "Politics of No Politics",
+    "definition": "The ideology, common among technology platforms, that design and governance choices are neutral or purely technical rather than political. By claiming to stand outside politics, platforms naturalise and conceal the power relations embedded in their architecture — a move Schneider identifies as itself a political act that forecloses democratic contestation.",
+    "see_also": [
+      "implicit-feudalism",
+      "democratic-design",
       "governable-space"
     ],
     "source_chapter": "Introduction"
-  },
-  {
-    "term": "Metagovernance",
-    "definition": "Governance of governance systems — the rules, norms, and structures that determine how online communities may set and change their own rules. In Schneider's framing, metagovernance operates at the platform or protocol layer and shapes what governance is even possible within spaces hosted on that infrastructure. Democratic metagovernance SHOULD guarantee communities meaningful autonomy to self-govern, rather than reserving ultimate authority for platform owners.",
-    "see_also": [
-      "governable-stack",
-      "implicit-feudalism",
-      "modular-politics",
-      "federated-subsidiarity"
-    ],
-    "source_chapter": "Introduction"
-  },
-  {
-    "term": "Politics of No-Politics",
-    "definition": "The ideological stance — common among platform designers and community managers — that online spaces should be 'neutral' or 'apolitical,' and that governance is a distraction from the community's real purpose. Schneider treats this as a failure mode: declaring a space free of politics MUST NOT obscure the political choices already embedded in its design. The politics of no-politics naturalizes implicit feudalism by rendering it invisible.",
-    "see_also": [
-      "implicit-feudalism",
-      "democratic-mediation",
-      "governable-space"
-    ],
-    "source_chapter": "Introduction"
-  },
-  {
-    "term": "Digital Colonialism",
-    "definition": "Schneider's framing for the way dominant platform companies extend extractive, unaccountable control over communities and populations — especially in the Global South — mirroring colonial power relationships. Digital colonialism names the global asymmetry of implicit feudalism: users and communities in less powerful positions produce value and data that flow to platform owners without reciprocal accountability or democratic stake.",
-    "see_also": [
-      "implicit-feudalism",
-      "governable-space",
-      "platform-cooperative"
-    ],
-    "source_chapter": "Introduction"
-  },
-  {
-    "term": "Governance Archaeology",
-    "definition": "Schneider's method of excavating historical and cross-cultural governance practices — from ancient Greek sortition to cooperative bylaws — to inform the design of online democratic spaces. The premise is that the past still 'lurks among us in the present,' and that human communities have accumulated a vast repertoire of self-governance forms that dominant online design has ignored or discarded. Governance archaeology treats that repertoire as a resource for designers of governable stacks.",
-    "see_also": [
-      "governable-stack",
-      "modular-politics",
-      "implicit-feudalism"
-    ],
-    "source_chapter": "Introduction",
-    "source_quote": "This begins with case studies in two very different attempts to design a participatory society without violence at its foundation... From there, I call for designing toward governable stacks at the level of communities. Stack design can draw at once from a new kind of software paradigm, modular politics, and an approach to learning from the breadth of human experience, governance archaeology."
   },
   {
     "term": "Democratic Erosion",
-    "definition": "The documented, multi-scalar decline of democratic norms, institutions, and civic capacity — tracked in political science as 'deconsolidation' — which Schneider argues is partly caused by the design of online social spaces. Dominant platform design atrophies everyday democratic skills (the 'deskilling' effect), leaving citizens less capable of collective self-governance at any scale. Democratic erosion is thus not only a failure of governments but a failure of the online environments where daily social life now occurs.",
+    "definition": "The documented decline of democratic institutions, norms, and popular affection for democratic ideals, observable across governmental and civil-society levels. Schneider adds a specific accusation to existing diagnoses: the design of online social spaces has contributed to the atrophy of everyday democratic skills, as daily life migrates into platforms that discourage or disallow meaningful collective self-governance. Democratic erosion thus coincides with a shortage of democratic practice.",
     "see_also": [
       "implicit-feudalism",
       "governable-space",
-      "democratic-mediation"
+      "everyday-democracy"
     ],
     "source_chapter": "Introduction",
     "source_quote": "This book will add one more accusation to the pile: the design of online social spaces has contributed to the atrophy of everyday democratic skills."
   },
   {
-    "term": "Spillover Effects (Civic)",
-    "definition": "The empirically documented causal mechanism by which participation in small-scale democratic associations increases individuals' propensity to engage in larger political processes. Schneider draws on Tocqueville and subsequent social-science findings to argue that online governable spaces can generate the same spillover: when people hold real power in everyday online communities, they develop democratic muscles exercisable at the level of national politics. The absence of such spaces online therefore contributes to democratic erosion.",
+    "term": "Everyday Democracy",
+    "definition": "The practice of democratic self-governance at the scale of ordinary community life—neighborhood clubs, workplaces, online groups—rather than only at the level of formal government. Drawing on Tocqueville, Dewey, Freire, and the James-Boggs-brown lineage, Schneider argues that democratic muscles require exercise in intimate, everyday settings, and that civic associations at small scales produce spillover effects that strengthen democratic capacity at larger political scales.",
     "see_also": [
       "governable-space",
       "democratic-erosion",
-      "everyday-democracy"
-    ],
-    "source_chapter": "Introduction"
-  },
-  {
-    "term": "Everyday Democracy",
-    "definition": "Schneider's insistence that democracy is not solely a property of formal governmental institutions but is practiced — or withheld — in the most mundane sites of social life: garden clubs, group chats, online forums, cooperative stores. Following Tocqueville, Dewey, Freire, and the James–Boggs–brown lineage, Schneider argues that the texture of everyday association either cultivates or atrophies democratic capacity. Online spaces are therefore political in a deep sense regardless of whether they address explicitly political topics.",
-    "see_also": [
-      "governable-space",
-      "spillover-effects-civic",
-      "democratic-erosion"
+      "tocquevillian-association"
     ],
     "source_chapter": "Introduction",
-    "source_quote": "This is a book about the politics of everyday life, and everyday online life in particular... I contend that the most quotidian kinds of online politics... affect the flows of power at the largest scales."
+    "source_quote": "The diagnosis also bears remedies. More than other explanations of democratic erosion, this account suggests that the future of democracy can begin at the level of ordinary community, wherever we find ourselves together, where each of us has the chance to make a difference."
   },
   {
-    "term": "Convivial Tools",
-    "definition": "Drawn from Ivan Illich, tools that 'support autonomous and creative intercourse among persons, and the intercourse of persons with their environment.' Schneider adopts this concept to articulate what governable-space software SHOULD be: technology that invites users to be creative and responsible, rather than deferring governance responsibility to admins or platform owners. Achieving conviviality, Illich warned and Schneider reaffirms, requires inverting the current deep structure of online tools, not merely adding democratic features to feudal architectures.",
+    "term": "Tocquevillian Association",
+    "definition": "Alexis de Tocqueville's observed phenomenon—and subsequent theoretical tradition—that Americans' habit of forming voluntary civic associations for any purpose cultivated democratic skills that fed back into representative government. Schneider invokes this lineage to argue that online spaces could serve a similar role, but currently fail to because their governance designs do not provide meaningful self-governance. The tradition runs from Tocqueville through Dewey and Freire to contemporary cooperative and movement practice.",
     "see_also": [
-      "governable-space",
-      "implicit-feudalism",
-      "modular-politics"
+      "everyday-democracy",
+      "democratic-erosion",
+      "governable-space"
     ],
     "source_chapter": "Introduction",
-    "source_quote": "I think we can build what Ivan Illich called 'tools for conviviality'—tools that support 'autonomous and creative intercourse among persons, and the intercourse of persons with their environment.' Convivial tools are ones that invite us to be creative and responsible, rather than deferring responsibility to someone else."
+    "source_quote": "Civil associations, therefore, facilitate political association: but, on the other hand, political association singularly strengthens and improves associations for civil purposes."
   },
   {
-    "term": "Design Justice",
-    "definition": "A framework, crystallized by Sasha Costanza-Chock and rooted in the Allied Media Projects / Grace Lee Boggs tradition in Detroit, insisting that design MUST occur through rigorous accountability to the people whose lives it will shape. Schneider positions design justice as a necessary complement to his own democratic-design agenda: governable spaces MUST enable communities to craft and practice that accountability, not merely receive governance structures designed elsewhere.",
+    "term": "Governance Archaeology",
+    "definition": "An approach Schneider names as complementary to modular politics: learning from the breadth of human governance experience across history and cultures, treating past and present arrangements as a living archive of tested mechanisms. Analogous to media archaeology's insistence that the past still lurks in the present, governance archaeology surfaces precedents and design possibilities that declarations of digital novelty tend to obscure.",
     "see_also": [
-      "governable-space",
       "modular-politics",
-      "governance-archaeology"
+      "governable-stack",
+      "democratic-design"
     ],
     "source_chapter": "Introduction"
+  },
+  {
+    "term": "Political Skills",
+    "definition": "A capacity, following Philip E. Agre, that healthier democratic politics requires cultivating—the practical human abilities needed to participate in, design, and sustain self-governing arrangements. Schneider contrasts political skills with the deskilling effect of dominant platform design, arguing that online spaces should be reoriented from deskilling to political-skills development. Political skills are both a goal of governable-space design and a prerequisite for exercising it.",
+    "see_also": [
+      "everyday-democracy",
+      "democratic-erosion",
+      "governable-space"
+    ],
+    "source_chapter": "Introduction",
+    "source_quote": "I will follow, for instance, Philip E. Agre's call, at the enigmatic end of his career as an engineer and humanist, for the cultivation of 'political skills.'"
   },
   {
     "term": "Artifacts Have Politics",
-    "definition": "Langdon Winner's canonical claim, adopted by Schneider, that technological artifacts are not politically neutral — their design encodes power relations. Schneider applies it to online social spaces: the interfaces and administrative features of platforms organize who has power over whom. Counter-democratic outcomes in online life arise not solely from bad actors but from the political affordances baked into dominant tool designs. This framing grounds Schneider's insistence that changing democratic outcomes requires changing the tools themselves.",
+    "definition": "Langdon Winner's canonical observation, adopted by Schneider, that technological artifacts are not politically neutral but embed and enact particular power structures and social possibilities. Schneider applies this to online social spaces: their dominant design patterns make autocratic flows of power easy and democratic self-governance unnecessarily hard—not primarily because of the people who use them but because of the tools and the economies that reinforce those tools.",
     "see_also": [
       "implicit-feudalism",
-      "convivial-tools",
-      "modular-politics"
+      "democratic-design",
+      "deep-mediatization"
     ],
     "source_chapter": "Introduction",
-    "source_quote": "Democratic self-governance is far harder than it needs to be in online spaces, and autocratic flows of power arise easily—not so much because of the people as because of the tools and the economies that reinforce them. Different tool designs can make self-governance easier to practice and improve. To borrow the canonical phrasing of Langdon Winner, who tangled with determinism too, these artifacts have politics."
+    "source_quote": "To borrow the canonical phrasing of Langdon Winner, who tangled with determinism too, these artifacts have politics."
   },
   {
-    "term": "Fractal Politics",
-    "definition": "adrienne maree brown's insight, adopted by Schneider, that ordinary interactions at intimate scales — friends in a group chat, neighbors in a community garden — shape the possibilities of politics at the largest scales, analogously to how fractals reproduce their pattern at every level of magnification. For Schneider, fractal politics is both an analytical lens (small online governance matters for national democracy) and a design imperative (governable spaces at small scales are building blocks of democratic power).",
+    "term": "Deep Mediatization",
+    "definition": "Andreas Hepp's concept, adopted by Schneider, that all elements of social life have become intricately interwoven with digital media and their infrastructures, such that algorithms, data aggregation, and interface designs do not merely communicate but actively reshape society and its power figurations. Schneider uses it to argue that democratic self-governance cannot emerge in not-especially-democratic media environments, making the redesign of those environments a prerequisite for democratic renewal.",
+    "see_also": [
+      "artifacts-have-politics",
+      "implicit-feudalism",
+      "governable-space"
+    ],
+    "source_chapter": "Introduction",
+    "source_quote": "If society has become so thoroughly mediated, how could we expect democracy to emerge in not-especially-democratic media?"
+  },
+  {
+    "term": "Tools for Conviviality",
+    "definition": "Ivan Illich's concept, invoked by Schneider, for tools that support 'autonomous and creative intercourse among persons, and the intercourse of persons with their environment'—tools that invite creativity and responsibility rather than deferring responsibility to someone else. Schneider holds this as a standard for governable-space design, while noting Illich's warning that achieving conviviality requires inverting the present deep structure of tools, not merely layering democratic features onto existing ones.",
+    "see_also": [
+      "democratic-design",
+      "governable-space",
+      "political-skills"
+    ],
+    "source_chapter": "Introduction",
+    "source_quote": "I think we can build what Ivan Illich called 'tools for conviviality'—tools that support 'autonomous and creative intercourse among persons, and the intercourse of persons with their environment.'"
+  },
+  {
+    "term": "Fractal Democracy",
+    "definition": "A metaphor drawn from adrienne maree brown's reading of Boggs and systems biology: ordinary interactions among loved ones and neighbors shape the possibilities of politics at the largest scales, just as fractals repeat their patterns across scales. Schneider uses it to argue that intimate online governable spaces are not merely peripheral to democratic politics but constitutive of it—the texture of small-scale self-governance is reproduced at higher levels.",
     "see_also": [
       "everyday-democracy",
-      "spillover-effects-civic",
+      "tocquevillian-association",
       "governable-space"
     ],
     "source_chapter": "Introduction",
     "source_quote": "Like fractals, people's ordinary interactions with loved ones and neighbors shape the possibilities of politics at the largest scales."
   },
   {
-    "term": "Political Skills",
-    "definition": "Philip Agre's concept, foregrounded by Schneider, that healthier democratic politics must begin and end with cultivated human practices of deliberation, accountability, and self-governance — not merely better algorithms or platform policies. Schneider pairs political skills with a critique of 'deskilling': dominant online design atrophies these capacities by removing meaningful governance from users' hands. Reorienting online spaces toward governability is, in this frame, an educational as much as a technical project.",
-    "see_also": [
-      "everyday-democracy",
-      "implicit-feudalism",
-      "convivial-tools"
-    ],
-    "source_chapter": "Introduction"
-  },
-  {
     "term": "Metagovernance Project",
-    "definition": "A community of research and practice, co-founded and led by Schneider, dedicated to advancing self-governance in online spaces. It functions as the collaborative intellectual context for the book, producing co-authors, co-investigators, co-developers, and co-critics. Schneider explicitly frames the book as an argument for the value of what the Metagovernance Project does collectively. Distinct from the concept of metagovernance (traversing plural governance environments), the Project is the institutional embodiment of that research agenda.",
+    "definition": "A community of research and practice that Schneider has helped lead, devoted to advancing the possibilities of self-governance in online spaces. It serves as the collaborative context in which many of the book's ideas were developed, tested with co-authors, co-investigators, co-developers, and co-critics. Schneider frames the book partly as an argument for the value of the work the Metagovernance Project collectively pursues.",
     "see_also": [
       "metagovernance",
-      "governable-space",
-      "modular-politics"
+      "modular-politics",
+      "governable-stack"
     ],
     "source_chapter": "Introduction"
-  },
-  {
-    "term": "Affective Voice",
-    "definition": "The appearance of freedom to speak out online — complaints, emotional expression, virality — without the instrumental power to compel binding change. Contrasted with effective voice: affective voice lets users be heard but leaves action entirely to those who hold administrative keys. Online platforms excel at enabling affective voice while systematically withholding effective voice.",
-    "see_also": [
-      "effective-voice",
-      "implicit-feudalism",
-      "exit-voice-distinction"
-    ],
-    "source_chapter": "Ch. 2",
-    "source_quote": "Affective voice can be heard in the maelstrom of online emotion and persuasion that flows so freely. It is at least the appearance of freedom; users can speak out and affirm each other into virality. But they must wait for admins or whoever else holds the keys to act on their complaints."
   },
   {
     "term": "Effective Voice",
-    "definition": "\"Individual or collective speech that brings about a binding effect according to transparent processes.\" The capacity to compel institutional change — voting out an admin, forming user unions, requiring moderators to follow rules — as distinct from mere complaint. Effective voice is largely absent for ordinary users under implicit feudalism, where exit remains the most forceful recourse.",
+    "definition": "Schneider's term (developed with Seth Frey) for speech or collective action that brings about a binding effect according to transparent processes — the instrumental power to change something, whether or not those holding authority agree. Distinguished from affective voice, effective voice includes capacities such as voting out an admin, forming user unions, or requiring moderators to follow rules. Under implicit feudalism, effective voice is largely absent for ordinary users, whose strongest recourse is exit.",
     "see_also": [
       "affective-voice",
-      "implicit-feudalism",
-      "exit-voice-distinction"
+      "exit-vs-voice",
+      "implicit-feudalism"
     ],
     "source_chapter": "Ch. 2",
     "source_quote": "Effective voice, meanwhile, is the voice that the peasants lack under feudalism, the instrumental power to change something, whether the nobles like it or not. We defined the effective sort of voice as 'individual or collective speech that brings about a binding effect according to transparent processes.'"
   },
   {
-    "term": "Benevolent Dictator for Life",
-    "definition": "A governance pattern, common in open-source software, in which a founder retains ultimate decision-making authority over a project indefinitely. Exemplified by Linus Torvalds (Linux) and Guido van Rossum (Python). Schneider frames it as implicit feudalism made explicit — a power vacuum left by the absence of formal governance, filled by founder authority. BDFL status is a cultural norm, not a structural necessity.",
+    "term": "Affective Voice",
+    "definition": "Schneider's term (developed with Seth Frey) for the appearance of freedom to speak out online — the maelstrom of emotion, complaint, and persuasion that flows freely on social platforms — without the instrumental power to change anything. Users can express themselves and affirm each other into virality, but must wait for admins or platform owners to act on their complaints. Affective voice is abundant under implicit feudalism; effective voice is not.",
+    "see_also": [
+      "effective-voice",
+      "exit-vs-voice",
+      "implicit-feudalism"
+    ],
+    "source_chapter": "Ch. 2"
+  },
+  {
+    "term": "Exit vs. Voice",
+    "definition": "Drawing on Albert O. Hirschman's classic distinction, Schneider applies the exit/voice framework to online community governance. Exit — leaving a community or platform — is the primary recourse available to users under implicit feudalism. Voice — the capacity to make change from within — is largely confined to affective expression. The social costs of exit often exceed their apparent technical simplicity, since leaving may mean losing friends, culture, or professional networks. Schneider argues that democratic community design favors voice-based mechanisms for greater commitment and stability.",
+    "see_also": [
+      "effective-voice",
+      "affective-voice",
+      "implicit-feudalism"
+    ],
+    "source_chapter": "Ch. 2"
+  },
+  {
+    "term": "Iron Law of Oligarchy",
+    "definition": "Sociologist Robert Michels's 1911 prediction that human societies naturally drift toward oligarchic rule. Schneider invokes it to argue that empirical studies finding nondemocratic outcomes in online communities may not reflect an iron sociological law so much as a preordained result of implicitly feudal software design. The tools' defaults — not human nature alone — nudge communities toward oligarchy.",
     "see_also": [
       "implicit-feudalism",
       "tyranny-of-structurelessness",
-      "power-vacuum"
+      "politics-of-no-politics"
     ],
     "source_chapter": "Ch. 2"
   },
   {
     "term": "Tyranny of Structurelessness",
-    "definition": "Jo Freeman's observation that the absence of explicit hierarchy does not produce equality but instead allows hidden, difficult-to-alter hierarchies — typically imported from external social forces — to dominate. Applied online by Zeynep Tufekci: 'The tyranny of structurelessness has merged with the tyranny of platforms.' Power vacuums in software design are reliably filled by implicit feudalism rather than democratic self-organization.",
+    "definition": "Feminist activist Jo Freeman's observation — first written for early-1970s feminist 'rap groups' — that the absence of an explicit hierarchy frequently produces a hidden, difficult-to-alter hierarchy imported from external social forces. Schneider applies it to online communities, quoting Zeynep Tufekci: 'The tyranny of structurelessness has merged with the tyranny of platforms.' Power vacuums left by software designs tend to be filled by implicit feudalism, reinforcing existing social hierarchies.",
     "see_also": [
       "implicit-feudalism",
-      "benevolent-dictator-for-life",
+      "iron-law-of-oligarchy",
       "do-ocracy"
     ],
     "source_chapter": "Ch. 2",
-    "source_quote": "As feminist activist and scholar Jo Freeman famously observed, a 'tyranny of structurelessness' frequently arises — one in which the absence of an explicit hierarchy in a system results in a hidden, difficult-to-alter hierarchy imported from external social forces."
+    "source_quote": "As Zeynep Tufekci puts it, 'The tyranny of structurelessness has merged with the tyranny of platforms.' If groups do not develop intentional 'democratic structuring,' Freeman argued, informal power structures will form, usually reinforcing existing hierarchies and privilege."
+  },
+  {
+    "term": "Benevolent Dictator for Life",
+    "definition": "A governance title used informally — and sometimes formally — for founders of open-source software projects who retain ultimate decision-making authority indefinitely, regardless of community size or complexity. Linus Torvalds (Linux) and Guido van Rossum (Python) are canonical examples. Schneider argues the BDFL pattern illustrates how implicit feudalism fills the power vacuums left by open-source communities' avoidance of explicit governance, producing a culture of explicit dictatorship more as a result of omission than ideology.",
+    "see_also": [
+      "implicit-feudalism",
+      "sysop-absolutism",
+      "do-ocracy",
+      "tyranny-of-structurelessness"
+    ],
+    "source_chapter": "Ch. 2"
+  },
+  {
+    "term": "Sysop Absolutism",
+    "definition": "The governance norm originating in bulletin board systems (BBSes) wherein the system operator — who physically hosted the community on their own computer — exercised total authority over users, policies, and community existence. As media historian Kevin Driscoll notes, sysops were 'the makers and enforcers of social policy,' with the ultimate power to pull the plug. Schneider traces sysop absolutism as a formative precursor to implicit feudalism across later platforms.",
+    "see_also": [
+      "implicit-feudalism",
+      "benevolent-dictator-for-life",
+      "bbs-governance"
+    ],
+    "source_chapter": "Ch. 2",
+    "source_quote": "They were the makers and enforcers of social policy. Ultimately, the sysop possessed a form of total authority because they lived under the same roof as the host PC. In a moment of frustration, the sysop could always pull the plug and shut down the whole system."
   },
   {
     "term": "Do-ocracy",
-    "definition": "The informal norm in open-source and commons-based communities that authority accrues to whoever does the work. Schneider critiques do-ocracy as a failure to recognize that not everyone has equal free time, knowledge, or incentives to participate — making it a mechanism that reinforces existing privilege rather than producing genuine democratic self-governance. Power vacuums framed as do-ocracy can produce the most entrenched feudalism of all.",
+    "definition": "The notion, common in open-source and hacker cultures, that anyone can contribute to and co-govern a project by virtue of simply doing the work. Schneider critiques do-ocracy as failing to recognize that not everyone is equally equipped with free time, knowledge, and incentives to participate. It obscures power structures and can produce the most entrenched feudalism of all by leaving power vacuums for informal hierarchies to fill.",
     "see_also": [
       "tyranny-of-structurelessness",
       "implicit-feudalism",
@@ -248,266 +276,339 @@ export const GLOSSARY: GlossaryTerm[] = [
     "source_chapter": "Ch. 2"
   },
   {
-    "term": "Exit-Voice Distinction",
-    "definition": "Albert O. Hirschman's framework distinguishing exit (departing — choosing another platform or creating a new community) from voice (making change from within). Under implicit feudalism, exit is the primary recourse for dissatisfied users, while effective voice is largely absent. Schneider and Seth Frey refine this into affective vs. effective voice to capture why online complaint feels empowering but rarely compels binding change.",
-    "see_also": [
-      "affective-voice",
-      "effective-voice",
-      "implicit-feudalism"
-    ],
-    "source_chapter": "Ch. 2"
-  },
-  {
     "term": "Democracy Theatre",
-    "definition": "Performative democratic gestures by platform companies that simulate participation while structurally ensuring outcomes remain controlled by owners. Exemplified by Facebook's 2009 user referendum on its terms of service, which set a quorum of 30% of over 1 billion users — a threshold equivalent to the entire US population — virtually guaranteeing non-binding results, after which the company proceeded with changes regardless.",
+    "definition": "Schneider's term for platform-run consultative or voting processes that carry the appearance of democratic participation but are structured to be non-binding or practically unachievable. The paradigm case is Facebook's 2009 user referendum on terms-of-service changes, which required 30 percent of over one billion users to participate for the vote to be binding — a threshold equivalent to the entire US population. When participation fell far below that threshold, the company declared the vote 'advisory' and proceeded as planned.",
     "see_also": [
       "implicit-feudalism",
       "affective-voice",
-      "iron-law-of-oligarchy"
-    ],
-    "source_chapter": "Ch. 2",
-    "source_quote": "Facebook has meanwhile engaged in 'democracy theatre,' such as its 2009 user referendum on proposed changes to its terms of service. For users' votes to be binding, the company stipulated that 30 percent of its over 1 billion users at the time would need to participate."
-  },
-  {
-    "term": "Iron Law of Oligarchy",
-    "definition": "Sociologist Robert Michels's 1911 prediction that human societies naturally drift toward rule by a small elite regardless of democratic intentions. Schneider argues that empirical studies confirming oligarchic outcomes in online communities are not evidence of an iron sociological law but artifacts of implicit feudalism — feudal software designs make oligarchy appear preordained by foreclosing democratic alternatives.",
-    "see_also": [
-      "implicit-feudalism",
-      "tyranny-of-structurelessness",
-      "affective-voice"
-    ],
-    "source_chapter": "Ch. 2"
-  },
-  {
-    "term": "Commons-Based Peer Production",
-    "definition": "Yochai Benkler's term for users coming together online as peers to collaborate on shared projects — most notably Free/Open Source software and Wikipedia. Schneider acknowledges its democratic promise while arguing that democracy is only occasionally part of the process: most commons-based peer production operates under implicit feudalism, power vacuums, or benevolent dictators rather than genuinely inclusive governance.",
-    "see_also": [
-      "implicit-feudalism",
-      "benevolent-dictator-for-life",
-      "tyranny-of-structurelessness"
+      "effective-voice"
     ],
     "source_chapter": "Ch. 2"
   },
   {
     "term": "Mixed Constitution",
-    "definition": "The principle, argued for in antiquity and embedded in the US separation of powers, of combining different power structures — electoral processes, meritocratic barriers, collective boards, autonomous units — into a single governance system. Schneider applies it to online communities: Debian combines elections with meritocratic onboarding; Usenet combines shared board governance with newsgroup autonomy. Mixed constitutions help prevent any one entity from becoming too powerful and create pathways for users with heterogeneous skills.",
+    "definition": "The governance design principle — argued for in antiquity and adopted as 'separation of powers' in the US Constitution — of combining different power structures within a single community or organization to prevent any one entity from becoming too powerful and to enable participants with heterogeneous skill sets to find effective voice. Schneider cites Debian and Wikipedia as online examples combining electoral processes with meritocratic barriers, and Usenet as combining shared board governance with newsgroup autonomy.",
     "see_also": [
       "implicit-feudalism",
+      "effective-voice",
       "debian-governance",
-      "governance-diversity"
+      "wikipedia-governance"
     ],
     "source_chapter": "Ch. 2"
   },
   {
-    "term": "Sysop Absolutism",
-    "definition": "The governance norm originating with bulletin board system operators (sysops) in which the owner of the hardware exercises total authority over the virtual community — setting rules, censoring users, and able to terminate the system entirely. Sysop absolutism is the founding instance of implicit feudalism, rooted in legal liability concerns over content posted on privately owned machines. It established the template later inherited by email-list admins, IRC chanops, and platform moderators.",
+    "term": "Conway's Law",
+    "definition": "A celebrated truism in software development holding that technical systems tend to resemble the communication structures of the organizations that create them. Schneider inverts it to observe that among companies like Facebook and Reddit, the influence has run the other way: the communication structures of technical systems — specifically implicit feudalism — informed what seemed plausible and practical for the architecture of corporations, as the feudal power structure migrated from online communities to the boardroom.",
     "see_also": [
       "implicit-feudalism",
-      "bbs-governance",
-      "exit-voice-distinction"
-    ],
-    "source_chapter": "Ch. 2"
-  },
-  {
-    "term": "Governance Diversity",
-    "definition": "The condition in which multiple governance logics — feudal, democratic, meritocratic, corporate — coexist in layered or complementary roles across a software ecosystem or community landscape. Schneider argues governance diversity is more realistic and productive than wholesale replacement of feudalism with democracy: different forms serve different purposes (exit-based designs produce variety; voice-based designs produce stability), and they work best in concert rather than as substitutes.",
-    "see_also": [
-      "mixed-constitution",
-      "exit-voice-distinction",
-      "implicit-feudalism"
+      "politics-of-no-politics"
     ],
     "source_chapter": "Ch. 2"
   },
   {
     "term": "CommunityRule",
-    "definition": "A web application that enables users to interactively design, publish, and fork community governance rules using drag-and-drop governance modules. Developed through consultations with mutual-aid groups and open-source communities during the COVID-19 pandemic, CommunityRule offers configurable templates and a public library of rules. It embodies the principle that democratic communities MUST have accessible ways to describe and share their governance arrangements — countering implicit feudalism, which thrives in the absence of explicit rules that admin power then fills.",
+    "definition": "A web application developed by Schneider and collaborators that allows users to interactively design, publish, and fork governance rules for online communities. Its drag-and-drop governance modules can be nested and configured, and a public library enables rule-sharing and forking. CommunityRule emerged from consultations with COVID-19-era mutual aid groups and open-source software communities, and is premised on the idea that implicit feudalism thrives in the absence of explicit rules — making visible governance design a democratic countermeasure.",
     "see_also": [
       "implicit-feudalism",
       "modular-politics",
-      "governance-diversity",
-      "tyranny-of-structurelessness"
+      "governable-space",
+      "governance-archaeology"
     ],
     "source_chapter": "Profile: CommunityRule",
     "source_quote": "Implicit feudalism thrives on an absence of rules; admin power fills the void. More democratic communities need ways to describe the rules they want to use. CommunityRule is an attempt to imagine interfaces that make governance arrangements easy to design and understand."
   },
   {
+    "term": "Governance Modules",
+    "definition": "Composable, configurable building blocks within CommunityRule that users drag, drop, nest, and customize to construct a community's governance design. The modular approach reflects Schneider's broader commitment to modular politics — the idea that democratic governance primitives can be assembled and recombined rather than adopted wholesale from a single rigid template.",
+    "see_also": [
+      "modular-politics",
+      "communityrule",
+      "governable-space"
+    ],
+    "source_chapter": "Profile: CommunityRule"
+  },
+  {
+    "term": "Rule Forking",
+    "definition": "A practice embedded in CommunityRule's public library whereby any published community governance ruleset can be copied and modified by another community to produce a new, adapted ruleset. Rule forking borrows the open-source software concept of forking codebases and applies it to governance design, enabling iterative, community-driven evolution of democratic rules without requiring each group to start from scratch.",
+    "see_also": [
+      "communityrule",
+      "governance-modules",
+      "modular-politics"
+    ],
+    "source_chapter": "Profile: CommunityRule"
+  },
+  {
     "term": "Californian Ideology",
-    "definition": "A term coined by Barbrook and Cameron (1995) for Silicon Valley's faith that greater volumes of information and connection, fueled by capitalism, would automatically produce flourishing democracy—transcending old left/right partisanship through entrepreneurialism. Schneider extends it from political economy to micropolitics: the ideology encodes homesteading habits and implicit feudalism into everyday software, training users in deference to fixed authority rather than democratic accountability.",
+    "definition": "A term coined by Richard Barbrook and Andy Cameron (1995) for the faith, dominant in Silicon Valley, that greater volumes of information and connection fueled by capitalism would automatically produce flourishing democracy — dissolving the old partisanship of left and right through entrepreneurial optimism. Schneider argues this ideology encodes a 'politics of no-politics' into platform design, inscribing homesteading habits and implicit feudalism into everyday online life while disowning the authoritarian outcomes that follow.",
     "see_also": [
       "politics-of-no-politics",
       "implicit-feudalism",
       "homesteading-metaphor",
-      "exit-as-democracy-substitute"
+      "exit-as-democracy"
     ],
     "source_chapter": "Ch. 5",
-    "source_quote": "The agenda of this chapter is to revisit the politics of no-politics that Barbrook and Cameron diagnosed—the culture that, according to Fred Turner, 'turned away from political action and toward technology.' ... Here I turn from political economy to the micropolitics of everyday online life: how implicit feudalism encoded certain imaginations of social order into software designs, which users far from California have decoded into a neo-feudal politics."
+    "source_quote": "the Californian ideology inscribed the habits of homesteading—a legacy so familiar, nostalgic, and violent in the American West—into the practice of online communities. Everyday experience with Californian technologies has thereby contributed to hollowing out the rudiments of democratic culture, especially the skills and habits of accountable association."
   },
   {
     "term": "Homesteading Metaphor",
-    "definition": "The organizing cultural logic—drawn from the US Homestead Acts of 1862 onward—that early internet boosters (Rheingold, GeoCities, Ethereum's 'Frontier'/'Homestead' releases) applied to online space. For Schneider, homesteading MUST NOT be read as merely nostalgic: it encodes property, patriarchy, and the erasure of prior occupants. It frames platform-building as rightful settlement of virgin territory, naturalizing feudal governance within each claimed plot while invoking democratic aspiration outward.",
+    "definition": "Schneider traces the 'homesteading' and 'frontier' metaphors — introduced to online culture via Howard Rheingold's subtitle 'Homesteading on the Electronic Frontier' and embedded in platforms like GeoCities and early Ethereum — back to the violent US Homestead Acts of 1862. The metaphor encodes a specific politics: bounded private domains whose owner is sovereign within them, democratic participation earned through that local absolutism, and the erasure of prior occupants. Schneider argues this tradition shaped the implicit feudalism of platform governance.",
     "see_also": [
-      "californian-ideology",
       "implicit-feudalism",
-      "politics-of-no-politics",
-      "exit-as-democracy-substitute"
+      "californian-ideology",
+      "exit-as-democracy",
+      "homeplace"
     ],
     "source_chapter": "Ch. 5",
-    "source_quote": "I argue that the Californian ideology inscribed the habits of homesteading—a legacy so familiar, nostalgic, and violent in the American West—into the practice of online communities. Everyday experience with Californian technologies has thereby contributed to hollowing out the rudiments of democratic culture, especially the skills and habits of accountable association."
+    "source_quote": "Homesteading became enshrined in US law with the first Homestead Act in 1862... the homestead doctrine was to be a parceling-out of democratic ownership—democratic in the sense of personal, private, and widely available, but with a feudalism inscribed inside. Within the homestead, the male citizen was sovereign over his family, and through his dominion he became a democratic subject on his visits to town."
   },
   {
     "term": "Homeplace",
-    "definition": "bell hooks's concept of a site of resistance—a space where marginalized people, especially Black women, could be subjects rather than objects, affirmed in mind and heart despite broader oppression. Schneider adapts it to online life: homeplaces emerge within feudally designed platforms when communities build care, solidarity, and resistance beyond the knowledge of platform owners. Homeplaces are fragile and ephemeral; the hard-coded power of admins and CEOs outlasts them.",
+    "definition": "Drawing on bell hooks, Schneider defines the homeplace as a 'site of resistance' — a space, often created by marginalized people within or against an oppressive society, where participants can be affirmed as subjects rather than objects and where power is shared rather than dominated. Online homeplaces form a counter-tradition to the homesteading machine: they arise because of and despite feudal platform designs, through affective solidarity among participants, and are never fully in the code.",
     "see_also": [
       "homesteading-metaphor",
       "implicit-feudalism",
-      "political-skills",
-      "everyday-politics"
+      "californian-ideology",
+      "politics-of-no-politics"
     ],
     "source_chapter": "Ch. 5",
-    "source_quote": "Black women resisted by making homes where all black people could strive to be subjects, not objects, where we could be affirmed in our minds and hearts. ... There are elements of the homeplace in many online spaces, in what people have made with the Californian ideology's products, constructing sites of resistance again and again, beyond the knowledge or comprehension of the technologists and executives."
+    "source_quote": "Black women resisted by making homes where all black people could strive to be subjects, not objects, where we could be affirmed in our minds and hearts."
   },
   {
-    "term": "Exit as Democracy Substitute",
-    "definition": "The Californian ideology's substitution of the ability to leave a community for genuine democratic self-governance. Schneider identifies this as a core justificatory move: if a community is exit-able, it is deemed sufficiently democratic. This logic appears across scales—startup 'exit' for investors, Burning Man's temporary co-creation, Musk's Mars colony pitch. It MUST NOT be accepted as democratic legitimation: exit without voice or ownership is feudal, not democratic.",
+    "term": "Exit as Democracy",
+    "definition": "Schneider identifies 'exit' as the implicit democratic justification of implicit feudalism in Californian ideology: if a community or platform is exit-able, that is treated as sufficient to call it democratic. Exit is exalted at multiple registers — cultural (Burning Man), business (startup acquisition), political (seasteading, Mars colonization) — substituting the freedom to leave for the freedom to govern. Schneider argues this logic rebrands feudal governance as democracy while foreclosing the development of genuine political skills.",
     "see_also": [
       "californian-ideology",
+      "implicit-feudalism",
       "homesteading-metaphor",
-      "exit-voice-distinction",
-      "implicit-feudalism"
+      "politics-of-no-politics"
     ],
     "source_chapter": "Ch. 5",
     "source_quote": "Exit has assumed an exalted place in Californian thinking. The availability of exit became the implicit justification of implicit feudalism: if a community is exit-able, that is enough to call it democratic."
   },
   {
     "term": "Soteriology of the Californian Ideology",
-    "definition": "Schneider's theological framing for Silicon Valley's salvific promise: just as Anselm of Canterbury mapped feudal hierarchy onto a cosmic order of salvation, the Californian ideology offers an 'electronic marketplace' and 'electronic agora' as a bloodless, democratic revolution that investors can profit from enabling. The QAnon movement, Islamic State caliphate, and Curtis Yarvin's monarchism are all decoded expressions of this salvific logic—salvation through ceding power to the sysadmin.",
+    "definition": "Schneider borrows the theological term 'soteriology' (the doctrine of salvation) to name the quasi-religious endgame embedded in the Californian ideology: a promise that frictionless electronic markets and limitless speech would deliver a bloodless democratic revolution, wiping away analog troubles. He traces this salvific imagination through The WELL, the Arab Spring, QAnon, the Islamic State's utopian media, and Curtis Yarvin's monarchism — each decoding the Californian template into a feudal order in which salvation comes from submitting to the sysadmin.",
     "see_also": [
       "californian-ideology",
       "implicit-feudalism",
       "politics-of-no-politics",
-      "homesteading-metaphor"
+      "exit-as-democracy"
     ],
     "source_chapter": "Ch. 5"
   },
   {
-    "term": "Everyday Politics",
-    "definition": "Benedict Kerkvliet's concept—adopted by Schneider—of how people embrace, comply with, adjust, and contest norms of authority through quiet, mundane, and subtle acts rarely organized or direct. For Schneider, everyday online interactions with implicitly feudal platforms constitute everyday politics that trains users in deference to fixed authority. Conversely, everyday practice in democratic spaces can cultivate the political skills that scale into larger democratic culture.",
+    "term": "Doctrine of Discovery (Digital)",
+    "definition": "Schneider draws an analogy between the colonial 'doctrine of discovery' — the theological-political principle that Christian settlers could assert title over non-Christian lands they conquered — and the logic by which Californian platform founders claim virgin 'frontier' territory online. Just as the doctrine underwrote homesteading on Indigenous lands, the digital variant underwrites the founding of platform fiefdoms on social terrain whose prior occupants and governance traditions are rendered invisible.",
     "see_also": [
-      "political-skills",
-      "fractal-politics",
-      "homeplace",
+      "homesteading-metaphor",
+      "californian-ideology",
       "implicit-feudalism"
     ],
     "source_chapter": "Ch. 5"
   },
   {
-    "term": "Issue Lattice",
-    "definition": "Philip Agre's mathematical-political concept of a lattice structure across four dimensions—vertical (national to international), geographic (local to global), institutional (one to many institutions), and ideological (one to many commitments)—along which political skills cascade across society. A healthy democracy requires skills exercised at all nodes. Schneider uses it alongside adrienne maree brown's fractals to argue that democratic practices at small scales are constitutive of democracy at large scales.",
+    "term": "Everyday Politics (Kerkvliet)",
+    "definition": "Schneider draws on Benedict Kerkvliet's concept of 'everyday politics' — people embracing, complying with, adjusting, and contesting norms and rules regarding authority in quiet, mundane, and subtle acts that are rarely organised or direct — to frame how daily platform interactions uphold or unravel reigning regimes. What looks like the opposite of politics may carry world-historical freight, making ordinary online behavior a site of potential resistance or feudal reproduction.",
     "see_also": [
+      "politics-of-no-politics",
+      "fractal-democracy",
       "political-skills",
-      "fractal-politics",
-      "everyday-politics"
+      "homeplace"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_quote": "Everyday politics involves people embracing, complying with, adjusting, and contesting norms and rules regarding authority over, production of, or allocation of resources and doing so in quiet, mundane, and subtle expressions and acts that are rarely organised or direct."
+  },
+  {
+    "term": "Issue Lattice",
+    "definition": "Philip Agre's mathematical-political concept, adopted by Schneider, describing how political skills developed at small scales cascade across four intersecting dimensions of social life: vertical (national to international), geographic (local to global), institutional (one institution to many), and ideological (one commitment to networks of commitments). The lattice functions analogously to adrienne maree brown's fractals — both frame everyday democratic practice as the micro-structural basis of macro-political health.",
+    "see_also": [
+      "fractal-democracy",
+      "political-skills",
+      "everyday-politics-kerkvliet"
     ],
     "source_chapter": "Ch. 5"
   },
   {
-    "term": "Deep Mediatization",
-    "definition": "The condition in which media become inseparable from the practice of social life and the production of culture. Schneider invokes it to explain how online spaces' implicit feudalism is not merely a technical feature but a formative social environment that shapes political imagination, religious sensibility, and governance expectations at every scale—from the household to the nation-state.",
+    "term": "Community Self-Recognition",
+    "definition": "Schneider's observation that governance is not only about holding power and making decisions — before a community can begin to self-govern, it first needs to see itself as a community, through participants telling stories about themselves and having shared experiences. This collective self-recognition is a prerequisite for any meaningful democratic self-governance of an online public.",
     "see_also": [
-      "californian-ideology",
-      "implicit-feudalism",
-      "everyday-politics"
-    ],
-    "source_chapter": "Ch. 5"
-  },
-  {
-    "term": "People's History Method",
-    "definition": "A community-memory practice in which participants collectively narrate their lived experiences of a platform or institution as a precondition for self-governance. Schneider uses it to argue that a community MUST first see itself as a community—through shared storytelling—before it can begin to govern itself. The 'A People's History of Twitter' event (March 2023) operationalized this: collecting accounts of Twitter's social value to ground demands for democratic accountability and articulate expectations for what should come next.",
-    "see_also": [
-      "governance-archaeology",
-      "affective-voice",
+      "governable-space",
+      "democratic-mediation",
       "everyday-democracy",
-      "citizen-assembly"
+      "affective-voice"
     ],
     "source_chapter": "Profile: A People's History of Twitter",
     "source_quote": "Governance is not just about holding power and making decisions. Before a community can begin to self-govern, it needs to see itself as a community—through participants telling stories about themselves and having shared experiences."
   },
   {
-    "term": "Shadow Government (Platform)",
-    "definition": "An experimental governance structure in which users of a platform—organized outside official corporate structures—deliberate and issue proposals as if they held legitimate authority over the platform. Schneider describes the Twitter project as a step toward a 'shadow government' that could devise an alternative future for the platform, drawing on citizen-assembly methods to make representative user governance legible and actionable, even absent formal ownership or legal standing.",
+    "term": "Shareholder Proposal as Decommodification Strategy",
+    "definition": "A tactic Schneider and collaborators employed in 2017 at Twitter: filing a shareholder proposal aimed at decommodifying a platform company by establishing a framework for users to become owners. Schneider treats this as one strategy within a broader repertoire for contesting the commodification of online civic space, distinct from but related to public-option and platform-cooperative approaches.",
     "see_also": [
-      "citizen-assembly",
-      "peoples-history-method",
+      "implicit-feudalism",
       "platform-cooperative",
-      "democratic-mediation"
+      "governable-stack",
+      "exit-vs-voice"
     ],
     "source_chapter": "Profile: A People's History of Twitter"
   },
   {
+    "term": "People's History Method",
+    "definition": "A community-organizing and governance-design methodology Schneider's team applied to Twitter after Musk's acquisition: gathering collective oral and digital histories of users' lived experiences with a platform as a foundation for articulating normative expectations and democratic alternatives. The method borrows the 'people's history' frame from radical historiography, treating users' accumulated memories and grievances as the legitimate basis for claims about what a platform owes its public.",
+    "see_also": [
+      "community-self-recognition",
+      "governance-archaeology",
+      "democratic-mediation",
+      "affective-voice"
+    ],
+    "source_chapter": "Profile: A People's History of Twitter",
+    "source_quote": "This collective history provides a foundation for articulating expectations about what should come next—what people have loved about Twitter, and what they hated, what the company did right, and how it betrayed us."
+  },
+  {
+    "term": "Shadow Government (Platform)",
+    "definition": "An experimental governance form Schneider's team considered for Twitter post-Musk: a representative shadow assembly of users that would devise and deliberate on an alternative future for a platform whose formal governance has been captured by a single owner. Grounded in citizen-assembly design practices drawn from government contexts, a shadow government articulates what democratic platform governance could look like even when it holds no formal power.",
+    "see_also": [
+      "democratic-mediation",
+      "metagovernance",
+      "fractal-democracy",
+      "community-self-recognition"
+    ],
+    "source_chapter": "Profile: A People's History of Twitter"
+  },
+  {
+    "term": "Platform as Commodity vs. Common Good",
+    "definition": "A central tension Schneider identifies in the Twitter/X case: social-media platforms that function as online civic spaces are legally structured as commodities that can be bought and sold, yet users experience and depend on them as commons or public goods. Musk's $44 billion acquisition made this tension viscerally legible by demonstrating that an entire public sphere infrastructure could change hands overnight, severing users from governance without recourse.",
+    "see_also": [
+      "implicit-feudalism",
+      "governable-stack",
+      "sysop-absolutism",
+      "exit-vs-voice"
+    ],
+    "source_chapter": "Profile: A People's History of Twitter",
+    "source_quote": "When Elon Musk acquired the social-media platform Twitter for $44 billion in October 2022, it was a stark reminder to many people that our online civic spaces are commodities that can be bought and sold."
+  },
+  {
     "term": "Abolition Democracy",
-    "definition": "Coined by W. E. B. Du Bois and extended by Angela Davis, abolition democracy means rendering oppressive institutions (slavery, then policing and prisons) finally obsolete by ensuring formerly excluded people gain full democratic participation—voting rights, cooperative economic power, education, and co-governance capacity. For Schneider, it is a transcendent political orientation that links transformative justice to the design of governable online spaces: abolition is never merely a negation but a positive project of democratic institution-building.",
+    "definition": "A concept drawn from W. E. B. Du Bois and developed by Angela Davis: abolition is not merely the negation of prisons and police, but the affirmative construction of democratic institutions—voting rights, cooperative economic power, education, and community accountability processes—that make those punitive systems unnecessary. For transformative justice practitioners, abolition democracy names the horizon toward which community accountability work points: a society where people co-govern themselves rather than outsourcing order to state violence.",
     "see_also": [
       "transformative-justice",
-      "subsidiarity-online",
-      "implicit-feudalism",
-      "democratic-mediation"
+      "community-accountability",
+      "subsidiarity",
+      "implicit-feudalism"
     ],
     "source_chapter": "Ch. 4",
-    "source_quote": "Abolition is a fleshy and material presence of social life lived differently."
+    "source_quote": "For Davis, achieving abolition democracy means establishing the conditions in which police and prisons are no longer necessary, because more democratic practices have replaced them."
   },
   {
     "term": "Transformative Justice",
-    "definition": "A community-based practice for addressing harm and conflict without relying on state policing or punishment. Rather than charging and punishing individuals, transformative justice uses facilitated accountability processes—circles, dialogues, and community agreements—to repair harm, hold people responsible, and address root causes including wider structural injustices. Schneider presents it as a model of radical subsidiarity and a template for designing genuinely governable online spaces that can resolve conflict contextually rather than through automated, scalable enforcement.",
+    "definition": "A movement-based practice of addressing interpersonal harm and community conflict through participatory processes among affected people, rather than referral to state violence (police, courts, prisons). Transformative justice seeks not to punish but to repair harm and address its root causes, including wider structural injustices. Associated with organizers such as Mariame Kaba and adrienne maree brown, it treats community safety as a skill cultivated collectively, not a product delivered by institutions.",
     "see_also": [
-      "subsidiarity-online",
       "abolition-democracy",
-      "scalability-vs-subsidiarity",
-      "governable-space"
+      "community-accountability",
+      "subsidiarity",
+      "scalability-vs-subsidiarity"
     ],
     "source_chapter": "Ch. 4",
     "source_quote": "Instead of referring incidents of harm in a community to the arbiters of state violence, transformative justice equips community members to build their own skills for facilitating conflict resolution and accountability."
   },
   {
-    "term": "Scalability vs. Subsidiarity",
-    "definition": "A core diagnostic opposition in Schneider's framework. Scalability—the ability to expand indefinitely without rethinking basic elements—is the business model of corporate social media, producing context-blind, automated moderation and governance. Subsidiarity—a principle prioritizing appropriately local control within a larger system—is the alternative, enabling communities to develop processes appropriate to their own culture. Scalability optimizes for investor returns; subsidiarity optimizes for self-governance. Online spaces SHOULD adopt subsidiarity over scalability wherever community accountability is at stake.",
+    "term": "Community Accountability",
+    "definition": "A practice within transformative justice in which community members—rather than state institutions—facilitate processes of acknowledgment, responsibility, and repair when harm occurs. Processes are voluntary, context-sensitive, and conducted by trained facilitators; they may involve circles, dialogues, and collective strategies addressing structural conditions. Mariame Kaba and collaborators have documented and taught these methods as a form of community self-governance applicable wherever harm occurs, including online.",
     "see_also": [
       "transformative-justice",
-      "implicit-feudalism",
-      "federated-subsidiarity",
-      "governable-space"
+      "abolition-democracy",
+      "subsidiarity",
+      "scalability-vs-subsidiarity"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Scalability vs. Subsidiarity",
+    "definition": "A design contrast Schneider draws (with Amy Hasinoff) between two organizing logics for online platforms. Scalability—the dominant venture-capital model—seeks to expand without rethinking basic elements, imposing uniform global rules, algorithmic enforcement, and opaque moderation. Subsidiarity prioritizes appropriately local control wherever possible within a larger system, enabling communities to develop governance processes suited to their culture. Subsidiarity does not reject scale but composes it from governable, context-sensitive units.",
+    "see_also": [
+      "transformative-justice",
+      "community-accountability",
+      "subsidiarity",
+      "governable-space",
+      "implicit-feudalism"
     ],
     "source_chapter": "Ch. 4",
     "source_quote": "Taking inspiration from transformative justice activists, Hasinoff and I show how participant-centered systems can adopt subsidiarity: a principle that prioritizes appropriately local control wherever possible, within a larger system."
   },
   {
-    "term": "Cryptoeconomics",
-    "definition": "A synthesis of economic incentives with cryptographic technology, widely associated with Ethereum founder Vitalik Buterin. Cryptoeconomics designs systems that 'reduce social trust assumptions by creating systems where we introduce explicit economic incentives for good behavior and economic penalties for bad behavior.' Schneider acknowledges its generative potential for democratic experimentation while warning that if cryptoeconomics is the sole basis of governance, it reproduces plutocracy, crowds out non-economic values, and obscures externalities—ultimately requiring an enveloping layer of intentional democratic politics.",
-    "see_also": [
-      "dao",
-      "moloch-dao",
-      "quadratic-funding",
-      "plutocracy-in-crypto",
-      "soulbound-tokens"
-    ],
-    "source_chapter": "Ch. 4",
-    "source_quote": "Cryptoeconomics allows software 'to reduce social trust assumptions by creating systems where we introduce explicit economic incentives for good behavior and economic penalties for bad behavior.'"
-  },
-  {
-    "term": "Subsidiarity (Online)",
-    "definition": "The application of the theological-political principle of subsidiarity to online social spaces: governance decisions MUST be made at the most local level capable of handling them, within a larger accountable network. Federalist subsidiarity nests smaller units inside larger ones (e.g., Slack channels within workspaces); polycentric subsidiarity connects smaller units laterally (e.g., Mastodon servers). Online spaces SHOULD NOT rely solely on central platform-level rule-books and algorithmic enforcement when local community governance is feasible. Subsidiarity enables scale composed of spaces small enough to be governable.",
+    "term": "Subsidiarity",
+    "definition": "A governance principle—rooted in Calvinist and Catholic theology, incorporated into EU founding documents, and present across diverse social orders—holding that decisions and control should reside at the most local level appropriate, within larger supporting systems. For Schneider, subsidiarity is the democratic antidote to scalability: it enables scale composed of spaces small enough to be governable, with mutual help among communities constituting a larger whole. It applies in federalist (nested) and polycentric (lateral) forms.",
     "see_also": [
       "scalability-vs-subsidiarity",
-      "federated-subsidiarity",
-      "transformative-justice",
+      "governable-space",
+      "federalist-subsidiarity",
+      "polycentric-subsidiarity",
+      "transformative-justice"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Federalist Subsidiarity",
+    "definition": "A form of subsidiarity in which smaller governance units are nested within larger ones in a hierarchical structure—for example, a channel within a workspace within a corporate platform. Schneider contrasts this with polycentric subsidiarity, noting that even federalist online architectures like Slack contain some degree of local control, though implicit feudalism and corporate ownership limit participant self-governance at each level.",
+    "see_also": [
+      "subsidiarity",
+      "polycentric-subsidiarity",
+      "scalability-vs-subsidiarity"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Polycentric Subsidiarity",
+    "definition": "A form of subsidiarity in which smaller governance units are connected laterally across a network rather than nested in a hierarchy. Schneider cites email and Mastodon as examples: servers governed differently can interoperate, and communities have shown capacity for large-scale coordinated action—such as Mastodon instances blocking platforms friendly to white supremacists—without a central enforcer.",
+    "see_also": [
+      "subsidiarity",
+      "federalist-subsidiarity",
+      "scalability-vs-subsidiarity",
       "mastodon-federated-moderation"
     ],
     "source_chapter": "Ch. 4"
   },
   {
+    "term": "Cryptoeconomics",
+    "definition": "A synthesis of cryptographic technology with economic incentive design, widely associated with Ethereum founder Vitalik Buterin. Cryptoeconomics encodes rules for social and technical processes into software, using token-based carrots and penalties to enforce behavior without relying on state power. Schneider treats it as both an opportunity—enabling governance experimentation free from implicit feudalism—and a limitation, since pure cryptoeconomic governance risks plutocracy, suppression of non-economic values, and dangerous externalities.",
+    "see_also": [
+      "dao",
+      "moloch-dao",
+      "plutocracy-in-crypto",
+      "soulbound-tokens",
+      "implicit-feudalism"
+    ],
+    "source_chapter": "Ch. 4",
+    "source_quote": "Buterin puts it, cryptoeconomics allows software 'to reduce social trust assumptions by creating systems where we introduce explicit economic incentives for good behavior and economic penalties for bad behavior.'"
+  },
+  {
     "term": "Soulbound Tokens",
-    "definition": "A design paradigm proposed by Vitalik Buterin, borrowing from World of Warcraft nomenclature, for blockchain tokens that are non-transferable and remain with a specific user. Soulbound tokens represent an attempt to introduce personhood—identity, reputation, and non-economic stakes—into cryptoeconomic systems that otherwise reduce governance to token-holding. For Schneider, they signal crypto's growing recognition that democratic governance requires identifying and representing individual human beings, not just economic stakes.",
+    "definition": "A design concept proposed by Vitalik Buterin: non-transferable blockchain tokens that remain tied to a particular user rather than circulating as tradeable commodities. Soulbound tokens represent an attempt to reintroduce personhood—identity, relationship, history—into cryptoeconomic systems that otherwise recognize only economic stake. Schneider reads this as crypto's self-recognition that blockchains need to account for souls, not just wallets.",
     "see_also": [
       "cryptoeconomics",
+      "dao",
+      "plutocracy-in-crypto",
+      "identity-in-crypto"
+    ],
+    "source_chapter": "Ch. 4",
+    "source_quote": "Buterin... has called for a new design paradigm and mythology... soulbound. Soulbound tokens, for instance, are not exchangeable commodities but remain with a particular user. Blockchains, it seems, need to account for souls."
+  },
+  {
+    "term": "Plutocracy in Crypto",
+    "definition": "A chronic failure mode in cryptoeconomic governance in which decision-making power concentrates with the largest token-holders or most computationally powerful miners, reproducing wealth-based rule without the counter-pressures (progressive taxation, collective bargaining, antitrust) that states can impose on corporations. Schneider identifies plutocracy as the first and most direct limitation of governance grounded in economic stake rather than personhood.",
+    "see_also": [
+      "cryptoeconomics",
+      "dao",
+      "soulbound-tokens",
+      "implicit-feudalism"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Identity in Crypto",
+    "definition": "A persistent design challenge: blockchain protocols recognize users through cryptographic keys and token holdings rather than as individual persons. This makes personhood a constructed and contested concept in crypto governance, simultaneously enabling permissionless participation and frustrating democratic principles that require individual representation. Schneider treats the quest for identity in crypto—including soulbound tokens and integration with cooperative membership—as a precondition for genuine democratic structuring.",
+    "see_also": [
+      "cryptoeconomics",
+      "soulbound-tokens",
       "plutocracy-in-crypto",
       "dao"
     ],
@@ -515,64 +616,117 @@ export const GLOSSARY: GlossaryTerm[] = [
   },
   {
     "term": "Democratic Play",
-    "definition": "Schneider's concept, drawing on Huizinga's Homo Ludens and adrienne maree brown's politics of pleasure, that play—rule-governed activity set apart from ordinary life—is both a precondition and a medium for democratic experimentation. Political imagination requires the freedom to play with institutional forms: to test governance models, forge mythologies, and cultivate political skills in low-stakes rehearsal before high-stakes application. Communities SHOULD protect the right to play as a form of democratic self-governance; denying play is a mechanism of oppression.",
+    "definition": "Schneider's framing—drawing on Johan Huizinga's Homo Ludens and adrienne maree brown's pleasure activism—of the role of play, game, and creative exploration in cultivating the political skills democracy requires. Play within self-set rules is presented as the engine of cultural and institutional innovation; both transformative justice and cryptoeconomics are read as sites of democratic play, where participants rehearse and refine governance forms not yet dominant in existing institutions.",
     "see_also": [
       "political-skills",
-      "cryptoeconomics",
       "transformative-justice",
-      "fractal-politics"
+      "cryptoeconomics",
+      "fractal-democracy"
     ],
     "source_chapter": "Ch. 4",
     "source_quote": "Through play, people cultivate the political skills that the next evolution of democracy will require."
   },
   {
-    "term": "Plutocracy in Crypto",
-    "definition": "A recognized failure mode and limitation of cryptoeconomic governance in which wealth concentration directly translates to governance dominance—more tokens equal more votes, mirroring joint-stock company plutocracy but without the countervailing pressures of state regulation (progressive taxation, collective bargaining, antitrust). Schneider identifies this as a direct outgrowth of governance by economic stake rather than personhood, producing feedback loops between wealth and power that democratic design MUST counteract through cooperative legal structures, rights-based protocol layers, or quadratic mechanisms.",
+    "term": "Conviction Voting",
+    "definition": "A cryptoeconomic decision-making mechanism in which votes on a proposal are continuously weighted by both the quantity of tokens staked and the duration of that staking. The longer a participant sustains their support, the more weight their preference carries, creating incentives for sustained commitment over reactive short-term voting.",
     "see_also": [
       "cryptoeconomics",
       "dao",
-      "quadratic-funding",
-      "soulbound-tokens"
+      "liquid-democracy-crypto",
+      "quadratic-funding"
     ],
     "source_chapter": "Ch. 4"
   },
   {
-    "term": "Critical Connections vs. Critical Mass",
-    "definition": "A distinction drawn by Grace Lee Boggs (via Schneider), contrasting two theories of social change. Critical mass focuses on accumulating large numbers of faceless participants. Critical connections prioritizes thick relationality—the quality of how people choose to self-organize day to day in their communities. For Schneider, online community design SHOULD favor critical connections: building the relational substrate from which democratic self-governance can emerge, rather than maximizing user counts that serve scalability logic.",
+    "term": "Liquid Democracy (Crypto)",
+    "definition": "A voting mechanism used in some DAOs in which token-holders can delegate their voting power to trusted others, who may in turn re-delegate; delegation is revocable at any time. Schneider notes that crypto rebrands proxy voting as 'stewardship' and 'liquid democracy,' and that the new naming has occasioned genuinely new interface designs for evaluating steward behavior.",
     "see_also": [
-      "scalability-vs-subsidiarity",
-      "subsidiarity-online",
-      "transformative-justice",
-      "political-skills"
+      "cryptoeconomics",
+      "dao",
+      "conviction-voting",
+      "quadratic-funding"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Quadratic Funding",
+    "definition": "A mechanism for distributing matching grants according to a formula that weights both the number of donors and the amounts they contribute. By amplifying breadth of support rather than depth of wealth, quadratic funding is designed to counteract plutocratic tendencies in collective resource allocation, making it a tool for democratic distribution of public goods within crypto ecosystems.",
+    "see_also": [
+      "cryptoeconomics",
+      "dao",
+      "conviction-voting",
+      "liquid-democracy-crypto"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Lazy Consensus (Crypto)",
+    "definition": "A governance mechanism in which users with sufficient reputation from past activity can make proposals that pass automatically in the absence of objections within a defined period. It reduces governance overhead while preserving community veto power, relying on social trust and reputational standing rather than active participation from all token-holders.",
+    "see_also": [
+      "cryptoeconomics",
+      "dao",
+      "conviction-voting"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Decentralized Dispute Resolution",
+    "definition": "A cryptoeconomic mechanism in which a randomly selected jury of users with staked tokens independently rule on disputes, each choosing the outcome they predict most others will choose, and gaining or losing tokens based on their alignment with the majority. It adapts sortition and jury logic to blockchain contexts, using economic stake to motivate good-faith judgment.",
+    "see_also": [
+      "cryptoeconomics",
+      "dao",
+      "conviction-voting",
+      "lazy-consensus-crypto"
+    ],
+    "source_chapter": "Ch. 4"
+  },
+  {
+    "term": "Curation Market",
+    "definition": "A cryptoeconomic mechanism in which curators are rewarded for elevating proposals or projects they correctly predict others in the community will value. By tying rewards to collective judgment rather than individual preference alone, curation markets attempt to align individual incentives with community-level quality assessment.",
+    "see_also": [
+      "cryptoeconomics",
+      "dao",
+      "conviction-voting"
     ],
     "source_chapter": "Ch. 4"
   },
   {
     "term": "Excavations (Online Exhibition)",
-    "definition": "An online exhibition and artist residency ('Governance Archaeology for the Future of the Internet') in which ten artists and collectives reflected on the history of online governance, grounded in cross-cultural collective governance practices. Exhibited at the UN Internet Governance Forum, Excavations linked artworks to patterns in a historical governance database. The project embodies Schneider's insistence that historical governance knowledge MUST be held as invitation and accountability rather than appropriation.",
+    "definition": "An online exhibition titled 'Governance Archaeology for the Future of the Internet,' presenting work from a residency of ten artists and collectives convened during COVID-19 lockdowns. Artists reflected on the history and future of online governance, informed by cross-cultural collective governance practices. The exhibition was shown at the United Nations Internet Governance Forum and linked artworks to patterns in a historical governance database, treating ancestral governance knowledge as an invitation to relationship and accountability rather than appropriation.",
     "see_also": [
       "governance-archaeology",
-      "people-s-history-method",
-      "commons-based-peer-production"
+      "democratic-design",
+      "people-s-history-method"
     ],
-    "source_chapter": "Profile: Excavations",
-    "source_quote": "If the database were simply another act of appropriation, the artists taught us, it should not exist at all. The information it contains must, rather, be an invitation and starting point for relationships, for accountability, for repair."
+    "source_chapter": "Profile: Excavations"
+  },
+  {
+    "term": "Digital Colonialism",
+    "definition": "Schneider's capacious shorthand for forms of domination by governments and corporations through their control over internet technologies — encompassing related concepts such as technocolonialism, data colonialism, platform imperialism, and digital extractivism. Digital colonialism involves surveillance, economic exploitation, cultural imposition, and social control within and across borders. Schneider acknowledges the danger of conflating military occupation with data extraction, yet argues that to the extent livelihoods and cultural sovereignty flow through digital systems, 'the coloniality in question is no mere metaphor.'",
+    "see_also": [
+      "governable-stack",
+      "implicit-feudalism",
+      "modular-politics",
+      "governance-archaeology",
+      "digital-non-alignment"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_quote": "I will use digital colonialism as a capacious shorthand for the above terms—forms of domination by governments and corporations through their control over internet technologies."
   },
   {
     "term": "Ungovernability",
-    "definition": "The aspiration to resist external domination by refusing to be governed — invoked by thinkers from Foucault and Agamben to Lorenzo Kom'boa Ervin. Schneider argues ungovernability alone is insufficient: anticolonial traditions teach it MUST accompany self-governance ('decisive democracy') to sustain resistance. Without self-governing infrastructure, the sensation of being ungovernable is always fleeting. Ungovernability and self-governance are dialectically linked — each requires the other.",
+    "definition": "The aspiration, traced in thinkers from Foucault and Agamben to Lorenzo Kom'boa Ervin and Frantz Fanon, to resist dehumanizing systems by refusing their authority and spontaneously asserting collective personhood. Schneider treats ungovernability as a necessary but insufficient basis for liberation: anticolonial traditions consistently show that durable ungovernability requires the accompanying practice of self-governance. Without the means of self-governance, the sensations of being ungovernable remain fleeting.",
     "see_also": [
       "governable-stack",
       "digital-colonialism",
-      "politics-of-no-politics",
-      "decisive-democracy"
+      "virality-as-colonizing-strategy"
     ],
     "source_chapter": "Ch. 5",
-    "source_quote": "To be ungovernable in any durable way requires self-governing through everyday organizing."
+    "source_quote": "These legacies of resistance speak loudly the more you listen: to be ungovernable in any durable way requires self-governing through everyday organizing."
   },
   {
     "term": "Decisive Democracy",
-    "definition": "A phrase from Honduran Indigenous activist Berta Cáceres describing communities with the genuine means to determine their own futures. Schneider invokes it as the necessary complement to ungovernability: resistance MUST be grounded in communities' capacity for self-determination, not merely in refusal. Decisive democracy is the positive program that prevents ungovernable energy from dissipating.",
+    "definition": "A phrase Schneider draws from Honduran Indigenous activist Berta Cáceres, naming the condition in which communities possess the actual means to determine their own futures. Schneider pairs it with ungovernability: ungovernability alone is insufficient; it must accompany decisive democracy — the concrete capacity for self-governance — as the basis of both resistance to digital colonialism and the construction of what comes after.",
     "see_also": [
       "ungovernability",
       "governable-stack",
@@ -582,40 +736,39 @@ export const GLOSSARY: GlossaryTerm[] = [
   },
   {
     "term": "Virality as Colonizing Strategy",
-    "definition": "Schneider's framing of viral social media dynamics as structurally hostile to durable self-governance. Platforms optimize for engagement and affect, not decision or consensus. Virality circulates impressions of shared experience without building persistent organization. Drawing on Zeynep Tufekci's signal/capacity distinction, Schneider argues movements MUST NOT mistake viral reach for organizational power; virality feeds Jodi Dean's 'fetish of circulation,' supplanting goals for political change.",
+    "definition": "Schneider's framing of the way platform-optimized virality substitutes for durable self-organization. Social platforms optimize for 'engagement' through chatter — not decision, resolution, or consensus — so viral movements produce signal without organizational capacity. Drawing on Zeynep Tufekci's distinction between networked signal and organizational capacity, and Jodi Dean's concept of the fetish of circulation, Schneider argues that virality reproduces colonial divide-and-rule dynamics: users experience a fleeting illusion of collective power while remaining atomized and ungovernable.",
     "see_also": [
       "digital-colonialism",
       "implicit-feudalism",
-      "governable-stack",
-      "politics-of-no-politics"
+      "ungovernability",
+      "governable-stack"
     ],
     "source_chapter": "Ch. 5",
     "source_quote": "Platforms optimize for 'engagement' through chatter—not decision, resolution, or consensus. Community control is not in the specifications unless communities put it there themselves."
   },
   {
-    "term": "Recursive Publics",
-    "definition": "Christopher Kelty's concept, adopted by Schneider, describing communities whose defining work is, at least in part, the making of the infrastructure that makes their community possible. Governable stacks enable recursive publics: participants are not merely users but co-constructors of the conditions of their own association. Schneider holds that governable stacks SHOULD aspire to this recursive quality as a marker of genuine self-governance.",
+    "term": "Digital Non-Alignment",
+    "definition": "Schneider's proposal, echoing the Cold War–era Non-Aligned Movement, for a new movement in which communities with governable stacks assert many diverse digital sovereignties against the dueling hegemonic forces of Silicon Valley and Shenzhen. Rather than choosing between dominant Western tech platforms and authoritarian state-backed alternatives, communities build and federate their own stacks — a fractal of the movement from small-scale practice to global political orientation.",
     "see_also": [
       "governable-stack",
-      "modular-politics",
-      "commons-based-peer-production"
+      "digital-colonialism",
+      "modular-politics"
     ],
     "source_chapter": "Ch. 5"
   },
   {
-    "term": "Swaraj",
-    "definition": "Gandhi's concept of self-rule — used by Schneider as a historical cipher for the inseparability of resistance and self-governance. The spinning wheel encoded swaraj into the Indian independence movement: a governable tool as the symbolic and practical base for ungovernable organizing. Schneider deploys swaraj to argue that the choice of technology is always a political choice about who governs whom.",
+    "term": "Recursive Publics",
+    "definition": "Christopher Kelty's concept, invoked by Schneider to describe communities whose constitutive work includes the making and remaking of what makes their community possible. In Schneider's framing, governable stacks enable recursive publics: the stack itself becomes an object of collective governance, so that participants shape the technical conditions of their own participation. This reflexive dimension distinguishes governable stacks from mere service provision.",
     "see_also": [
       "governable-stack",
-      "digital-colonialism",
-      "ungovernability",
-      "convivial-tools"
+      "modular-politics",
+      "metagovernance"
     ],
     "source_chapter": "Ch. 5"
   },
   {
     "term": "Red Stack",
-    "definition": "Tiziana Terranova's concept of an insurgent socio-technical stack built through 'crafty bricolage of existing technologies' and 'détournement of widespread social media literacy.' Schneider cites it as a precursor framing to governable stacks, emphasizing that insurgents can reconfigure available tools rather than waiting for purpose-built alternatives.",
+    "definition": "Tiziana Terranova's concept of an insurgent socio-technical assemblage, cited by Schneider as a precursor to his own governable-stacks framework. Terranova proposes that insurgents can build new platforms through 'a crafty bricolage of existing technologies' and 'a détournement of widespread social media literacy,' enacting new subjectivities against dominant platforms. Schneider draws on this to frame governable stacks as refusals of colonial infrastructure rather than mere workarounds.",
     "see_also": [
       "governable-stack",
       "digital-colonialism",
@@ -624,367 +777,216 @@ export const GLOSSARY: GlossaryTerm[] = [
     "source_chapter": "Ch. 5"
   },
   {
-    "term": "Action Arena",
-    "definition": "Elinor Ostrom's concept denoting the context that situates the choices available to participants in an 'action situation.' Schneider uses it to explain how stack design shapes governance possibility: a different stack makes a different action arena, expanding or contracting what self-governance can mean in practice. Modular politics is explicitly framed as a model for designing better action arenas.",
-    "see_also": [
-      "modular-politics",
-      "governable-stack",
-      "subsidiarity-online"
-    ],
-    "source_chapter": "Ch. 5"
-  },
-  {
-    "term": "Digital Non-Alignment",
-    "definition": "Schneider's proposed movement concept — echoing the Cold War Non-Aligned Movement — in which communities use governable stacks to assert diverse digital sovereignties against the dueling dominance of Silicon Valley and Shenzhen. Governable stacks are its material basis; communities become 'digital maroons' with infrastructures of their own, refusing subordination to either pole of platform imperialism.",
+    "term": "Swaraj",
+    "definition": "The Gandhian concept of self-rule — translated by Schneider as both resistance and the society that would follow independence — used as a historical cipher for the idea that self-governance and ungovernability to colonizers are mutually constitutive. Gandhi's spinning wheel embodied swaraj: choosing a tool under community control over one under imperial control. Schneider draws a direct line from swaraj to the pursuit of governable stacks as the contemporary form of encoded self-governance.",
     "see_also": [
       "governable-stack",
       "digital-colonialism",
       "ungovernability"
     ],
-    "source_chapter": "Ch. 5"
+    "source_chapter": "Ch. 5",
+    "source_quote": "Gandhi believed that self-sufficient and self-governing people would become ungovernable to colonizers. He regarded this, not the more famous and visible acts of protest, as the heart of his politics."
   },
   {
-    "term": "Governance Reciprocity",
-    "definition": "Schneider's normative principle within governance archaeology: designers who draw on historical or Indigenous governance legacies MUST NOT merely take and apply but should cultivate reciprocal relationships with those communities — asking permission, paying royalties or reparations, and becoming good descendants. Reciprocity distinguishes ethical governance archaeology from colonial extraction of institutional knowledge.",
+    "term": "Ecology of Knowledges",
+    "definition": "Boaventura de Sousa Santos's concept, adopted by Schneider as a framework for governance archaeology. An ecology of knowledges places cowrie shells and blockchains, medieval Italian city-state coins and Islamic hawala networks in 'radical copresence' — a juxtaposition across lines of culture and power that refuses the centrality of dominant Western narratives. For Schneider, this ecology is the epistemic basis for expanding the canon of democratic legacies that inform governable-stack design.",
     "see_also": [
       "governance-archaeology",
       "digital-colonialism",
-      "transformative-justice"
+      "governable-stack"
+    ],
+    "source_chapter": "Ch. 5"
+  },
+  {
+    "term": "Stack Sovereignty Vectors",
+    "definition": "Schneider's three-axis diagnostic framework for evaluating any layer or component of a governable stack: (1) Sovereignty — who is ultimately in control, what happens to value derived from labor and culture, and how easy exit is; (2) Democracy — how participants engage flows of power and whether interfaces are accessible and culturally appropriate; (3) Liberation — whether the stack resists exploitation, centers marginalized experiences, reduces unwanted dependencies, and can spread to other communities. The vectors are not a litmus test but an orientation toward continual deepening of governability.",
+    "see_also": [
+      "governable-stack",
+      "modular-politics",
+      "digital-colonialism"
     ],
     "source_chapter": "Ch. 5"
   },
   {
     "term": "Modpol",
-    "definition": "A self-governance toolkit for online communities, first implemented in the open-source game Minetest, created by Schneider and collaborators to translate the modular politics framework into running code. Players form 'orgs' (groups) and select from composable governance modules — for consent, coin-flipping, deferred authority, and more — written in Lua. Three core design principles counter implicit feudalism: groups over roles (sovereignty stems from the collective), freedom over authority (trust is the default, not admin power), and inheritance over blank slates (child orgs inherit parent rules). Modpol treats autocracy as one option among many rather than the structural presumption.",
+    "definition": "A self-governance toolkit for online communities, first implemented in the open-source multiplayer game Minetest. Created by Nathan Schneider and collaborators to translate the modular politics framework into code. Players form 'orgs' (groups) and choose governance modules for those orgs; modules can call other modules, defer to other orgs, or trigger consent processes. Design principles include groups over roles (sovereignty from collectives, not individuals), freedom over authority (trust as default, not admin control), and inheritance over blank slates (new orgs inherit parent rules). Intended as an engine for self-governance, not a reproduction of implicit feudalism.",
     "see_also": [
       "modular-politics",
       "implicit-feudalism",
-      "governable-space",
-      "orgs-modpol",
-      "modules-modpol"
+      "governance-modules",
+      "subsidiarity",
+      "communityRule"
     ],
     "source_chapter": "Profile: Modpol",
-    "source_quote": "Modpol is a self-governance toolkit for communities in online worlds. My collaborators and I created the first implementation in a multiplayer game called Minetest... Our goal was to translate the modular politics framework described in chapter 4 into code."
-  },
-  {
-    "term": "Orgs (Modpol)",
-    "definition": "The primary unit of collective governance in Modpol. Rather than assigning powers to individual users via roles, Modpol assigns powers to orgs — member groups that choose their own governance modules. Orgs can be nested: child orgs inherit the rules of parent orgs by default. This design embeds the principle that sovereignty stems first from the collective, not from any individual admin or role-holder. An org can voluntarily delegate authority to a single member (role-like structure), but collectivity is the structural starting point.",
-    "see_also": [
-      "modpol",
-      "modular-politics",
-      "implicit-feudalism",
-      "modules-modpol"
-    ],
-    "source_chapter": "Profile: Modpol"
-  },
-  {
-    "term": "Modules (Modpol)",
-    "definition": "Composable, interoperable governance primitives in the Modpol toolkit, written in Lua. A module encodes a discrete governance action — admitting a member, reaching consent, flipping a coin, deferring a decision to another org — and can activate other modules, enabling compound governance workflows. The modularity allows communities to assemble bespoke governance systems without being locked into a single default (typically admin autocracy). Modules operationalize the modular politics framework at the level of executable code rather than abstract description.",
-    "see_also": [
-      "modpol",
-      "modular-politics",
-      "orgs-modpol",
-      "governable-space"
-    ],
-    "source_chapter": "Profile: Modpol"
-  },
-  {
-    "term": "Groups Over Roles",
-    "definition": "A Modpol design principle that assigns governance powers to collective orgs rather than to individual user roles. Under conventional platform design, permissions attach to individuals (admin, moderator, member), reproducing implicit feudalism. Modpol inverts this: all action flows from org membership and whatever modules the org has chosen. A role-like structure is achievable only by deliberately creating a one-member org — making individual authority an intentional collective choice rather than an architectural default.",
-    "see_also": [
-      "modpol",
-      "orgs-modpol",
-      "implicit-feudalism",
-      "modular-politics"
-    ],
-    "source_chapter": "Profile: Modpol"
-  },
-  {
-    "term": "Freedom Over Authority (Modpol Default)",
-    "definition": "A Modpol design principle establishing trust — not admin gatekeeping — as the structural default for org decisions. Any member can take any available action within an org unless the org has explicitly changed that. Autocracy is available as a governance option but MUST be chosen intentionally; it is not presumed. This inverts the typical platform pattern in which admin authority is the default and democratic arrangements must be specially constructed, thereby shifting the burden of proof onto restrictive rather than open governance.",
-    "see_also": [
-      "modpol",
-      "implicit-feudalism",
-      "groups-over-roles",
-      "modular-politics"
-    ],
-    "source_chapter": "Profile: Modpol"
-  },
-  {
-    "term": "Inheritance Over Blank Slates",
-    "definition": "A Modpol design principle ensuring that newly formed child orgs inherit the governance rules of their parent org by default, rather than starting from a blank or platform-imposed default. Schneider grounds this in the social reality that human groups carry habit, tradition, and practice. Inherited rules can be changed, but governance begins from existing community norms rather than from a generic template, countering the platform tendency to flatten every new community into the same starting configuration and erase prior social order.",
-    "see_also": [
-      "modpol",
-      "orgs-modpol",
-      "modular-politics",
-      "governance-archaeology"
-    ],
-    "source_chapter": "Profile: Modpol",
-    "source_quote": "Usually, new spaces for online groups on a platform start out the same. Real social life, however, is infused with habit, tradition, and muscle memory. Modpol reflects that. When new orgs form within existing orgs, they inherit the rules of their parents."
+    "source_quote": "Modules can activate other modules; a module to admit a new org member might call a module that needs everyone's consent, or it could call a coin-flipping module, or it could defer the question to another org."
   },
   {
     "term": "Social Provisioning",
-    "definition": "A feminist economic lens, drawn from Marilyn Power, on how social practices organize the distribution of resources and responsibilities. Schneider applies it to governable spaces: self-governance MUST be materially supported — with time, information, and economic resources — or it becomes an additional burden on already-marginalized participants. The five methodological starting points include recognizing hidden labor, prioritizing well-being, correcting for unequal agency, asserting ethical judgment, and intersecting gender with race and class. Provisioning is the precondition for democratic participation, not an afterthought.",
-    "source_chapter": "Ch. 6",
-    "source_quote": "People experience self-governance as burdensome when they are not adequately provided for in doing it.",
+    "definition": "A feminist economic lens, drawn from Marilyn Power, on how social practices organize the distribution of resources and responsibilities. Provisioning governable spaces means supplying the time, information, material resources, and political capacity that meaningful self-governance requires — correcting for unequal access to authority, recognizing hidden care labor, and ensuring participants can engage without being drained. Self-governance becomes burdensome when provisioning is absent; it becomes viable when structures actively support it.",
     "see_also": [
       "governable-space",
-      "feminist-economics",
-      "partner-state",
-      "democratic-structuring"
-    ]
+      "feminist-economics-of-online-life",
+      "tyranny-of-structurelessness",
+      "subsidiarity"
+    ],
+    "source_chapter": "Ch. 6",
+    "source_quote": "People experience self-governance as burdensome when they are not adequately provided for in doing it."
   },
   {
     "term": "Partner State",
-    "definition": "A cooperativist demand for public policy that encourages democratic associations across society without attempting to control them. The partner state neither commands nor abandons self-governing communities; it provisions and legitimizes them. Schneider cites this tradition to argue that governments SHOULD cede authority and resources to user communities, platform cooperatives, and networked polities rather than defaulting to top-down regulation or corporate paternalism. The partner state is the policy analog to the governable stack: it creates conditions for self-governance to take hold.",
-    "source_chapter": "Ch. 6",
+    "definition": "A concept from cooperativist tradition describing public policy that encourages democratic associations across society without attempting to control them. The partner state does not replace self-governance with top-down administration but provisions and legitimizes the conditions under which communities can govern themselves. Schneider invokes it as the appropriate orientation for governments seeking to cultivate governable spaces in online life.",
     "see_also": [
       "governable-space",
       "social-provisioning",
-      "cooperative-economy-act",
-      "participatory-budgeting"
-    ]
-  },
-  {
-    "term": "Democratic Structuring",
-    "definition": "A set of practices proposed by Jo Freeman in response to 'The Tyranny of Structurelessness,' applied by Schneider to online governance design. Democratic structuring includes rotating roles of authority, ensuring power-holders are responsible to the entire group, and diffusing information widely. Schneider treats it as a feminist corrective to the implicit feudalism of platform design: groups MUST have clear processes and pathways for participation, or they fall into rigid hierarchies and stewing resentment. Freeman's essay is a 'gravity well' attracting shared concerns across feminist governance traditions.",
-    "source_chapter": "Ch. 6",
-    "source_quote": "Those who do not know the rules and are not chosen for initiation must remain in confusion, or suffer from paranoid delusions that something is happening of which they are not quite aware.",
-    "see_also": [
-      "tyranny-of-structurelessness",
-      "modular-politics",
-      "implicit-feudalism",
-      "social-provisioning"
-    ]
-  },
-  {
-    "term": "Allocation of Coordination Rights",
-    "definition": "Sanjukta Paul's framing, adopted by Schneider, of law as an arbiter of who is allowed to team up and how. Policy — including antitrust law, securities regulation, and platform terms of service — allocates coordination rights, determining which actors can organize collectively and on what terms. Schneider argues that dominant allocation systematically favors corporate coordination while blocking worker and user coordination. A pro-governable-spaces policy MUST reallocate coordination rights toward communities, co-ops, and networked workers. Restrictions on coordination can be invisible, lurking in the shadows of what the law prevents.",
-    "source_chapter": "Ch. 6",
-    "see_also": [
-      "partner-state",
-      "cooperative-economy-act",
-      "antitrust-as-democracy-tech",
-      "platform-cooperative"
-    ]
+      "cooperative-economy-act"
+    ],
+    "source_chapter": "Ch. 6"
   },
   {
     "term": "Exit to Community (E2C)",
-    "definition": "A slogan coined by Schneider in 2019 proposing that venture-backed startups, instead of exiting via acquisition or IPO, transition ownership and governance to their user and worker communities. E2C challenges the 'phallic metaphors' of market dominance and liquidity events that orient startups toward investor profit over community health. Mechanisms include dual-class stock, purpose trusts, cooperatives, and nonprofits. Corporate and securities law SHOULD be redesigned to support E2C as a normal exit path. The concept has spread most in blockchain contexts where securities law applies ambiguously.",
-    "source_chapter": "Ch. 6",
-    "source_quote": "E2C is an invitation for startups to explore bringing their most direct participants into structures of ownership and governance.",
+    "definition": "A slogan and startup transition strategy coined by Schneider in 2019 proposing that venture-backed platforms, instead of exiting via acquisition or IPO, transition ownership and governance to their most direct participants — users, workers, and contributors. Mechanisms include dual-class stock, purpose trusts, cooperatives, and nonprofits. E2C reframes the 'liquidity event' from a commodity sale into a handoff of community stewardship, and has circulated most widely in blockchain contexts where securities law applies ambiguously.",
     "see_also": [
       "platform-cooperative",
-      "dao",
-      "cooperative-economy-act",
-      "allocation-of-coordination-rights"
-    ]
-  },
-  {
-    "term": "Paternalism (Platform)",
-    "definition": "The exercise of 'positive rather than coercive power' by platform companies — cast by Schneider as patriarchy reconfiguring itself as beneficent entrepreneurship. Platform paternalism presents top-down control as necessary care: CEOs argue that only they can protect users from each other at scale. Feminist tradition has 'far less patience' for this framing. Paternalism MUST NOT be accepted as a substitute for self-governance; it hoards power and therefore hoards blame, producing techlash. The antidote is social provisioning that enables communities to govern themselves rather than accepting managerial solutions to problems of platforms' own making.",
-    "source_chapter": "Ch. 6",
-    "see_also": [
-      "implicit-feudalism",
-      "social-provisioning",
-      "democratic-structuring",
-      "partner-state"
-    ]
-  },
-  {
-    "term": "Governable Communities",
-    "definition": "Schneider's policy frame for social-media communities reorganized around user self-governance rather than platform-centric content moderation. Under this frame, legal regimes — such as Section 230 reform — would expect subsidiarity as a prerequisite for liability protection. Platforms would gain immunity only by sharing power: providing modular-politics tools (elections, petitions, boards, juries) and default collective decision-making rather than admin-fiat moderation. Schneider holds up Karrot's group-process member removal as an example. A platform MUST NOT receive regulatory safe harbor merely by enacting content policies; it SHOULD be required to provision meaningful user self-governance.",
-    "source_chapter": "Ch. 6",
-    "see_also": [
-      "governable-space",
-      "modular-politics",
-      "subsidiarity-online",
-      "section-230-reform",
-      "implicit-feudalism"
-    ]
-  },
-  {
-    "term": "Governable Work",
-    "definition": "Schneider's policy frame for platform-mediated gig labor reorganized around worker co-governance. Corporate gig platforms allocate coordination rights on behalf of managerial control, discouraging persistent worker relationships. Governable work requires policy that enables workers to form cooperatives and unions, access capital, and collectively bargain over platform terms — as in the Cooperative Economy Act proposal. Schneider draws on feminist economic traditions that make visible precarious piecework and ghost work. Workers' self-governance SHOULD be backed by state power; improvised guild-like arrangements alone are insufficient against wealthy platform companies.",
-    "source_chapter": "Ch. 6",
-    "see_also": [
-      "allocation-of-coordination-rights",
-      "cooperative-economy-act",
-      "partner-state",
-      "social-provisioning",
-      "platform-cooperative"
-    ]
-  },
-  {
-    "term": "Governable Infrastructures",
-    "definition": "Schneider's policy frame for network and software infrastructure reorganized under community ownership and governance. Corporate infrastructure is built to be incomprehensible and unaccountable; feminist tradition calls for demystification and care pedagogy. Governable infrastructures include community broadband co-ops, municipal networks, and commons-based software. Policy SHOULD reverse prohibitions on cooperative and municipal broadband, require transition to community stewardship after private build-out, and adopt procurement preferences for commons-based software. Public investment in infrastructure enables more of daily digital life to move into governable stacks.",
-    "source_chapter": "Ch. 6",
-    "see_also": [
       "governable-stack",
-      "partner-state",
-      "allocation-of-coordination-rights",
-      "commons-based-peer-production",
-      "social-provisioning"
-    ]
+      "exit-as-democracy",
+      "cooperative-economy-act"
+    ],
+    "source_chapter": "Ch. 6",
+    "source_quote": "E2C is an invitation for startups to explore bringing their most direct participants into structures of ownership and governance."
   },
   {
-    "term": "Citizen Assembly (Sortition-Based)",
-    "definition": "A legislative or executive governance form in which randomly selected citizens study a problem, deliberate, and devise policy proposals. Schneider documents their use in France (climate), Ireland (abortion), Chile (constitution), Canada (misinformation), and Michigan (COVID-19). Assemblies SHOULD carry real decision-making power, not merely advisory status; without binding authority they become 'democracy theatre' and fail to correct the power imbalances that motivate them. Complex algorithms can establish representative selection across multiple identity vectors. Schneider cites C. L. R. James's 'every cook can govern' as the democratic premise sortition requires.",
-    "source_chapter": "Ch. 6",
+    "term": "Feminist Economics of Online Life",
+    "definition": "An analytical tradition that reveals how invisible and undervalued labor — emotional, reproductive, and 'ghost work' — underlies the digital economy while credit flows to technical systems and male entrepreneurs. Drawing on scholars like Marilyn Power and Juliet Schor, this lens exposes how gig platforms' algorithmic management reinforces precarity and segregation, and argues that social provisioning and democratic ownership are necessary correctives, not optional add-ons.",
     "see_also": [
-      "democratic-structuring",
       "social-provisioning",
-      "democracy-theatre",
-      "decisive-democracy",
-      "participatory-budgeting"
-    ]
+      "ghost-work",
+      "tyranny-of-structurelessness",
+      "partner-state"
+    ],
+    "source_chapter": "Ch. 6"
   },
   {
-    "term": "Participatory Budgeting",
-    "definition": "A governance form originating in Porto Alegre, Brazil (1988) in which residents directly decide how part of a municipal budget is spent. Schneider treats it as a model of governments genuinely ceding authority — carving out domains where direct participation comes with real power. Participatory budgeting has since spread to cities worldwide and inspired platforms like Decidim. It exemplifies the 'partner state' in action: provisioning a governable space with something real at stake. Ostrom's principle that self-governance arises from common resources, not polite consultations, underlies Schneider's endorsement.",
-    "source_chapter": "Ch. 6",
+    "term": "Ghost Work",
+    "definition": "Schneider's use of the term (drawn from broader scholarship) refers to little-seen, poorly rewarded labor performed offshore or at home that makes digital platforms function — including content moderation workers who view harmful material, data-annotation workers, and others whose contributions are systematically hidden from view. Ghost work exemplifies how the digital economy renders certain labor invisible to preserve the myth of algorithmic self-sufficiency.",
     "see_also": [
-      "partner-state",
-      "citizen-assembly-sortition-based",
+      "feminist-economics-of-online-life",
       "social-provisioning",
-      "decidim"
-    ]
+      "implicit-feudalism"
+    ],
+    "source_chapter": "Ch. 6"
   },
   {
     "term": "Listening at Scale",
-    "definition": "Audrey Tang's term for Taiwan's digital-deliberation approach to government policymaking, in which clusters of public opinion are identified and proposals with broad support are crowdsourced. Schneider presents it as an example of governments using digital tools to bypass partisan divides and expand the reach of self-governance. The approach remaps political terrain by treating connectivity-spanning issues (ridesharing apps, COVID-19) as invitations to network-native governance. Governments SHOULD explore analogous approaches for online-platform regulation, where challenges transcend localities.",
-    "source_chapter": "Ch. 6",
+    "definition": "A phrase associated with Taiwan's digital minister Audrey Tang describing a mode of digital deliberation in which governments identify clusters of public opinion and crowdsource proposals with broad support, bypassing partisan talking points. The approach uses structured digital tools to surface genuine consensus across large populations, offering a model of government-provisioned governable space that works with network-native challenges like ridesharing regulation and pandemic response.",
     "see_also": [
-      "governable-communities",
-      "citizen-assembly-sortition-based",
+      "governable-space",
       "decidim",
-      "partner-state"
-    ]
+      "citizen-assembly-sortition",
+      "social-provisioning"
+    ],
+    "source_chapter": "Ch. 6"
   },
   {
-    "term": "Sufficiently Decentralized (Regulatory Standard)",
-    "definition": "A US regulatory standard signaled in 2018 indicating that blockchain projects operating 'sufficiently decentralized' could be exempt from securities regulation. Schneider notes this gave crypto projects incentive to distribute ownership and governance widely, and treats it as a precedent for how governments might conditionally cede authority — granting regulatory safe harbor only to network-native polities with strong democratic commitments. The standard illustrates how regulatory design shapes the economics of decentralization and community ownership.",
-    "source_chapter": "Ch. 6",
+    "term": "Coordination Rights (Allocation of)",
+    "definition": "Legal scholar Sanjukta Paul's concept, adopted by Schneider, that policy acts as an 'allocator of coordination rights' — an arbiter of who is allowed to team up, on what terms, and how. Antitrust law, securities regulation, and platform design all allocate coordination rights in ways that can either fragment workers and users or enable them to self-organize. Governable spaces require coordination rights distributed to communities, not monopolized by platforms or investors.",
     "see_also": [
+      "cooperative-economy-act",
       "exit-to-community",
-      "dao",
-      "allocation-of-coordination-rights",
-      "governable-stack"
-    ]
+      "implicit-feudalism",
+      "governable-infrastructure"
+    ],
+    "source_chapter": "Ch. 6",
+    "source_quote": "Policy... acts as an 'allocator of coordination rights': an arbiter of who is allowed to team up and how."
   },
   {
-    "term": "Worker Codetermination (Platform Analog)",
-    "definition": "Schneider's proposal to extend Germany's requirement of worker representation on corporate boards to online platforms, mandating user-elected representatives on boards or moderation teams. Platforms above a certain size SHOULD be required to include user-elected representatives in governance. Corporate and securities laws could enshrine governable spaces as a normal aspiration, making transition to community control the expected outcome of successful entrepreneurship rather than an exception. This represents an organizational-level policy strategy distinct from, but complementary to, cooperative conversion.",
-    "source_chapter": "Ch. 6",
+    "term": "Governable Infrastructure",
+    "definition": "Physical or software infrastructure — broadband networks, protocols, platforms — structured so that the communities who depend on it hold meaningful governance rights over its operation, costs, and development. Schneider contrasts governable infrastructure with corporate-owned utilities that mystify their own workings to prevent user comprehension and accountability. Examples include rural electric cooperatives, community broadband networks, and commons-based software like Nextcloud and Matrix.",
     "see_also": [
-      "exit-to-community",
-      "governable-communities",
-      "partner-state",
-      "allocation-of-coordination-rights"
-    ]
-  },
-  {
-    "term": "Technology as Policy Design",
-    "definition": "Schneider's principle that technology design is policy design — that interfaces, protocols, and incentive structures make policy by dictating what information users see and how, and by teaching users how to interact. Well-intended transparency can mystify when it overloads attention. Provisioning governable spaces requires not just technologies for governance but governable technologies, and people equipped to co-design their tools. Users MUST develop skills not just for using technology but for crafting its policies: understanding what is at stake in system design and what decisions affect their lives. Mystification of technology is a mechanism of elite control.",
-    "source_chapter": "Ch. 6",
-    "source_quote": "Technology design is policy design. Policies appear in the shape of interfaces... But policies also disappear in the underlying infrastructure, in the protocols and incentive structures that lie beneath the surface.",
-    "see_also": [
-      "artifacts-have-politics",
       "governable-stack",
-      "governable-infrastructures",
-      "democratic-structuring",
-      "political-skills"
-    ]
+      "commons-based-software",
+      "magnolia-road-internet-cooperative",
+      "social-provisioning"
+    ],
+    "source_chapter": "Ch. 6"
+  },
+  {
+    "term": "Infrastructure Mystification",
+    "definition": "The practice, documented by feminist media scholars including Lisa Parks, by which utility and technology firms design infrastructure to be not only incomprehensible but invisible — buried underground, disguised as natural objects, or obscured by proprietary opacity. Mystification serves capital accumulation by diverting attention from the extraction infrastructure enables and by preventing users from understanding or governing the systems they depend on. Countering it requires acts of care, pedagogy, and explicit community capacity-building.",
+    "see_also": [
+      "governable-infrastructure",
+      "feminist-economics-of-online-life",
+      "ghost-work",
+      "modular-politics"
+    ],
+    "source_chapter": "Ch. 6"
   },
   {
     "term": "Science Fictional Behavior",
-    "definition": "Adrienne maree brown's practice of imagining and enacting alternative futures as a form of social change, referenced by Schneider to frame the aspirational politics of governable spaces. 'I believe that all organizing is science fiction.' Schneider invokes it to argue that imagining democratic AI, cooperative platforms, and user-governed infrastructure requires the same imaginative audacity as science fiction — especially for those, like residents of St. Thomas, whom dominant futures have excluded. The practice is a companion to Schneider's call for prefigurative politics and fractal organizing.",
-    "source_chapter": "Ch. 6",
-    "source_quote": "We hold so many worlds inside us. It is our radical responsibility to share these worlds, to plant them in the soil of our society as seeds for the type of justice we want and need.",
+    "definition": "A practice advocated by adrienne maree brown — drawn from Octavia Butler's legacy — of treating social organizing as an act of imagination, prefiguring futures that do not yet exist. In Schneider's framing, science fictional behavior is the cognitive prerequisite for imagining governable spaces: communities historically excluded from technology's futures must be invited to write those futures before different policies become thinkable. 'I believe that all organizing is science fiction,' brown writes.",
     "see_also": [
-      "fractal-politics",
+      "fractal-democracy",
       "prefigurative-politics",
-      "everyday-democracy",
-      "swaraj"
-    ]
-  },
-  {
-    "term": "Antitrust as Democracy-Tech",
-    "definition": "Schneider's framing, drawing on Sanjukta Paul, of antitrust law as a policy lever that allocates coordination rights and thereby structures democratic possibility. Current US antitrust doctrine imposes barriers that have prevented platform workers from forming unions or cooperatives, while rarely being wielded against large platform companies. Antitrust reform is a democracy-technology policy: by reversing the allocation of coordination rights, it could enable workers and users to organize collectively. Antitrust SHOULD be understood not as a neutral competition tool but as a determinant of who gets to exercise collective power.",
-    "source_chapter": "Ch. 6",
-    "see_also": [
-      "allocation-of-coordination-rights",
-      "governable-work",
-      "cooperative-economy-act",
-      "partner-state"
-    ]
-  },
-  {
-    "term": "Governable AI",
-    "definition": "Schneider's speculative-to-practical concept, anchored in Cadwell Turnbull's Common, of an AI system co-owned and co-governed by the communities it serves. A governable AI MUST be accountable to participants: they can decide together how to program it differently when anxious about its presence. Turnbull's Common is governed by a federation of collective institutions, decentralized across user devices, and built by tech cooperatives. Schneider presents this as audacious but necessary — a different economy of innovation, a different distribution of opportunities and rewards — contrasted with AI systems today used to manage people on behalf of corporations and governments.",
-    "source_chapter": "Ch. 6",
-    "source_quote": "Common is governed by a federation of collective institutions from all over the world that are devoted to the mission of AI as a public resource. Anyone can add knowledge to Common, and there is a democratic process to building the hardware necessary to carry the AI.",
-    "see_also": [
-      "governable-space",
-      "governable-stack",
-      "platform-cooperative",
       "digital-non-alignment"
-    ]
+    ],
+    "source_chapter": "Ch. 6",
+    "source_quote": "\"We hold so many worlds inside us,\" she writes... \"It is our radical responsibility to share these worlds, to plant them in the soil of our society as seeds for the type of justice we want and need.\""
+  },
+  {
+    "term": "Sufficiently Decentralized (Regulatory Standard)",
+    "definition": "A standard signaled by a US regulator in 2018 indicating that blockchain networks operating with sufficiently distributed ownership and governance could be exempt from securities regulation. Schneider notes this created incentive for crypto projects to distribute ownership widely, and argues that governments could generalize this logic — ceding authority only to network-native polities that demonstrate strong democratic commitments, rather than defaulting to feudal or investor-controlled structures.",
+    "see_also": [
+      "dao",
+      "exit-to-community",
+      "coordination-rights-allocation-of",
+      "cryptoeconomics"
+    ],
+    "source_chapter": "Ch. 6"
   },
   {
     "term": "Non-Exclusive Sovereignties",
-    "definition": "A concept drawn from Indigenous North American governance traditions, articulated by Glen Coulthard and Matt Hern, describing overlapping, non-territorial forms of jurisdiction in which communities coexist without claiming exclusive domain. Schneider invokes this as a democratic-design aspiration for online metagovernance: rather than winner-take-all platform sovereignty, governable spaces could embody layered, concurrent governance that strips 'we' of colonial and statist fixities and extends community beyond the human.",
+    "definition": "A concept drawn from Indigenous North American political experience, articulated by Glen Coulthard and Matt Hern, describing overlapping and coexisting jurisdictions that do not claim exclusive territorial domain. Against nationalist fixity, non-exclusive sovereignties imagine community beyond transcendent identity, extending governance beyond the human and beyond the logic of singular, bordered sovereignty. Schneider invokes it as a horizon for what more intentional metagovernance of online spaces could move toward.",
     "see_also": [
-      "subsidiarity-online",
       "metagovernance",
-      "governable-space",
-      "digital-colonialism"
+      "subsidiarity",
+      "polycentric-subsidiarity",
+      "digital-non-alignment",
+      "ecology-of-knowledges"
     ],
     "source_chapter": "Epilogue",
     "source_quote": "Imagining new renditions of community beyond any transcendent identity is exactly what is required to surpass the brutal nations that stain our times. The idea of 'we' can be stripped of its colonial, statist and anthropocentric fixities. It is wholly possible to embrace and refuse identity in the same breath, reaching for a concept of being together that is exposed to the more-than-human."
   },
   {
-    "term": "Concurrent Layers of Governance",
-    "definition": "Schneider's proposal that the nation-state could offload governance burdens onto new, tailored, accountable jurisdictions running in parallel rather than in hierarchical sequence. Rather than a single sovereign authority, concurrent layers allow domain-specific self-governance to proliferate — online communities, platform cooperatives, federated networks — each handling what they are best positioned to govern, coordinated through metagovernance rather than central command.",
-    "see_also": [
-      "metagovernance",
-      "subsidiarity-online",
-      "non-exclusive-sovereignties",
-      "governable-stack"
-    ],
-    "source_chapter": "Epilogue"
-  },
-  {
-    "term": "Project Cybersyn (as Governable-Space Ideal)",
-    "definition": "Chilean president Salvador Allende's pre-internet computer network (1971–73), treated by Schneider as an aspirational historical precedent for democratic metagovernance: a convergence of transparent information flows and community decisions under democratic control. Schneider poses it as a counter-image to feudal platform design — asking what it would look like if each community were a Cybersyn, a nerve center of accountable connectivity.",
-    "see_also": [
-      "metagovernance",
-      "governable-space",
-      "governance-archaeology",
-      "democratic-mediation"
-    ],
-    "source_chapter": "Epilogue",
-    "source_quote": "How would the world look and feel if each of our communities were a Cybersyn, a convergence of transparent information flows and decisions, under democratic control?"
-  },
-  {
-    "term": "DAO Metagovernance (Token-Cascade)",
-    "definition": "A practice emerging in crypto ecosystems in which one DAO holds tokens from other DAOs, so that a proposal vote in the first DAO can cascade across the broader ecosystem. Schneider documents this as an independent, practice-driven rediscovery of metagovernance theory — less academic than visceral — requiring specialized dashboards and voting tools to comprehend many-sided governance entanglement. He treats it as a concrete (if narrow) instantiation of the broader metagovernance challenge.",
+    "term": "Metagovernance (DAO Variant)",
+    "definition": "In crypto and DAO contexts, metagovernance refers to the practice by which one DAO holds governance tokens from other DAOs, so that a proposal vote in the first DAO can cascade through the ecosystem. Token swaps between DAOs solidify collaborations by exchanging mutual governance power. Schneider distinguishes this daily-practice usage from the political-theory sense of metagovernance as 'the organization of self-organization,' noting both usages converge on the challenge of governing across entangled, many-sided systems.",
     "see_also": [
       "metagovernance",
       "dao",
+      "cryptoeconomics",
       "plutocracy-in-crypto",
-      "cryptoeconomics"
+      "liquid-democracy-crypto"
     ],
     "source_chapter": "Epilogue"
   },
   {
-    "term": "Accountable Connectivity",
-    "definition": "Schneider's normative end-state for online metagovernance design: networks that connect people while remaining answerable to the communities they bind together. Positioned against the authoritarian affordances of current social networks, accountable connectivity names the design goal that governable stacks, modular politics, and subsidiarity are all meant to serve — a condition in which connectivity itself is subject to democratic control rather than feudal defaults.",
+    "term": "Nation-State Offloading",
+    "definition": "Schneider's framing for a path by which the nation-state, faced with governance failures it cannot resolve alone (such as climate change), cedes some governance burdens to new, concurrent layers of jurisdiction that are more tailored and accountable in their specific domains. Rather than retreating into ethnonationalist fantasy, this path cultivates subsidiary and overlapping governable spaces alongside the state.",
     "see_also": [
-      "metagovernance",
-      "governable-stack",
-      "implicit-feudalism",
-      "democratic-mediation"
+      "subsidiarity",
+      "polycentric-subsidiarity",
+      "governable-space",
+      "partner-state",
+      "governable-infrastructure"
+    ],
+    "source_chapter": "Epilogue"
+  },
+  {
+    "term": "Project Cybersyn (Governable Space Reference)",
+    "definition": "Chilean president Salvador Allende's pre-internet computer network, headquartered at a stylized nerve center in Santiago, that attempted to make Chile a governable space through transparent, democratically controlled information flows and decisions. Schneider invokes Cybersyn as an illustrative horizon: what would it mean if each community were such a convergence of transparent data and democratic control?",
+    "see_also": [
+      "governable-space",
+      "governable-infrastructure",
+      "listening-at-scale",
+      "decisive-democracy"
     ],
     "source_chapter": "Epilogue"
   }

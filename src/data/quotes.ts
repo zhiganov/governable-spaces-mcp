@@ -2,7 +2,7 @@ import type { Quote } from '../types.js';
 
 export const QUOTES: Quote[] = [
   {
-    "id": "governable-spaces-title-democratic-design",
+    "id": "governable-spaces-title-premise",
     "text": "Governable Spaces: Democratic Design for Online Life",
     "themes": [
       "governable-spaces",
@@ -13,158 +13,139 @@ export const QUOTES: Quote[] = [
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Title"
   },
   {
-    "id": "intro-governable-spaces-definition",
-    "text": "Any precise meaning of self-governance is necessarily contextual, depending on who is involved and what kinds of say they seek. Likewise, I claim no fixed definition for democracy. I understand it as always a horizon, a longing for power shared equitably among participants, a destination that moves depending on where one stands. An orchestra permits hierarchies intolerable to a punk band, but the people in each may still see themselves as living toward democracy. If democracy is the horizon, self-governance is a plausible practice for moving in that direction. Governable spaces, then, are where democratic self-governance can happen.",
-    "themes": [
-      "governable-spaces",
-      "democratic-mediation",
-      "self-governance"
-    ],
-    "source_chapter": "Introduction",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Introduction"
-  },
-  {
-    "id": "intro-tools-must-change",
-    "text": "Gillespie's proposal therefore requires amending. To 'share the tools' as the tools are will do little for governing collectively. The tools themselves must be different for governable spaces to emerge.",
-    "themes": [
-      "democratic-mediation",
-      "platform-governance",
-      "governable-stack"
-    ],
-    "source_chapter": "Introduction",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Introduction"
-  },
-  {
-    "id": "intro-democratic-skills-atrophy",
+    "id": "democratic-erosion-design-atrophy",
     "text": "This book will add one more accusation to the pile: the design of online social spaces has contributed to the atrophy of everyday democratic skills. The diagnosis also bears remedies. More than other explanations of democratic erosion, this account suggests that the future of democracy can begin at the level of ordinary community, wherever we find ourselves together, where each of us has the chance to make a difference.",
     "themes": [
       "implicit-feudalism",
-      "democratic-mediation",
+      "democratic-erosion",
       "everyday-democracy"
     ],
     "source_chapter": "Introduction",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Introduction"
   },
   {
-    "id": "intro-tocqueville-spillover",
-    "text": "Causal 'spillover effects' indicate that when people participate in local democratic activities, they are more likely to involve themselves in the affairs of government. Among social movements, practicing democracy at small scales has often been a strategy for building democratic power at the highest levels.",
+    "id": "artifacts-have-politics-winner",
+    "text": "Democratic self-governance is far harder than it needs to be in online spaces, and autocratic flows of power arise easily—not so much because of the people as because of the tools and the economies that reinforce them. Different tool designs can make self-governance easier to practice and improve. To borrow the canonical phrasing of Langdon Winner, who tangled with determinism too, these artifacts have politics.",
     "themes": [
-      "everyday-democracy",
-      "democratic-mediation",
-      "governable-spaces"
+      "implicit-feudalism",
+      "governable-spaces",
+      "democratic-mediation"
     ],
     "source_chapter": "Introduction",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Introduction"
   },
   {
-    "id": "implicit-feudalism-definition-quote",
-    "text": "I use the word metaphorically to describe concurrent communities across a network, each subject to a power structure that is apparently absolute and unalterable by those who lack specific permissions. . . . Implicit feudalism is primarily a matter of software design. It is a habit: a familiar way of doing things, along with the technical debt from past designs, around which business models have grown.",
+    "id": "implicit-feudalism-definition",
+    "text": "I argue that an implicit feudalism informs the available options for community management on the dominant platforms for online communities. It is a pattern that grants user-administrators absolutist reign over their fiefdoms, with competition among them as the primary mechanism for quality control, typically under rules set by platform companies. These practices emerged from particular technical conditions dating to early social platforms. They have since bled into widespread social and political norms. But implicit feudalism is not a necessary condition.",
     "themes": [
       "implicit-feudalism",
-      "software-design",
+      "platform-design",
       "counter-democratic-design"
     ],
     "source_chapter": "Ch. 2",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
   },
   {
-    "id": "implicit-feudalism-disaffordance-quote",
-    "text": "Social-media platforms do not advertise implicit feudalism as a feature; users do not often demand or notice it. Rather, it lurks in what the affordances lack, a negative space outside users' experience with platforms. When we do notice it, implicit feudalism appears as a disaffordance: a field of actions that platforms seem to inhibit. But in typical online life, it is merely a willingness to accept and a failure to question systems with impoverished feature sets.",
+    "id": "affective-vs-effective-voice",
+    "text": "We defined the effective sort of voice as 'individual or collective speech that brings about a binding effect according to transparent processes.' This might be the ability to vote out an admin, for instance, or to form unions among users or to require that moderators have to follow rules like everyone else. These are basic features of so much institutional life in democratic societies, at least before it all went online. There, for most of us, effective voice is mostly absent.",
     "themes": [
       "implicit-feudalism",
-      "disaffordance",
-      "counter-democratic-design"
-    ],
-    "source_chapter": "Ch. 2",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
-  },
-  {
-    "id": "effective-vs-affective-voice-quote",
-    "text": "Affective voice can be heard in the maelstrom of online emotion and persuasion that flows so freely. . . . But they must wait for admins or whoever else holds the keys to act on their complaints. Effective voice, meanwhile, is the voice that the peasants lack under feudalism, the instrumental power to change something, whether the nobles like it or not. We defined the effective sort of voice as 'individual or collective speech that brings about a binding effect according to transparent processes.'",
-    "themes": [
-      "effective-voice",
-      "affective-voice",
       "democratic-mediation",
-      "implicit-feudalism"
+      "exit-voice"
     ],
     "source_chapter": "Ch. 2",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
   },
   {
-    "id": "tyranny-of-structurelessness-quote",
-    "text": "As Zeynep Tufekci puts it, 'The tyranny of structurelessness has merged with the tyranny of platforms.' If groups do not develop intentional 'democratic structuring,' Freeman argued, informal power structures will form, usually reinforcing existing hierarchies and privilege. The notion that 'anyone' can contribute to and even co-govern an open-source project—a notion sometimes referred to as 'do-ocracy'—fails to recognize that not everyone is equally equipped with the free time, knowledge, and incentives to participate. Power vacuums can produce the most entrenched feudalism of all.",
+    "id": "tyranny-of-structurelessness-online",
+    "text": "As feminist activist and scholar Jo Freeman famously observed, a 'tyranny of structurelessness' frequently arises—one in which the absence of an explicit hierarchy in a system results in a hidden, difficult-to-alter hierarchy imported from external social forces. . . . As Zeynep Tufekci puts it, 'The tyranny of structurelessness has merged with the tyranny of platforms.' If groups do not develop intentional 'democratic structuring,' Freeman argued, informal power structures will form, usually reinforcing existing hierarchies and privilege.",
     "themes": [
       "implicit-feudalism",
-      "structurelessness",
+      "tyranny-of-structurelessness",
       "power-vacuum",
-      "do-ocracy"
+      "democratic-design"
     ],
     "source_chapter": "Ch. 2",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
   },
   {
-    "id": "blunt-tools-cancel-culture-quote",
+    "id": "blunt-tools-cancel-culture",
     "text": "Anxieties about cancel culture should instead be anxieties about the fact that there is no better recourse, that people feel powerless to address conflict in a proportionate, deliberate way. We couldn't just vote Miguel out and thank him for his service, or submit a complaint to a mediation process. To the extent that cancel culture has become a term of derision, perhaps the blame should fall not on the crowds for their excesses but on the systems that leave them little choice.",
     "themes": [
       "implicit-feudalism",
-      "effective-voice",
+      "democratic-mediation",
       "accountability",
-      "cancel-culture"
+      "affective-voice"
     ],
     "source_chapter": "Ch. 2",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
   },
   {
-    "id": "feudalism-business-model-quote",
-    "text": "Why do feudal defaults persist on large platforms? A Facebook Group doesn't reside in its creator's house. A subreddit doesn't consume the computing resources of its moderators, only that of Reddit itself. It is no longer so obvious that the founder of a community should have dictatorial say over it. The norms and design elements of implicit feudalism are no longer a matter of technical necessity. But they became a business model.",
+    "id": "lambdamoo-wizardly-fiat",
+    "text": "In 1996 the admins announced that they were 'reintroducing wizardly fiat' with veto power over user self-governance, due to the realities of non-virtual jurisdiction: 'So long as the MOO is located on a single RL [real-life] machine at a single RL site subject to RL laws and liabilities, there will be those deemed responsible for the use of that hardware.' In realizations like this, we find a formative moment of implicit feudalism. Regardless of whatever limitless possibilities seem to exist in virtual space, if that space lives on someone's server, then the possibilities end at what that someone, together with the legal regime where they live, will tolerate.",
     "themes": [
       "implicit-feudalism",
-      "platform-business-model",
+      "server-ownership",
+      "legal-liability",
       "counter-democratic-design"
     ],
     "source_chapter": "Ch. 2",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
   },
   {
-    "id": "communityrule-rules-vs-bylaws",
-    "text": "Having shared rules in a group is important. They help members know when a decision is really a decision. When conflicts arise and people's relationships alone aren't enough to handle them, it helps to have a clear process for what to do. But traditional bylaws are too formal—and even too expensive to produce if lawyers get involved—for most online communities.",
+    "id": "feudalism-as-business-model",
+    "text": "Why do feudal defaults persist on large platforms? A Facebook Group doesn't reside in its creator's house. A subreddit doesn't consume the computing resources of its moderators, only that of Reddit itself. It is no longer so obvious that the founder of a community should have dictatorial say over it. The norms and design elements of implicit feudalism are no longer a matter of technical necessity. But they became a business model. . . . Rather than criminally low wages, platforms offer moderators the perk of unchecked power.",
     "themes": [
+      "implicit-feudalism",
+      "platform-design",
+      "moderation-labor",
+      "business-model"
+    ],
+    "source_chapter": "Ch. 2",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 2"
+  },
+  {
+    "id": "implicit-feudalism-rules-void",
+    "text": "Implicit feudalism thrives on an absence of rules; admin power fills the void. More democratic communities need ways to describe the rules they want to use. CommunityRule is an attempt to imagine interfaces that make governance arrangements easy to design and understand.",
+    "themes": [
+      "implicit-feudalism",
       "democratic-mediation",
-      "governable-spaces",
-      "modular-politics",
-      "online-community-governance"
+      "governance-design",
+      "rules-as-infrastructure"
     ],
     "source_chapter": "Profile: CommunityRule",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: CommunityRule"
   },
   {
-    "id": "californian-ideology-politics-of-no-politics-quote",
+    "id": "communityrule-bylaws-accessibility",
+    "text": "Having shared rules in a group is important. They help members know when a decision is really a decision. When conflicts arise and people's relationships alone aren't enough to handle them, it helps to have a clear process for what to do. But traditional bylaws are too formal—and even too expensive to produce if lawyers get involved—for most online communities.",
+    "themes": [
+      "governance-design",
+      "democratic-mediation",
+      "rules-as-infrastructure",
+      "accessibility"
+    ],
+    "source_chapter": "Profile: CommunityRule",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: CommunityRule"
+  },
+  {
+    "id": "californian-ideology-politics-of-no-politics",
     "text": "The agenda of this chapter is to revisit the politics of no-politics that Barbrook and Cameron diagnosed—the culture that, according to Fred Turner, 'turned away from political action and toward technology.' The original formulation of the Californian ideology outlined a certain kind of political economy, a social and economic liberalism capable of assailing industrial policy while tacitly relying on it. Here I turn from political economy to the micropolitics of everyday online life: how implicit feudalism encoded certain imaginations of social order into software designs, which users far from California have decoded into a neo-feudal politics.",
     "themes": [
       "politics-of-no-politics",
       "implicit-feudalism",
-      "californian-ideology"
+      "californian-ideology",
+      "everyday-politics"
     ],
     "source_chapter": "Ch. 5",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
   },
   {
-    "id": "homesteading-feudalism-inside-democracy-quote",
-    "text": "The homestead turns land into a bounded political object, encoding participants as the citizens who could be the basis of new states for the Union... Homesteading extended the earlier 'doctrine of discovery'... Whereas Iberian dominions in the Americas parceled out land in large chunks to aristocrats, leaving subsequent inhabitants to demand disruptive waves of land reform, the homestead doctrine was to be a parceling-out of democratic ownership—democratic in the sense of personal, private, and widely available, but with a feudalism inscribed inside. Within the homestead, the male citizen was sovereign over his family, and through his dominion he became a democratic subject on his visits to town.",
+    "id": "homesteading-feudalism-inscribed",
+    "text": "The homestead turns land into a bounded political object, encoding participants as the citizens who could be the basis of new states for the Union... Within the homestead, the male citizen was sovereign over his family, and through his dominion he became a democratic subject on his visits to town. Democracy thereby depended on the dual subjugation of the household and of the people whose territories preexisted its property lines... As in the homestead, the two tendencies are enmeshed and codependent, despite their contradictions. Democracy is the goal, even if it is not recognizable in the means.",
     "themes": [
       "implicit-feudalism",
       "homesteading",
-      "politics-of-no-politics"
-    ],
-    "source_chapter": "Ch. 5",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
-  },
-  {
-    "id": "exit-as-false-democracy-quote",
-    "text": "Exit has assumed an exalted place in Californian thinking. The availability of exit became the implicit justification of implicit feudalism: if a community is exit-able, that is enough to call it democratic... From dreams of space travel to floating 'seasteading' colonies in international waters, the Californian ideology longs for homestead archipelagos, where feudal governance can finally flourish—justified by exit options, rebranded as democracy.",
-    "themes": [
-      "implicit-feudalism",
-      "exit-as-false-democracy",
       "californian-ideology",
       "politics-of-no-politics"
     ],
@@ -172,21 +153,11 @@ export const QUOTES: Quote[] = [
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
   },
   {
-    "id": "homeplace-vs-homestead-hooks-quote",
-    "text": "Compare the homesteading tradition to another sort of home, the 'site of resistance' that bell hooks has celebrated as a homeplace. She explains: 'Black women resisted by making homes where all black people could strive to be subjects, not objects, where we could be affirmed in our minds and hearts.' Those who could not leave an oppressive society could find liberation together, transforming space and time, however constrained the homeplace might be by the world outside. The homeplace forms a counter-tradition to the homestead, a place of care and resistance, where power can be shared in contrast to the domination of the broader society in which it occurs.",
+    "id": "homeplace-as-resistance",
+    "text": "There are elements of the homeplace in many online spaces, in what people have made with the Californian ideology's products, constructing sites of resistance again and again, beyond the knowledge or comprehension of the technologists and executives. Homeplaces have become particularly important among marginalized groups, whose members can find each other online in ways unavailable before... Solidarity forms through the affective affinities among participants, regardless of who is technically in charge of the platform or the forum. The intimacy, the care, the rebellion, the imagination—none are in the code, but homeplaces occur both because of and despite the designs of homesteading machines. The feudal power flows are never the whole story.",
     "themes": [
       "homeplace",
-      "democratic-mediation",
-      "resistance"
-    ],
-    "source_chapter": "Ch. 5",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
-  },
-  {
-    "id": "everyday-fractals-political-skills-quote",
-    "text": "We—Americans—don't know how to do democracy. We don't know how to make decisions together, how to create generative compromises, how to advance policies that center justice. Most of our movements are reduced to advancing false solutions, things we can get corporate or governmental agreement on, which don't actually get us where we need to be. It was and is devastatingly clear to me that until we have some sense of how to live our solutions locally, we won't be successful at implementing a just governance system regionally, nationally, or globally.",
-    "themes": [
-      "political-skills",
+      "implicit-feudalism",
       "democratic-mediation",
       "everyday-politics"
     ],
@@ -194,184 +165,272 @@ export const QUOTES: Quote[] = [
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
   },
   {
-    "id": "anti-feudal-skills-precede-technology-quote",
-    "text": "Recall Conway's Law, the notion that the designs of technical systems end up resembling the organizations that design them; to build anti-feudal systems, Agre would likewise stress the need to start by practicing anti-feudal interactions, wherever we find ourselves... Against feudal technology and the authoritarian revival it helped produce, the retort is not another technology, but the practice of political skills. If we honor those skills, perhaps designers will encode future technologies that nourish, rather than evade, everyday politics.",
+    "id": "political-skills-everyday-fractals",
+    "text": "We—Americans—don't know how to do democracy. We don't know how to make decisions together, how to create generative compromises, how to advance policies that center justice. Most of our movements are reduced to advancing false solutions, things we can get corporate or governmental agreement on, which don't actually get us where we need to be. It was and is devastatingly clear to me that until we have some sense of how to live our solutions locally, we won't be successful at implementing a just governance system regionally, nationally, or globally.",
     "themes": [
       "political-skills",
-      "implicit-feudalism",
-      "democratic-design",
-      "conways-law"
+      "everyday-politics",
+      "democratic-mediation"
     ],
     "source_chapter": "Ch. 5",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
   },
   {
-    "id": "twitter-as-commodity-civic-space",
+    "id": "implicit-feudalism-authoritarian-decoding",
+    "text": "Before long, feudal systems gave rise to even more disruptive forms of feudal politics... Starting with the feudal designs encoded into their systems, the minutiae of technical administration expanded to become coterminous with geopolitics... The salvific promise of Q was to overcome democracy and install the order of a platform homestead in its place. As with the Islamic State, the movement born on decentralized networks adopted the organizational default that implicit feudalism promulgates.",
+    "themes": [
+      "implicit-feudalism",
+      "politics-of-no-politics",
+      "authoritarian-revival",
+      "californian-ideology"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "twitter-as-commodity-musk-takeover",
     "text": "When Elon Musk acquired the social-media platform Twitter for $44 billion in October 2022, it was a stark reminder to many people that our online civic spaces are commodities that can be bought and sold.",
     "themes": [
       "implicit-feudalism",
       "platform-commodification",
-      "civic-infrastructure"
+      "civic-space"
     ],
     "source_chapter": "Profile: A People's History of Twitter",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: A People's History of Twitter"
   },
   {
-    "id": "community-self-recognition-precedes-self-governance",
+    "id": "community-identity-precondition-self-governance",
     "text": "Governance is not just about holding power and making decisions. Before a community can begin to self-govern, it needs to see itself as a community—through participants telling stories about themselves and having shared experiences. A People's History of Twitter was an attempt to begin that process, to initiate people's transition from being users of someone else's platform to being full citizens of the networks they live by.",
     "themes": [
       "democratic-mediation",
-      "community-formation",
+      "community-identity",
       "self-governance",
-      "implicit-feudalism"
+      "civic-space"
     ],
     "source_chapter": "Profile: A People's History of Twitter",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: A People's History of Twitter"
   },
   {
-    "id": "diagnosis-to-remedy-shift-quote",
-    "text": "From here on, I shift from diagnosis to remedy. The remedies I explore involve rethinking the design and practice of online social spaces by treating democracy as itself a medium for struggle, play, and policy. This is a departure from more widespread calls for online platforms to better serve the legitimate functioning of representative elections among territorial governments. While I do not object to such calls, I focus instead on remedies that match the ailment I have observed—remedies that bring democracy more deeply into everyday online life, establishing appropriate kinds of jurisdictions as sites of creative self-governance.",
+    "id": "peoples-history-as-mourning-wake",
+    "text": "In that sense, the People's History served as a kind of wake, a joyful way of mourning something that, at least in some respects, had died.",
     "themes": [
-      "democratic-mediation",
+      "platform-commodification",
+      "community-identity",
+      "civic-space"
+    ],
+    "source_chapter": "Profile: A People's History of Twitter",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: A People's History of Twitter"
+  },
+  {
+    "id": "scalability-vs-subsidiarity-quote",
+    "text": "Taking inspiration from transformative justice activists, Hasinoff and I show how participant-centered systems can adopt subsidiarity: a principle that prioritizes appropriately local control wherever possible, within a larger system... Subsidiarity, to be clear, is not a demand for limitless local autonomy. Alongside autonomy it involves relationships to larger systems. It is not scalability, but it does enable scale—composed of spaces small enough to be governable.",
+    "themes": [
+      "subsidiarity",
+      "scalability",
       "governable-spaces",
-      "implicit-feudalism"
-    ],
-    "source_chapter": "Ch. 3",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 3"
-  },
-  {
-    "id": "scalability-vs-subsidiarity-core-quote",
-    "text": "Taking inspiration from transformative justice activists, Hasinoff and I show how participant-centered systems can adopt subsidiarity: a principle that prioritizes appropriately local control wherever possible, within a larger system... Scalability has become the business model for the venture-capital investment that underwrites nearly all corporate social media. The payoff for investing millions of dollars in an unproven startup is the prospect of a business that can add large numbers of new users at ever-declining per-user cost. Platforms therefore seek to govern harm and conflict through software-enabled automation: global rule books, algorithmic enforcement wherever possible, and opaque human decision-making when necessary.",
-    "themes": [
-      "democratic-mediation",
-      "governable-spaces",
-      "implicit-feudalism"
-    ],
-    "source_chapter": "Ch. 3",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 3"
-  },
-  {
-    "id": "crypto-antidote-implicit-feudalism-quote",
-    "text": "Regardless of any practical use value, crypto represents a rupture with respect to the particular argument I have been making: it can be an antidote to implicit feudalism. Previous internet technologies have presumed a central server, whose legal owner holds ultimate responsibility for what takes place on that server. A democracy among users will almost inevitably come into conflict with the underlying technical and legal reality. The distinguishing affordance of a blockchain, however, is enabling a system that lacks any single owner, that is user-governed by default.",
-    "themes": [
-      "implicit-feudalism",
-      "dao",
-      "governable-stack"
-    ],
-    "source_chapter": "Ch. 3",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 3"
-  },
-  {
-    "id": "cryptoeconomics-needs-politics-quote",
-    "text": "If cryptoeconomics is the sole basis of new governance models, however, there is cause for worry... the neoliberal aspiration for economics to guide all aspects of society represents a threat to democracy and human personhood... While it has enabled productive experimentation, cryptoeconomics cannot serve as a sufficient basis for the governance possibilities in online spaces. My argument is perhaps anticlimactic in comparison to a technology that inspires such radical aspirations for remaking the world: crypto needs to rediscover politics. This entails enveloping economics within rules set by institutions not primarily economic in nature, which are capable of articulating, instantiating, and evolving shared understandings of the common good.",
-    "themes": [
-      "dao",
-      "metagovernance",
       "democratic-mediation"
     ],
-    "source_chapter": "Ch. 3",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 3"
+    "source_chapter": "Ch. 4",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 4"
+  },
+  {
+    "id": "cryptoeconomics-politics-rediscovery",
+    "text": "While it has enabled productive experimentation, cryptoeconomics cannot serve as a sufficient basis for the governance possibilities in online spaces. My argument is perhaps anticlimactic in comparison to a technology that inspires such radical aspirations for remaking the world: crypto needs to rediscover politics. This entails enveloping economics within rules set by institutions not primarily economic in nature, which are capable of articulating, instantiating, and evolving shared understandings of the common good.",
+    "themes": [
+      "cryptoeconomics",
+      "democratic-mediation",
+      "dao",
+      "metagovernance"
+    ],
+    "source_chapter": "Ch. 4",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 4"
   },
   {
     "id": "abolition-democracy-online-quote",
     "text": "Online spaces need abolitionist imaginations. Intersecting experiences of oppression and marginalization run rampant there, along with the habits of punitive enforcement. Governments and technology companies offer to solve problems with rules and punishments, but those institutions represent the racial capitalism that abolitionists want to make obsolete with their own solutions. Kaba and Andrea J. Ritchie quote Grace Lee Boggs: 'We need to exercise power, not take it.' Change of this sort cannot happen by replacing who is in charge, only by altering how power flows.",
     "themes": [
+      "transformative-justice",
+      "abolition-democracy",
       "democratic-mediation",
+      "implicit-feudalism"
+    ],
+    "source_chapter": "Ch. 4",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 4"
+  },
+  {
+    "id": "crypto-antidote-feudalism-quote",
+    "text": "Regardless of any practical use value, crypto represents a rupture with respect to the particular argument I have been making: it can be an antidote to implicit feudalism. Previous internet technologies have presumed a central server, whose legal owner holds ultimate responsibility for what takes place on that server. A democracy among users will almost inevitably come into conflict with the underlying technical and legal reality. The distinguishing affordance of a blockchain, however, is enabling a system that lacks any single owner, that is user-governed by default.",
+    "themes": [
       "implicit-feudalism",
-      "governable-spaces"
+      "dao",
+      "cryptoeconomics",
+      "governable-stack"
     ],
-    "source_chapter": "Ch. 3",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 3"
+    "source_chapter": "Ch. 4",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 4"
   },
   {
-    "id": "democratic-play-political-skills-quote",
-    "text": "Through play, people cultivate the political skills that the next evolution of democracy will require. The political economist Vincent Ostrom, a twentieth-century disciple of Tocqueville, taught that citizenship is a sort of 'artisanship,' both art and science. Unlike a sculpted pot or statue, however, Ostrom noted that organizations are 'artifacts that contain their own artisans.' The possibilities of organizational life are not to be found in universal laws but in the political imagination their participants allow themselves to have, and in the capacity to sneak imagination into practice.",
+    "id": "excavations-database-as-relationship",
+    "text": "If the database were simply another act of appropriation, the artists taught us, it should not exist at all. The information it contains must, rather, be an invitation and starting point for relationships, for accountability, for repair.",
     "themes": [
-      "democratic-mediation",
-      "governable-spaces"
-    ],
-    "source_chapter": "Ch. 3",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 3"
-  },
-  {
-    "id": "excavations-ancestry-obligation-database-quote",
-    "text": "Many of the Excavations artists came to their work with a strong sense of ancestry—of obligation to ancestral lineages, both direct and adopted. This sensibility has helped inform our thinking surrounding the meaning and use of the database. If the database were simply another act of appropriation, the artists taught us, it should not exist at all. The information it contains must, rather, be an invitation and starting point for relationships, for accountability, for repair.",
-    "themes": [
-      "democratic-mediation",
-      "metagovernance",
-      "governance-archaeology",
-      "indigenous-governance",
-      "accountability"
+      "cross-cultural-governance",
+      "indigenous-knowledge",
+      "accountability",
+      "democratic-mediation"
     ],
     "source_chapter": "Profile: Excavations",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: Excavations"
   },
   {
-    "id": "modpol-groups-over-roles-quote",
+    "id": "digital-colonialism-definition",
+    "text": "I will use digital colonialism as a capacious shorthand for the above terms—forms of domination by governments and corporations through their control over internet technologies. I do so while recognizing the danger of too easily conflating military occupation with more immaterial feats of data extraction and digital labor arbitrage. In the apt phrase of Eve Tuck and K. Wayne Yang, 'decolonization is not a metaphor.' Corporate capture of online data is not the same as territorial conquest and genocide. But the control of data flows can supplant or aid control over embodied life. To the extent that access to livelihoods and cultural sovereignty occur through digital systems, the coloniality in question is no mere metaphor.",
+    "themes": [
+      "digital-colonialism",
+      "platform-imperialism",
+      "data-colonialism"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "governable-stacks-definition-quote",
+    "text": "I propose the pursuit of governable stacks—the webs of tools and techniques that can support self-governing online communities. Governable stacks are cyborg assemblages of interoperating technology in symbiosis with human relationships. Those relationships organize power in partnership with the technology more than through domination over it. Governable stacks are also an orientation toward ungovernable organizing under digital colonialism. They are the socio-technical substrate of governable spaces.",
+    "themes": [
+      "governable-stack",
+      "democratic-mediation",
+      "self-governance"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "virality-vs-capacity-quote",
+    "text": "Zeynep Tufekci offers an illuminating distinction: the networked 'signal' of movements can be self-defeating without 'capacity' to translate it into durable, adaptable organizations that can wield leverage long enough to achieve shared goals. For movements that claim a democratic mandate, capacity for power requires capacity for sustainable self-governance.",
+    "themes": [
+      "virality",
+      "democratic-mediation",
+      "self-governance",
+      "movement-organizing"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "modular-politics-goals-quote",
+    "text": "Modular politics is a model for the design of action arenas in online spaces that I developed with my collaborators in the Metagovernance Project, an online network of researchers and builders. We imagine this model as a foil to implicit feudalism, the basis of an emerging 'governance layer for the internet.' It is a workshop for artisans of self-governance.",
+    "themes": [
+      "modular-politics",
+      "implicit-feudalism",
+      "metagovernance",
+      "governable-stack"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "governance-archaeology-quote",
+    "text": "Governance archaeology is a practice of intentionally crafting relationships between new governance designs and preexisting legacies. Conventional archaeology deals with the remnants of the past that are still here in the present, unearthing them for study and displaying them for the purposes of the living; governance designers do something similar, whether consciously or not. They draw on their muscle memory and their ancestors when deciding what seems right and what might work.",
+    "themes": [
+      "governance-archaeology",
+      "democratic-mediation",
+      "decolonial-design"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "ungovernability-requires-self-governance-quote",
+    "text": "These legacies of resistance speak loudly the more you listen: to be ungovernable in any durable way requires self-governing through everyday organizing. Platforms have enabled their users to feel ungovernable and powerful for a time. But without the means of self-governance, those sensations will be always fleeting.",
+    "themes": [
+      "self-governance",
+      "ungovernability",
+      "implicit-feudalism",
+      "digital-colonialism"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "fractal-organizing-quote",
+    "text": "Adrienne maree brown credits Grace Lee Boggs for helping her see the fractal nature of movements, that 'what we practice at the small scale sets the patterns for the whole system.' There was a fractal in the free maroons of Saint-Domingue who stormed down from their mountains into combat with French troops so that the whole island could be free. There was a fractal in the spinning wheel on the Indian National Congress flag, extending from a traditional practice to an eventual industrial policy. Resistance can spread up and down the stack.",
+    "themes": [
+      "governable-stack",
+      "self-governance",
+      "fractal-organizing",
+      "digital-colonialism"
+    ],
+    "source_chapter": "Ch. 5",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 5"
+  },
+  {
+    "id": "modpol-design-principles-groups-over-roles",
     "text": "Instead of assigning powers to particular users, Modpol assigns powers to orgs. Ultimately, it is on the level of org membership not individual permissions that things happen. Orgs can make decisions using whatever modules they choose. They can use the consent module we created to approve decisions with a certain threshold of votes; they can also defer an approval to a one-member org if they want a role-like structure. But sovereignty stems first from the collective, not an individual.",
     "themes": [
-      "implicit-feudalism",
       "modular-politics",
-      "collective-sovereignty",
-      "governable-spaces"
+      "implicit-feudalism",
+      "democratic-design",
+      "self-governance",
+      "sovereignty"
     ],
     "source_chapter": "Profile: Modpol",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: Modpol"
   },
   {
-    "id": "modpol-freedom-over-authority-quote",
+    "id": "modpol-design-principles-freedom-over-authority",
     "text": "The default setting for org decisions is trust—any user can take any available action within an org. The system does not assume that one admin holds all the power. Org members can change that and create an admin structure (or anything else), but they have to do so intentionally. Autocracy is just one option among many for how to run a group, rather than being the presumption at the outset.",
     "themes": [
       "implicit-feudalism",
+      "democratic-design",
       "modular-politics",
-      "democratic-default",
-      "governable-spaces"
+      "self-governance"
     ],
     "source_chapter": "Profile: Modpol",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: Modpol"
   },
   {
-    "id": "modpol-inheritance-over-blank-slates-quote",
+    "id": "modpol-design-principles-inheritance",
     "text": "Usually, new spaces for online groups on a platform start out the same. Real social life, however, is infused with habit, tradition, and muscle memory. Modpol reflects that. When new orgs form within existing orgs, they inherit the rules of their parents. Those rules can be changed. But the rules begin with whatever users were already doing.",
     "themes": [
       "modular-politics",
-      "governable-spaces",
       "democratic-design",
-      "inheritance"
+      "self-governance",
+      "metagovernance"
     ],
     "source_chapter": "Profile: Modpol",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Profile: Modpol"
   },
   {
-    "id": "policy-as-self-governance-strategy-quote",
-    "text": "The heart of my argument is a call for shifting the orientation of policymaking from top-down regulation, which reinforces existing sites of power, toward enabling new sites of power among user communities. This kind of policy seeks to ensure that people have the power to solve problems on their own terms. In the process, policy can secure a future for democracy by letting it evolve—under diverse conditions, confronting urgent needs.",
+    "id": "policy-as-coordination-rights-allocator",
+    "text": "Policy, she came to realize, acts as an 'allocator of coordination rights': an arbiter of who is allowed to team up and how. Restrictions on coordination can be difficult to notice, lurking in the shadows of what the law prevents, even without actively prohibiting it.",
     "themes": [
-      "democratic-mediation",
-      "governable-spaces",
-      "partner-state",
-      "self-governance"
-    ],
-    "source_chapter": "Ch. 6",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
-  },
-  {
-    "id": "antitrust-coordination-rights-quote",
-    "text": "Sanjukta Paul had a job at a labor union. She saw how US antitrust laws—ostensibly intended to constrain corporate power—actually narrowed the options workers had for joining together and organizing. Policy, she came to realize, acts as an 'allocator of coordination rights': an arbiter of who is allowed to team up and how.",
-    "themes": [
-      "platform-cooperatives",
+      "policy-strategy",
       "coordination-rights",
-      "antitrust-as-democracy-tech"
+      "antitrust",
+      "platform-work"
     ],
     "source_chapter": "Ch. 6",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
   },
   {
-    "id": "self-governance-as-provisioned-practice-quote",
-    "text": "People experience self-governance as burdensome when they are not adequately provided for in doing it... good governance does not happen by magic or for free. Governable spaces cannot flourish without the leverage to make them meaningful or the resources to make them sustainable.",
+    "id": "section-230-platform-governors-quote",
+    "text": "Platform companies thereby became what Kate Klonick has called 'the new governors'—not merely moderators or enforcers but architects of meaningfully autonomous polities wielding power over users and the public sphere.",
+    "themes": [
+      "implicit-feudalism",
+      "platform-governance",
+      "section-230",
+      "content-moderation"
+    ],
+    "source_chapter": "Ch. 6",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
+  },
+  {
+    "id": "self-governance-provisioning-quote",
+    "text": "People experience self-governance as burdensome when they are not adequately provided for in doing it. ... Feminist economists have long sought to study the present and imagine futures with particular attention to burdens that fall across society unequally. But the feminist response to those burdens has not been to fix them with well-resourced paternalism.",
     "themes": [
       "social-provisioning",
-      "governable-spaces",
-      "feminist-economics"
+      "self-governance",
+      "feminist-economics",
+      "governable-spaces"
     ],
     "source_chapter": "Ch. 6",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
@@ -381,71 +440,74 @@ export const QUOTES: Quote[] = [
     "text": "Technology design is policy design. Policies appear in the shape of interfaces, like the steward report cards. But policies also disappear in the underlying infrastructure, in the protocols and incentive structures that lie beneath the surface. Provisioning governable spaces requires not just technologies for governance but also governable technologies, and people equipped to co-design their tools.",
     "themes": [
       "governable-stack",
-      "metagovernance",
-      "implicit-feudalism"
+      "technology-as-policy",
+      "modular-politics",
+      "platform-design"
     ],
     "source_chapter": "Ch. 6",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
   },
   {
-    "id": "exit-to-community-rationale-quote",
-    "text": "Typically, startups backed by venture capital have two options for their inevitable 'exit': being acquired by a bigger company or becoming publicly traded on stock markets. Both exit options mean selling to the highest bidder, and any community the startup has built becomes a commodity... E2C is an invitation for startups to explore bringing their most direct participants into structures of ownership and governance.",
+    "id": "governable-spaces-vector-not-standard-quote",
+    "text": "Governable spaces arise when social and technical infrastructures enable participants to deliberate, make decisions, and enact those decisions through accessible, transparent, and just processes. ... I will not provide a list of minimum conditions for what is or isn't a governable space. Governable spaces are a vector, a direction of motion, not a standard or condition that can be named without knowing its context.",
+    "themes": [
+      "governable-spaces",
+      "democratic-design",
+      "policy-strategy"
+    ],
+    "source_chapter": "Ch. 6",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
+  },
+  {
+    "id": "exit-to-community-quote",
+    "text": "Typically, startups backed by venture capital have two options for their inevitable 'exit': being acquired by a bigger company or becoming publicly traded on stock markets. Both exit options mean selling to the highest bidder, and any community the startup has built becomes a commodity. ... E2C is an invitation for startups to explore bringing their most direct participants into structures of ownership and governance.",
     "themes": [
       "exit-to-community",
       "platform-cooperatives",
-      "democratic-mediation"
-    ],
-    "source_chapter": "Ch. 6",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
-  },
-  {
-    "id": "common-ai-cooperative-trust-quote",
-    "text": "Common is governed by a federation of collective institutions from all over the world that are devoted to the mission of AI as a public resource. Anyone can add knowledge to Common, and there is a democratic process to building the hardware necessary to carry the AI. Common is decentralized and spread across all of the devices that run its software. Tech cooperatives create vessels to hold the AI—from literal black boxes to giant robots—but most people use practical vessels like smartphones and watches.",
-    "themes": [
-      "platform-cooperatives",
-      "governable-stack",
-      "public-infrastructure",
-      "metagovernance"
-    ],
-    "source_chapter": "Ch. 6",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
-  },
-  {
-    "id": "cooperative-commonwealth-theory-of-change-quote",
-    "text": "Historically, this is indeed how bursts of cooperative development have tended to go: people conducting local experiments out of necessity band together and build power sufficient to establish public policies, which unlock potential for far more. Prefigure, replicate, and reintegrate into a new normal.",
-    "themes": [
-      "platform-cooperatives",
-      "democratic-mediation",
+      "democratic-ownership",
       "governable-spaces"
     ],
     "source_chapter": "Ch. 6",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
   },
   {
-    "id": "metagovernance-definition-jessop-quote",
+    "id": "democracy-seeds-foundational-quote",
+    "text": "Historically, this is indeed how bursts of cooperative development have tended to go: people conducting local experiments out of necessity band together and build power sufficient to establish public policies, which unlock potential for far more. Prefigure, replicate, and reintegrate into a new normal. ... Democracy starts with seeds, and they grow if we let them.",
+    "themes": [
+      "democratic-mediation",
+      "cooperative-development",
+      "fractal-organizing",
+      "policy-strategy"
+    ],
+    "source_chapter": "Ch. 6",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Ch. 6"
+  },
+  {
+    "id": "metagovernance-definition-jessop",
     "text": "Political theorists began writing about metagovernance in the 1990s—as Bob Jessop defines it, 'the organization of the conditions for governance in its broadest sense,' or simply the 'organization of self-organization.' Addressing failures of governance, this coterie recognized, requires more than simply considering a certain situation in isolation, because there is a broader context in which it occurs.",
     "themes": [
       "metagovernance",
       "self-organization",
-      "governance-failures"
+      "governance-conditions"
     ],
     "source_chapter": "Epilogue",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
   },
   {
-    "id": "implicit-feudalism-as-metagovernance-quote",
+    "id": "implicit-feudalism-as-metagovernance",
     "text": "Implicit feudalism has been a kind of metagovernance, and like so much metagovernance, it too often hides beneath our notice. But changing how we govern requires being attentive to the metagovernance at work. Shaping the background conditions of governance is itself a form of governance.",
     "themes": [
       "implicit-feudalism",
       "metagovernance",
-      "background-conditions"
+      "background-conditions",
+      "governance"
     ],
     "source_chapter": "Epilogue",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
   },
   {
-    "id": "dao-metagovernance-token-cascade-quote",
-    "text": "People in crypto have begun talking about metagovernance, too—less as a theory than as daily practice. For them, metagovernance happens when one DAO, for instance, holds tokens from other DAOs. That means a proposal vote in that first DAO might cascade to other DAOs, across the ecosystem and potentially back again. DAOs habitually engage in token swaps to solidify collaborations, exchanging power in each other.",
+    "id": "dao-metagovernance-token-cascade",
+    "text": "People in crypto have begun talking about metagovernance, too—less as a theory than as daily practice. For them, metagovernance happens when one DAO, for instance, holds tokens from other DAOs. That means a proposal vote in that first DAO might cascade to other DAOs, across the ecosystem and potentially back again. DAOs habitually engage in token swaps to solidify collaborations, exchanging power in each other. Products like dashboards and voting tools are appearing specifically to support the resulting kinds of many-sided governance.",
     "themes": [
       "metagovernance",
       "dao",
@@ -456,38 +518,26 @@ export const QUOTES: Quote[] = [
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
   },
   {
-    "id": "non-exclusive-sovereignties-democratic-design-quote",
-    "text": "More intentional metagovernance can veer human societies toward accountable connectivity and toward the planet now asking us to get our act together, or else. What kinds of interfaces, power structures, and skills will guide us in a world where we can co-govern more and more of the jurisdictions we inhabit? A different sort of design, a different tenor of education, and different practices of attention will all be necessary.",
+    "id": "non-exclusive-sovereignties-coulthard-hern",
+    "text": "Imagining new renditions of community beyond any transcendent identity is exactly what is required to surpass the brutal nations that stain our times. The idea of 'we' can be stripped of its colonial, statist and anthropocentric fixities. It is wholly possible to embrace and refuse identity in the same breath, reaching for a concept of being together that is exposed to the more-than-human. Community needs to extend far past the human if it is to retain any force. It has to think past species and sovereignty as much as flag.",
+    "themes": [
+      "non-exclusive-sovereignties",
+      "digital-colonialism",
+      "metagovernance",
+      "community"
+    ],
+    "source_chapter": "Epilogue",
+    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
+  },
+  {
+    "id": "governable-spaces-metagovernance-call",
+    "text": "What I have been up to all along in this book is a kind of metagovernance, a critique of feudal habits and a call for cultivating democratic communities. I have argued that the design of metagovernance for online spaces matters immensely. Social networks so far have fed democratic erosion and an authoritarian turn, but other kinds of design could draw people toward a world of non-exclusive sovereignties, as Coulthard and Hern put it, and of right relation to the more-than-human.",
     "themes": [
       "metagovernance",
-      "democratic-design",
+      "implicit-feudalism",
+      "democratic-erosion",
       "governable-spaces",
       "non-exclusive-sovereignties"
-    ],
-    "source_chapter": "Epilogue",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
-  },
-  {
-    "id": "governable-spaces-everyday-practice-fractal-quote",
-    "text": "Governable spaces are steps into possible futures, starting with the connective networks that are already now among us. I have argued for the importance of everyday online experience as a starting point for imagining through practice what it might be like to more fully, appropriately, deeply co-govern the world.",
-    "themes": [
-      "governable-spaces",
-      "democratic-mediation",
-      "everyday-practice",
-      "political-skills"
-    ],
-    "source_chapter": "Epilogue",
-    "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
-  },
-  {
-    "id": "governable-stack-commons-subsidiarity-quote",
-    "text": "Through governable stacks, communities can identify and root out feudal patterns and remake them as commons. The stack is social, technical, and environmental infrastructure. It is affective and effective. It is economic and spiritual. Through relations of subsidiarity, communities can work out their stacks as they see fit locally, while still participating in larger networks. Through modular designs, they can copy and adapt practices from elsewhere and share their creations with others.",
-    "themes": [
-      "governable-stack",
-      "commons",
-      "subsidiarity",
-      "modular-politics",
-      "implicit-feudalism"
     ],
     "source_chapter": "Epilogue",
     "source_attribution": "Schneider, Governable Spaces (UC Press / Luminos, 2024), Epilogue"
