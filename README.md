@@ -1,8 +1,10 @@
 # Governable Spaces — MCP Server
 
-An unofficial MCP server embedding Nathan Schneider's framing of democratic design for online life from *Governable Spaces: Democratic Design for Online Life* (UC Press / Luminos, 2024).
+An unofficial MCP server distilling Nathan Schneider's *Governable Spaces: Democratic Design for Online Life* (UC Press / Luminos, 2024) — open-access edition.
 
-> Built for: democracy-tech builders, governance designers, platform-cooperative organizers, fediverse implementers, DAO designers, civic-tech researchers. Use it inside Claude Desktop, Claude Code, or any MCP-compatible client to apply Schneider's framing to a real situation — diagnose implicit feudalism, find precedent democratic-medium cases, surface countering governance forms, or reframe a market/feudal-mind problem.
+The book opens with a question anyone who has lived in a moderated online community will recognise: why does so much of digital life feel feudal? You participate for years; you build trust, follow the norms, contribute. Then one admin makes a unilateral move and there is no formal seat at the table for the people who actually live in the space. Schneider names this pattern *implicit feudalism* — not a slogan, a diagnosable structural claim — and argues the alternative, a *governable space*, has to be deliberately designed.
+
+This MCP exposes the book's diagnostic taxonomy and design vocabulary as 13 callable tools, with citations back to the source. Use it inside Claude Desktop, Claude Code, or any MCP-compatible client when you're designing a fediverse instance, drafting platform-cooperative bylaws, examining a DAO's governance, writing up an admin overreach, or trying to find Schneider's name for a pattern you keep seeing.
 
 The server is hosted publicly. No account, no API key, no install required — just point your Claude client at the URL.
 
@@ -57,60 +59,57 @@ Then restart your Claude Code session and check `claude mcp list` — you should
 
 ## What's in the catalog
 
-Schneider's central distinction — *governable space vs. implicit feudalism* — shapes the data:
+Schneider's argument runs as a historical genealogy: implicit feudalism predates the platform era; it persists on platforms by business-model choice rather than technical necessity; alternatives exist but have to be built deliberately as *governable stacks*. The catalog reflects that genealogy.
 
-- **Cases** — democratic-medium examples Schneider documents (Wikipedia, Mastodon / fediverse, Loomio, Decidim, the Drupal community, the Ethereum DAO ecosystem, etc.). Each entry names its **community** (who participates), the **governance forms** it uses, and 2–5 concrete **democratic features** with MUST / SHOULD / MUST NOT modal markers drawn directly from Schneider's framing.
-- **Failure modes** — recurring counter-democratic patterns (implicit feudalism, politics of no politics, digital colonialism, captured-DAO plutocracy, etc.) plus specific historical instances Schneider names (the 2023 Reddit API revolt, Twitter's acquisition, etc.). Each entry has a `kind` discriminator (`pattern` or `instance`) and cross-references to the governance forms that counter it.
-- **Governance forms** — democratic primitives with diagnostic questions: representational voting, sortition, federated subsidiarity, plural voting, consensus, modular politics, metagovernance, etc. Each lists which failure modes it counters and which cases exemplify it.
-- **Policy strategies** — scaled moves that embed democratic design at the policy/regulatory level: governable-stack acts, antitrust as democracy-tech, public-option mandates, platform-cooperative tax incentives, exit-to-community securities reform, etc.
-- **Glossary** — Schneider's vocabulary (implicit feudalism, governable space, governable stack, modular politics, democratic mediation, metagovernance, politics of no politics, digital colonialism, etc.).
-- **Quotes** — verbatim passages indexed by theme, with full attribution to Schneider built into every response that surfaces them (per the CC BY-NC-SA license).
+- **Cases** — democratic-medium examples Schneider documents: Wikipedia's bureaucratic talk-page culture, the fediverse's instance-level autonomy, Loomio's worker-cooperative tooling, the Drupal community's elected governance, Ethereum DAO experiments, Porto Alegre's participatory budgeting, Decidim in Barcelona, Taiwan's listening-at-scale under Audrey Tang. Each entry names its *community*, the *governance forms* it composes, and what Schneider himself says about how it succeeds or strains.
+- **Failure modes** — counter-democratic patterns Schneider names and diagnoses (*implicit feudalism*, *politics of no politics*, *digital colonialism*, *democracy theatre*, *founder lock-in*, *affective voice without effective voice*, *exit-as-democracy substitution*, *plutocratic DAO governance*, *cryptoeconomic reductionism*, *paternalism as patriarchy reconfigured*, *infrastructure mystification*) plus specific historical instances (LambdaMOO 1996, AOL community-leader unpaid labour, The WELL's 1994 sale, Linux BDFL, Reddit 2015 moderator revolt and Ellen Pao's resignation, BLM Global Network's single-board-member period, Meta's Oversight Board, El Salvador's Bitcoin adoption). Patterns cross-reference the governance forms that counter them; instances cross-reference the patterns they exemplify.
+- **Governance forms** — democratic primitives Schneider documents both in the abstract and in the wild: representational voting, sortition, federated subsidiarity, plural voting (quadratic and weighted), consensus and rough consensus, *modular politics*, *metagovernance / constitutional design*, code-of-conduct enforcement, karma-based distributed moderation (Slashdot), bylaws-based community self-governance, participatory budgeting, cooperative one-member-one-vote, *governance archaeology* (treating non-Western democratic legacies as ancestors rather than extracted material).
+- **Policy strategies** — Schneider's scaled moves at the policy and regulatory level: subsidiarity-based reform of platform liability (a Section 230 successor that requires demonstrable user self-governance as the price of safe harbour), antitrust as democracy-tech, public-option platform mandates, platform-cooperative tax incentives, exit-to-community securities reform, the California Cooperative Economy Act model.
+- **Glossary** — Schneider's vocabulary defined as he uses it: *implicit feudalism*, *governable space*, *governable stack*, *modular politics*, *democratic mediation*, *metagovernance*, *politics of no politics*, *digital colonialism*, the *exit / voice / ownership* triad, *non-exclusive sovereignties*.
+- **Quotes** — verbatim passages indexed by theme, with attribution to Schneider built into every response (per the CC BY-NC-SA license).
 
-Example of what a "democratic feature" looks like — from the Wikipedia entry:
-
-> - "MUST surface community-developed policies through talk pages and noticeboards rather than top-down admin fiat"
-> - "SHOULD subject administrator actions to community review and appeal processes"
-> - "Editors MUST reach consensus or supermajority before major content or policy changes take effect"
+The categories track the book's own architecture — genealogy → patterns → primitives → policy → vocabulary — not a generic catalog template.
 
 ---
 
 ## What you can ask it to do
 
-You don't call the tools directly. You talk to Claude in plain English, and Claude decides which tools to use. Two common starting points:
+You don't call the tools directly. You talk to Claude in plain English, and Claude decides which tools to use. Two starting points that put the book to work:
 
 ### Diagnosing implicit feudalism
 
-You're trying to write up, advocate against, or just *understand* a situation where a platform or online space has unaccountable admin power — a Discord owner who unilaterally bans, a subreddit where moderation is opaque, a DAO that's plutocratic in practice, a federation instance with no internal democracy. The MCP helps Claude walk Schneider's diagnostic ladder with you.
+You're trying to write up, advocate against, or just *understand* a situation where a platform or online space has unaccountable admin power — a Discord owner who unilaterally bans, a subreddit where moderation is opaque, a DAO that's plutocratic in practice, a federation instance with no internal democracy. The MCP helps Claude walk Schneider's diagnostic ladder with you and surface the patterns he's already named.
 
-> **You:** Help me write up the 2023 Reddit API revolt as a case study. The volunteer moderators of the largest subreddits went on strike when Reddit's CEO unilaterally killed third-party apps and broke their workflows. I want to ground this in real framing, not just complain about admin overreach.
+> **You:** Help me write up the 2015 Reddit moderator revolt — when the major subreddits went private over the firing of Victoria Taylor and the AMA workflow collapse, ending in interim CEO Ellen Pao's resignation. I want Schneider's frame, not just a complaint about admin overreach.
 >
-> **Claude:** [calls `start_analysis(situation: "diagnose_feudalism")`] Schneider names four diagnostic angles: who has unilateral power and over what? Do members have meaningful voice / exit / ownership? What domain? Has the community pushed back?
+> **Claude:** [calls `start_analysis(situation: "diagnose_feudalism")`] Schneider's diagnostic ladder: who holds unilateral power and over what; do members have meaningful exit, voice, *and* ownership stake; has the community pushed back, and what did that push produce.
 >
-> [calls `find_failure_mode(signs: ["unilateral CEO", "moderators no voice", "no recourse"])`] Closest matched pattern: **implicit feudalism**. The 2023 Reddit revolt is one of Schneider's canonical instance examples — moderators are unpaid lord-tenants whose labor sustains the platform but who have no formal seat at the table when platform-wide decisions get made. The strike made the implicit explicit.
+> [calls `find_failure_mode(signs: ["volunteer mods exit en masse", "platform retains policy control", "CEO resigns"])`] Schneider catalogues this as `reddit-2015-revolt`, a canonical *instance* cross-referenced to two patterns: `implicit-feudalism` and `affective-vs-effective-voice-gap`. The pattern he draws out: moderators are unpaid labour whose work sustains the platform, but they have no formal seat at the table; the strike made the implicit explicit. Pao resigned — but Schneider notes the longer-term consequence was *tighter* platform-level policy enforcement, demonstrating the limits of moderator collective action against the platform monarchy.
 >
-> [calls `suggest_governance_forms(countering_failure_mode_id: "implicit-feudalism")`] Schneider's countering primitives include: federated subsidiarity (let mods set local rules without central override), community-ownership / cooperative-conversion, modular politics (plug-in governance layers), and democratic mediation (structured appeal + recall procedures). [calls `find_quote("implicit feudalism")`] Here are two grounding passages you can quote in the writeup...
+> [calls `suggest_governance_forms(countering_failure_mode_id: "implicit-feudalism")`] Countering primitives Schneider documents: `federated-subsidiarity` (let mods set local rules without central override — what the fediverse encodes architecturally), `modular-politics` (governance components built as swappable modules rather than admin defaults), `bylaws-based-community-governance` (the garden-club move Schneider holds up as the in-person contrast that online spaces consistently fail to replicate). [calls `find_quote("implicit feudalism")`] Two grounding passages from the book for the writeup...
 
-### Designing a governable space
+### Designing past plutocracy
 
-You're building or stewarding an online community — a Mastodon instance, a co-op platform, a DAO, a research network — and want to design democratic accountability into the structure rather than relying on a "benevolent dictator."
+You're designing or critiquing token-based governance — a DAO, a platform-cooperative with a governance token, a quadratic-voting experiment — and want Schneider's frame for what makes crypto governance "rediscover politics" rather than reproduce shareholder voting under a new label.
 
-> **You:** I'm starting a small federated discussion platform for environmental researchers — maybe 200 people, distributed across a few institutions. What does Schneider say about designing this as a governable space rather than yet another admin-run forum?
+> **You:** Our DAO is one-token-one-vote on protocol decisions and a few VCs hold large stakes. Founders argue this is "democratic" because anyone can buy in. What would Schneider say, and what changes the answer?
 >
-> **Claude:** [calls `start_analysis(situation: "design_governable_space")`] Schneider's frame: a governable space MUST give participants meaningful exit, voice, AND ownership stake. Let's walk through what each requires.
+> **Claude:** [calls `start_analysis(situation: "diagnose_feudalism")`] Schneider treats this directly in the crypto chapter. The relevant pattern is `plutocratic-dao-governance`: governance rights derived from token holdings rather than personhood; wealth concentrations translate directly into voting power; no counter-pressure equivalent to progressive taxation or collective bargaining. Often paired with `cryptoeconomic-reductionism` — every coordination question framed as an incentive-alignment problem, while non-economic values (justice, ecological harm, dignity) become invisible because they generate no penalty signal within the protocol.
 >
-> [calls `find_precedent_case(domain: "federated_network", what_governed: "moderation and policy")`] Two precedent cases worth studying: Mastodon's federated moderation (instance-level rule-setting + cross-instance defederation as exit mechanism) and the Drupal community's elected governance.
+> [calls `suggest_governance_forms(countering_failure_mode_id: "plutocratic-dao-governance")`] Schneider documents three counter-moves crypto culture has been working on: `plural-voting` (quadratic and weighted, so wealth doesn't convert linearly into voting power), `soulbound-identity-governance` (non-transferable tokens tied to persons, not capital — Schneider's framing: crypto "rediscovering politics," recognising souls and not just wallets), and `cooperative-democratic-governance` (one-member-one-vote vested in membership, with capital ownership barred from disproportionate governance power).
 >
-> [calls `assess_governable_space`] Let me walk you through Schneider's four structural requirements with diagnostic questions: voice, exit, ownership stake, accountability... [continues]
->
-> [calls `suggest_governance_forms(domain: "federated_network")`] Forms that fit: federated subsidiarity (each instance sets its own rules), elected steering councils, community-policy-making via talk pages or proposals, sortition-based dispute resolution. Here are the diagnostic questions for each...
+> [calls `find_quote("rediscover politics")`] Schneider's claim: the design problem is recognising persons, not optimising incentive alignment. [calls `apply_democratic_mediation(...)`] Here's how that translates into a concrete governance proposal you could put in front of your DAO's forum...
 
 ### Other things to try
 
-- "Reframe 'we need a benevolent dictator' in democratic-mediation terms" — pulls in Schneider's reframe move
-- "What does Schneider mean by metagovernance?" — uses the glossary
-- "Find me a Schneider passage on the 'politics of no politics'" — surfaces verbatim quotes with citations
-- "Is this DAO actually democratic, or just an oligarchy with token-voting?" — surfaces failure-mode signals (captured DAO, plutocratic governance)
-- "What policy moves would scale platform cooperatives?" — surfaces policy strategies
+- *"My online community has a code of conduct but the admin enforces it selectively. What does Schneider say about that?"* — surfaces `code-of-conduct-governance` and Schneider's structural critique that a CoC is insufficient under implicit feudalism without binding enforcement against admins, not just users.
+- *"What's the difference between affective voice and effective voice, and how do platforms confuse them?"* — surfaces `affective-vs-effective-voice-gap`, the reaction-emoji-as-vote pattern, and Schneider's reading of cancel-culture dynamics.
+- *"Reframe 'we need a benevolent dictator' in Schneider's terms."* — surfaces `linux-bdfl-model`, `founder-lock-in`, and Schneider's recurring point that BDFL emerges from a power vacuum produced by avoiding explicit governance, not from a deliberate democratic choice.
+- *"Schneider compares his mother's garden club to the online spaces he administered. What was the contrast?"* — surfaces `democratic-skill-atrophy` and the eight-page-bylaws move (`bylaws-based-community-governance`).
+- *"What does it actually take to make Section 230 reform pro-democracy rather than just pro-moderation?"* — surfaces `subsidiarity-as-content-liability-shield` and Schneider's argument that liability immunity should be conditional on demonstrable user self-governance.
+- *"Show me how Schneider treats non-Western governance traditions in a 'governance archaeology' sense."* — surfaces `governance-archaeology`, the cowrie-shell precedent, and the Ch. 6 decolonial framing.
+- *"What's a 'governable stack' and an example Schneider actually uses himself?"* — surfaces the May First example from the book and the cross-references between `governable-stacks` and the failure modes it counters.
+- *"Find me Schneider's claim that implicit feudalism is itself a form of metagovernance."* — surfaces the closing-chapter passage: "Implicit feudalism has been a kind of metagovernance, and like so much metagovernance, it too often hides beneath our notice."
 
 ---
 
