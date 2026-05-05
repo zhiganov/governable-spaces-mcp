@@ -15,6 +15,9 @@ npm start              # Run compiled server (dist/index.js)
 npm run convert        # Re-run EPUB → markdown post-processor (adds # chapter markers)
 npm run extract        # Re-run Sonnet extraction over books/governable-spaces.md (requires ANTHROPIC_API_KEY)
 npm run typecheck      # tsc --noEmit
+
+# Not in package.json scripts (run directly):
+npx tsx scripts/dry-run.ts   # Sanity-check chapter chunking from books/governable-spaces.md. No API calls; no key needed.
 ```
 
 ## Architecture
@@ -58,11 +61,25 @@ books/
 - All data embedded as TypeScript constants — no DB, no vector search
 - Substring search for cross-catalog discovery (`search_book`)
 - Branching entry-point (`start_analysis`) routes to one of 4 workflows: diagnose_feudalism, design_governable_space, name_failure_mode, exploring
-- Dual transport: stdio (local dev) / StreamableHTTP (Railway). **No auth** — public, by design (book is CC BY-NC-SA, framing is for movement-building)
+- Dual transport: stdio (local dev) / StreamableHTTP (Railway). Mode is selected by `process.env.PORT` at runtime — set → HTTP listen on that port; unset → stdio. Railway sets `PORT` automatically. **No auth** — public, by design (book is CC BY-NC-SA, framing is for movement-building)
 - `diagnose_implicit_feudalism` is intentionally heuristic and surfaces caveat: a governable space MUST give participants meaningful exit, voice, AND ownership stake (Schneider Ch. 1). Negation handling is coarse — for nuanced cases the LLM consumer should override.
 - `find_failure_mode` returns both pattern entries and instance entries (kind discriminator) so the agent can show "this is X pattern, exemplified by Y, Z, W historical instances."
 - `find_quote` capped at 3 results × ~200 words each, per CC BY-NC-SA fair-use discipline; each response includes attribution.
-- `glossary` ran 89 entries (target ~25). Dedup pass returned warnings about `keep` ids not matching catalog (case mismatch on "communityRule", missing entries like "modpol"/"governable-stack"/"metagovernance"). Worth a manual cull pass eventually.
+- **Known debt:** glossary is over-extracted — 89 entries vs ~25 intended. Dedup pass left warnings about `keep` ids not matching the live catalog (case mismatch on `communityRule`, missing `modpol` / `governable-stack` / `metagovernance`). A manual cull pass before the next major release is the right move; not blocking.
+
+## How to extend
+
+- **New tool** — add a `server.registerTool(...)` block in `src/index.ts`. If the tool returns a new shape, add the interface to `src/types.ts` first; the data files import from there. Group with the matching tools-tools section header (`// === ROUTING TOOLS ===` etc.) and update the count comment in the section header.
+- **New catalog entry** — append to the relevant `src/data/<catalog>.ts` array. Each entry is typed against the corresponding interface in `src/types.ts` (`Case`, `FailureMode`, `GovernanceForm`, `PolicyStrategy`, `GlossaryTerm`, `Quote`). Run `npm run typecheck` to surface shape errors.
+- **Re-extract from a revised source** — `npm run convert && npm run extract`. Requires `ANTHROPIC_API_KEY` in `.env` and the EPUB at `../book-power/books/`. Cached per-chapter in `.extraction-cache/` so partial re-runs are cheap.
+
+## Testing
+
+No test suite. Validate changes via:
+
+- `npm run typecheck` — type-safety + Zod-schema sanity (catches most data-shape regressions)
+- `npm run dev` then connect with [MCP Inspector](https://github.com/modelcontextprotocol/inspector) or a real Claude client to call the changed tool
+- For catalog-only edits, typecheck plus one targeted tool call is usually sufficient
 
 ## Stack
 
