@@ -29,6 +29,77 @@ import Anthropic from '@anthropic-ai/sdk';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
+// =============================================================================
+// EXTRACTION DISCIPLINES
+// -----------------------------------------------------------------------------
+// The rhetorical mode in which extracted entries express the source's claims.
+// Each per-book extract-data.<flavor>.ts declares one of these by setting a
+// DISCIPLINE constant at the top of the file; that discipline's
+// systemPromptSection is injected into the SYSTEM_PROMPT, and its fieldHint is
+// appended to tool-schema field descriptions.
+//
+// Pick the discipline that matches the source book:
+//   - prescriptive: source argues in rules/defaults/anti-patterns (RFC 2119
+//     modal markers fit). Examples: Bollier's commons protocols, Ostrom's
+//     design principles, programming-discipline books (Clean Code, etc.).
+//   - descriptive:  source argues structurally/historically/dialectically;
+//     "MUST X" reformulations distort the author's voice. Examples:
+//     Schneider's *Governable Spaces*, most academic argument.
+//   - dialectical:  source works through opposing positions; entries should
+//     surface tensions rather than collapse to recommendations.
+//   - procedural:   source teaches a process with steps, triggers, and exit
+//     conditions. Examples: facilitation handbooks, how-to guides, recipes.
+// =============================================================================
+
+export const DISCIPLINES = {
+  prescriptive: {
+    systemPromptSection: `EXTRACTION VOICE: PRESCRIPTIVE
+
+The source argues prescriptively — it issues rules, strong defaults, and explicit anti-patterns. Use RFC-2119-style modal markers (MUST / SHOULD / MUST NOT) in field values that capture rules, defaults, or diagnostic questions, when the author states:
+- A hard rule (e.g., "a commons MUST have boundaries, rules, social norms, and sanctions")
+- A strong default (e.g., "monitoring SHOULD be done by community members, not external authorities")
+- An explicit anti-pattern (e.g., "a commons MUST NOT be confused with open-access — that is Hardin's mistake")
+
+Forces specificity. Don't waffle. Do NOT impose modal markers where the author is being descriptive — paraphrase descriptively in those cases.`,
+    fieldHint: 'with MUST/SHOULD/MUST NOT modal markers where the source is prescriptive',
+  },
+  descriptive: {
+    systemPromptSection: `EXTRACTION VOICE: DESCRIPTIVE
+
+The source argues descriptively, structurally, and historically — it documents what is the case, names patterns, and analyses how they emerged. Do NOT use RFC-2119-style modal markers (MUST / SHOULD / MUST NOT). Render claims as descriptive prose grounded in what the author actually says or shows:
+- For diagnostic / feature fields: state what the entity in question does, has, or makes possible (e.g., "Wikipedia editors develop policy through talk pages and noticeboards, with the Five Pillars holding that there are 'no firm rules'") rather than what it MUST do.
+- For pattern signatures: describe the recognition heuristics ("how do you spot this in the wild") in the author's voice, not as modal claims.
+- For diagnostic questions: ask questions in their natural form ("Is X the case?", "Does Y hold?") rather than reformulating as "MUST X be the case?".
+
+If the author makes an explicit prescription, you may quote or paraphrase it directly — but do NOT impose a modal voice on descriptive material.`,
+    fieldHint: 'as descriptive prose grounded in the source — do NOT use MUST/SHOULD modal markers',
+  },
+  dialectical: {
+    systemPromptSection: `EXTRACTION VOICE: DIALECTICAL
+
+The source argues dialectically — it works through opposing positions, surfaces tensions, and treats the resolution as an ongoing question rather than a settled rule. Render entries as positions paired with their counter-positions where the author sets them up that way:
+- For pattern signatures: name both the position the author critiques and the position the author argues for.
+- For governance/design forms: surface the tradeoffs the author names ("X enables A but at the cost of B") rather than collapsing to a single recommendation.
+- For diagnostic questions: prefer "What would the X view say here?" framings over yes/no MUSTs.
+
+Do NOT use RFC-2119 modal markers unless the author explicitly does. Preserve productive disagreement; don't flatten the argument.`,
+    fieldHint: 'as positions paired with counter-positions where the source sets them up that way',
+  },
+  procedural: {
+    systemPromptSection: `EXTRACTION VOICE: PROCEDURAL
+
+The source teaches a process — sequenced steps, triggers, branching decisions, and exit conditions. Render entries with explicit process structure:
+- For workflow fields: list ordered steps with their triggers and outcomes ("when X, do Y, exit when Z").
+- For technique entries: describe when to use the technique, its preconditions, the actions it involves, and how to know if it worked.
+- For diagnostic questions: ask "what comes next?" / "what would this look like in practice?" rather than imposing modal MUST claims.
+
+Use modal markers only where the source treats a step as non-negotiable. Procedural sources usually argue empirically ("here's what works"), not normatively.`,
+    fieldHint: 'as ordered steps / triggers / outcomes — modal markers only when the source treats a step as non-negotiable',
+  },
+} as const;
+
+export type DisciplineName = keyof typeof DISCIPLINES;
+
 export type ToolSchema = { name: string; description: string; input_schema: any };
 
 export interface ExtractConfig<C extends string> {

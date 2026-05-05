@@ -39,6 +39,8 @@ import { fileURLToPath } from 'node:url';
 import {
   type ToolSchema,
   type ExtractConfig,
+  type DisciplineName,
+  DISCIPLINES,
   entriesArray,
   chapterChunks,
   extractCatalog,
@@ -58,6 +60,18 @@ const MODEL = 'claude-sonnet-4-6';
 
 // === DEMOCRACY-TECH DOMAIN CONFIG ===
 // Reusable across books on democratic design of online governance.
+
+// Discipline: Schneider's *Governable Spaces* and most democracy-tech writing
+// argues structurally and historically — not in MUST/SHOULD rules. The book's
+// source text contains zero RFC-2119 modal markers; imposing them on the
+// catalog produces reformulations that contradict the author (e.g., "Editors
+// MUST reach consensus" for Wikipedia, when Schneider explicitly cites the
+// Five Pillar that "Wikipedia has no firm rules"). See zhiganov/book-power#30
+// for audit data and the architectural rationale. If a future democracy-tech
+// book argues prescriptively, change this to 'prescriptive' for that book's
+// MCP — it's a per-book choice, not a domain default.
+const DISCIPLINE: DisciplineName = 'descriptive';
+const D = DISCIPLINES[DISCIPLINE];
 
 type Catalog =
   | 'cases'
@@ -94,13 +108,7 @@ EXTRACTION DISCIPLINE
 - For source_chapter, use short forms: "Introduction", "Ch. 2", ... "Epilogue".
 - Quote sparingly. Source quotes must be ≤200 words and verbatim. Skip the source_quote field if no especially strong passage applies.
 
-MODAL MARKERS
-Use MUST / SHOULD / MUST NOT in democratic-feature descriptions, governance-form diagnostic questions, and policy-strategy descriptions when Schneider states:
-- A hard rule (e.g., "a governable space MUST give participants meaningful exit, voice, and ownership stake")
-- A strong default (e.g., "moderation SHOULD be subject to community appeal rather than admin fiat")
-- An explicit anti-pattern (e.g., "a platform MUST NOT be confused with a governable space merely because it has a forum or comment section")
-
-Forces specificity. Don't waffle.
+${D.systemPromptSection}
 
 DOMAIN ENUM (use exactly one per entry)
 - "online_community" — forums, chats, wikis, subreddits, Discord servers, Slack workspaces
@@ -160,7 +168,7 @@ const TOOLS: Record<Catalog, ToolSchema> = {
         brief: { type: 'string', description: '1-2 sentence description' },
         community: { type: 'string', description: 'Who participates / who is governed' },
         governance_form_ids: { type: 'array', items: { type: 'string' }, description: 'IDs of governance_forms this case uses (1-3)' },
-        democratic_features: { type: 'array', items: { type: 'string' }, description: '2-5 concrete democratic affordances with MUST/SHOULD/MUST NOT modal markers where Schneider is prescriptive' },
+        democratic_features: { type: 'array', items: { type: 'string' }, description: `2-5 concrete democratic affordances ${D.fieldHint}` },
         lessons_or_failures: { type: 'string', description: 'What Schneider extracts from this case — what works, what doesn\'t, what scales, what doesn\'t' },
         source_chapter: { type: 'string' },
         source_quote: { type: 'string', description: 'Optional verbatim grounding passage, ≤200 words' },
@@ -199,8 +207,8 @@ const TOOLS: Record<Catalog, ToolSchema> = {
       properties: {
         id: { type: 'string' },
         name: { type: 'string' },
-        description: { type: 'string', description: '2-4 sentences with MUST/SHOULD where Schneider is prescriptive' },
-        diagnostic_questions: { type: 'array', items: { type: 'string' }, description: '3-5 questions to assess whether this form fits a given situation. Use MUST where Schneider is prescriptive about preconditions.' },
+        description: { type: 'string', description: `2-4 sentences ${D.fieldHint}` },
+        diagnostic_questions: { type: 'array', items: { type: 'string' }, description: `3-5 questions to assess whether this form fits a given situation. ${D.fieldHint}.` },
         countered_failure_mode_ids: { type: 'array', items: { type: 'string' }, description: 'Failure mode IDs this governance form counters' },
         example_case_ids: { type: 'array', items: { type: 'string' }, description: 'Case IDs that exemplify this form' },
         source_chapter: { type: 'string' },
@@ -216,7 +224,7 @@ const TOOLS: Record<Catalog, ToolSchema> = {
       properties: {
         id: { type: 'string' },
         name: { type: 'string' },
-        description: { type: 'string', description: '2-4 sentences with MUST/SHOULD where Schneider is prescriptive' },
+        description: { type: 'string', description: `2-4 sentences ${D.fieldHint}` },
         target_failure_mode_ids: { type: 'array', items: { type: 'string' }, description: 'Failure mode IDs this strategy targets at scale' },
         example_case_ids: { type: 'array', items: { type: 'string' }, description: 'Case IDs that exemplify this strategy in practice' },
         source_chapter: { type: 'string' },
