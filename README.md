@@ -180,6 +180,6 @@ EPUB → markdown conversion: Kreuzberg flattens EPUB heading structure, so `scr
 Sibling MCPs under the book-power umbrella (umbrella repo private):
 
 - [think-like-a-commoner-mcp](https://github.com/zhiganov/think-like-a-commoner-mcp) — Bollier's commons framing (shipped, public, CC BY-NC-SA)
+- [plurality-mcp](https://github.com/zhiganov/plurality-mcp) — Weyl, Tang & ⿻ Community's ⿻ digital-democracy framing (shipped, public, CC0)
 - jtbd-knowledge-mcp — JTBD framing combining Moesta + Kalbach (shipped, private — copyrighted source)
 - facilitating-deliberation-mcp — MosaicLab's facilitator reference (shipped, private — copyrighted source)
-- Plurality (Weyl & Tang) — queued, will be public (CC0 source)
