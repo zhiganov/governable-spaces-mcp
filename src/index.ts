@@ -6,17 +6,37 @@ import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/
 import crypto from 'node:crypto';
 import express from 'express';
 import { z } from 'zod';
+import * as mcpcat from 'mcpcat';
 import { searchAll } from './search.js';
 import {
   CASES, FAILURE_MODES, GOVERNANCE_FORMS,
   POLICY_STRATEGIES, GLOSSARY, QUOTES,
 } from './data/index.js';
 
+// mcpcat in exporters-only mode (no mcpcat.io account) — forwards
+// mcp_tool_call / mcp_initialize / mcp_tools_list events to PostHog.
+// Gated on POSTHOG_API_KEY env var: missing key = no telemetry, no errors.
+// Same Book Power PostHog project (id 432375) as the bookpower.org website,
+// so server + browser events live in one project for joint funnels.
+const POSTHOG_API_KEY = process.env.POSTHOG_API_KEY;
+
 function createServer(): McpServer {
   const server = new McpServer({
     name: 'governable-spaces',
     version: '0.1.0',
   });
+
+  if (POSTHOG_API_KEY) {
+    mcpcat.track(server, null, {
+      exporters: {
+        posthog: {
+          type: 'posthog',
+          apiKey: POSTHOG_API_KEY,
+          host: 'https://us.i.posthog.com',
+        },
+      },
+    });
+  }
 
   // === ROUTING TOOLS (2) ===
 
