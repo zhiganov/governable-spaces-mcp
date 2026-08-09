@@ -578,35 +578,77 @@ async function startHttpServer() {
   const app = express();
   app.use(express.json());
 
-  app.get('/health', (_req, res) => {
-    res.json({ status: 'ok', name: 'governable-spaces', version: '0.1.0' });
-  });
+  // Session lifecycle. Each session holds its own McpServer, so anything left
+  // in this map stays resident for the life of the process. MCP clients are not
+  // required to send DELETE /mcp before going away — Claude Code simply exits —
+  // so `onclose` alone never reclaims them. Reconnects then accumulate until the
+  // container is recycled. The idle sweep below is what actually bounds this.
+  const SESSION_IDLE_MS = Number(process.env.MCP_SESSION_IDLE_MS ?? 10 * 60 * 1000);
+  const SESSION_SWEEP_MS = Number(process.env.MCP_SESSION_SWEEP_MS ?? 60 * 1000);
 
-  const sessions = new Map<string, StreamableHTTPServerTransport>();
+  interface Session {
+    transport: StreamableHTTPServerTransport;
+    lastSeen: number;
+  }
+
+  const sessions = new Map<string, Session>();
+
+  function dropSession(sessionId: string): void {
+    const session = sessions.get(sessionId);
+    if (!session) return;
+    sessions.delete(sessionId);
+    void session.transport.close().catch(() => {
+      /* already torn down — nothing to reclaim */
+    });
+  }
+
+  app.get('/health', (_req, res) => {
+    res.json({
+      status: 'ok',
+      name: 'governable-spaces',
+      version: '0.1.0',
+      sessions: sessions.size,
+    });
+  });
 
   app.all('/mcp', async (req, res) => {
     const existingSessionId = req.headers['mcp-session-id'] as string | undefined;
 
-    if (existingSessionId && sessions.has(existingSessionId)) {
-      const transport = sessions.get(existingSessionId)!;
-      await transport.handleRequest(req, res, req.body);
-      return;
+    if (existingSessionId) {
+      const session = sessions.get(existingSessionId);
+      if (session) {
+        session.lastSeen = Date.now();
+        await session.transport.handleRequest(req, res, req.body);
+        return;
+      }
     }
 
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: () => crypto.randomUUID(),
+      // Register on the SDK's own hook rather than after handleRequest returns:
+      // a client that disconnects mid-initialize would otherwise leave behind a
+      // transport the sweeper never learns about.
+      onsessioninitialized: (sessionId) => {
+        sessions.set(sessionId, { transport, lastSeen: Date.now() });
+      },
     });
+    transport.onclose = () => {
+      if (transport.sessionId) sessions.delete(transport.sessionId);
+    };
+
     const sessionServer = createServer();
     await sessionServer.connect(transport);
 
     await transport.handleRequest(req, res, req.body);
-
-    const newSessionId = res.getHeader('mcp-session-id') as string | undefined;
-    if (newSessionId) {
-      sessions.set(newSessionId, transport);
-      transport.onclose = () => sessions.delete(newSessionId);
-    }
   });
+
+  const sweeper = setInterval(() => {
+    const cutoff = Date.now() - SESSION_IDLE_MS;
+    for (const [sessionId, session] of sessions) {
+      if (session.lastSeen <= cutoff) dropSession(sessionId);
+    }
+  }, SESSION_SWEEP_MS);
+  sweeper.unref();
 
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
