@@ -89,10 +89,28 @@ try {
   const swept = (await health()).sessions;
   check('abandoned sessions are swept after idle timeout', swept === 0, `sessions=${swept}`);
 
-  // A swept session id must not resurrect on reuse.
+  // A retired session id must report 404 specifically. The spec makes 404 the
+  // client's trigger to open a new session; a 400 leaves recovery to chance.
   const stale = await post({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} }, politeId);
   await stale.body?.cancel().catch(() => {});
-  check('stale session id is rejected', stale.status >= 400, `HTTP ${stale.status}`);
+  check('deleted session id returns 404', stale.status === 404, `HTTP ${stale.status}`);
+
+  // Same for a session the sweeper closed. This is the common case in
+  // production — clients rarely send DELETE — so it matters more than the above.
+  const doomed = await post(initBody('to-be-swept'));
+  const sweptId = doomed.headers.get('mcp-session-id');
+  await doomed.body?.cancel().catch(() => {});
+  await sleep(IDLE_MS + 1200);
+  const afterSweep = await post({ jsonrpc: '2.0', id: 3, method: 'tools/list', params: {} }, sweptId);
+  await afterSweep.body?.cancel().catch(() => {});
+  check('swept session id returns 404', afterSweep.status === 404, `HTTP ${afterSweep.status}`);
+
+  // ...and the client recovers by initializing afresh.
+  const recovered = await post(initBody('recovered'));
+  const recoveredId = recovered.headers.get('mcp-session-id');
+  await recovered.body?.cancel().catch(() => {});
+  check('client can re-initialize after expiry', !!recoveredId,
+    recoveredId ? 'new session issued' : 'no session id');
 } catch (e) {
   check('smoke run completed', false, e.message);
   if (serverLog) console.error('--- server log ---\n' + serverLog.slice(0, 900));
