@@ -3,6 +3,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
+import { isInitializeRequest } from '@modelcontextprotocol/sdk/types.js';
 import crypto from 'node:crypto';
 import express from 'express';
 import { z } from 'zod';
@@ -619,6 +620,19 @@ async function startHttpServer() {
       if (session) {
         session.lastSeen = Date.now();
         await session.transport.handleRequest(req, res, req.body);
+        return;
+      }
+      // Unknown id: swept by the idle reaper, or predates a restart. The spec
+      // requires 404 here so the client knows to open a new session. Falling
+      // through would mint a fresh transport that answers the non-initialize
+      // request with "Server not initialized" (400) — a code clients are under
+      // no obligation to recover from.
+      if (!isInitializeRequest(req.body)) {
+        res.status(404).json({
+          jsonrpc: '2.0',
+          error: { code: -32001, message: 'Session not found or expired' },
+          id: null,
+        });
         return;
       }
     }
